@@ -1,0 +1,2 @@
+* Blog profesional de Pedro Prieto
+Repositorio con el código fuente del blog publicado en https://pedroprieto.github.io/
