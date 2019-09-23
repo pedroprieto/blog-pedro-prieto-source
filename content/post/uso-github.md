@@ -1,7 +1,7 @@
 +++
 title = "GitHub"
 date = 2019-09-23T12:37:00+02:00
-categories = ["diw", "diw-herramientas"]
+categories = ["diw", "diw-herramientas-desarrollo"]
 draft = false
 +++
 

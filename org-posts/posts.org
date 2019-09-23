@@ -23,7 +23,7 @@
 Mi nombre es Pedro Prieto. Soy profesor del IES Mare Nostrum de Alicante. Este blog tiene como objetivo servir como plataforma para publicar los materiales de mis clases. Espero que poco a poco se convierta en una buena fuente de recursos tanto para los alumnos como para cualquier persona interesada en los temas que aquí se tratan.
 
 * DIW                                                            :@diw:
-** Presentación y herramientas de trabajo                     :@diw_herramientas:
+** Presentación y herramientas de trabajo      :@diw_herramientas_desarrollo:
 *** DONE Fundamentos de Git I
     CLOSED: [2019-09-23 lun 11:51]
     :PROPERTIES:
@@ -287,3 +287,59 @@ En este artículo se explicará el uso de la herramienta *GitHub* y las posibili
 
 **** Contenidos
   - [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-3-presentacion.html][Presentación]]
+*** DONE Herramientas de desarrollo
+    CLOSED: [2019-09-24 mar 00:43]
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: herramientas-desarrollo
+    :END:
+
+A continuación se muestran algunas herramientas de desarrollo que considero interesantes. Este artículo estará en continua revisión.
+#+hugo: more
+
+**** Editores
+   - [[https://code.visualstudio.com/][Visual Studio Code]] 
+   - [[https://atom.io/][Atom]]
+   - [[http://brackets.io/][Brackets]]
+   - [[https://www.sublimetext.com/][Sublime Text]]
+   - [[https://notepad-plus-plus.org/][Notepad ++]]
+   - [[http://emmet.io/][Emmet (plugin)]]
+
+***** IDEs
+   - [[http://www.eclipse.org][Eclipse]]
+     - [[http://www.eclipse.org/downloads/packages/eclipse-ide-javascript-web-developers/indigosr2][Paquete para JavaScript]]
+   - [[https://netbeans.org][Netbeans]]
+     - [[https://netbeans.org/kb/73/ide/javascript-editor.html][Soporte para JavaScript]] 
+
+**** Editores online para prototipos rápidos
+   - https://jsbin.com
+   - https://jsfiddle.net/
+   - http://codepen.io/
+   - https://www.jsnippet.net/
+
+**** Herramientas de desarrollo de navegadores
+   - [[https://developers.google.com/web/tools/chrome-devtools/][Chrome DevTools]] (Chrome)
+   - [[https://addons.mozilla.org/es/firefox/addon/firebug/][Firebug]] (Firefox)
+
+**** Servicios de validación
+   - [[https://validator.w3.org/][W3C HTML Validation Service]]
+   - [[https://jigsaw.w3.org/css-validator/][W3C CSS Validation Service]] 
+   - [[http://www.jslint.com][JSLint]] (Chequeo de sintaxis y código JavaScript)
+
+**** Git
+   - [[https://git-scm.com/download/win][Git para Windows]]
+
+**** Node (plataforma de desarrollo en JavaScript)
+   - [[https://nodejs.org/en/][Node JS]]
+   - [[https://www.npmjs.com/][Node packages]]
+   
+**** Diagramas y diseño
+   - [[http://plantuml.com][PlantUml]]
+   - [[https://draw.io][Draw.io]] 
+
+**** Licencias
+   - [[https://en.wikipedia.org/wiki/Copyright][Copyright]]
+   - [[https://en.wikipedia.org/wiki/Copyleft][Copyleft]] 
+   - [[https://opensource.org/osd.html][Open Source Definition]]
+   - [[http://choosealicense.com][Choose a License]]
+   - [[https://creativecommons.org/share-your-work/][Creative Commons licenses]] (Para creaciones que no son código, como sitios web, multimedia, textos, libros, etc.)
+
