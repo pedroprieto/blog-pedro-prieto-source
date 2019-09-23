@@ -1,3 +1,31 @@
 baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Blog de Pedro Prieto"
+theme = "jane"
+
+defaultContentLanguage = "es"
+[languages.es]
+  languageCode = "es"
+
+[author]
+  name = "Pedro Prieto Alarcón"
+
+[[menu.main]]
+  name = "Inicio"
+  weight = 10
+  identifier = "home"
+  url = "/"
+[[menu.main]]
+  name = "Archivo"
+  weight = 20
+  identifier = "archives"
+  url = "/post"
+[[menu.main]]
+  name = "Tags"
+  weight = 30
+  identifier = "tags"
+  url = "/tags/"
+[[menu.main]]
+  name = "Categorías"
+  weight = 40
+  identifier = "categories"
+  url = "/categories/"
