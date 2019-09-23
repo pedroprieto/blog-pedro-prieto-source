@@ -1,0 +1,289 @@
+#+hugo_base_dir: ../
+#+hugo_section: post
+#+property: header-args :eval no
+
+* Homepage
+:PROPERTIES:
+:EXPORT_TITLE: Página principal - Blog de Pedro Prieto
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_TYPE: homepage
+:EXPORT_HUGO_SECTION: /
+:CUSTOM_ID: main
+:END:
+
+* DONE Acerca de
+  CLOSED: [2019-09-23 lun 11:56]
+:PROPERTIES:
+:EXPORT_TITLE: Acerca de
+:EXPORT_FILE_NAME: about
+:EXPORT_HUGO_SECTION: /
+:EXPORT_HUGO_MENU: :menu main
+:END:
+
+Mi nombre es Pedro Prieto. Soy profesor del IES Mare Nostrum de Alicante. Este blog tiene como objetivo servir como plataforma para publicar los materiales de mis clases. Espero que poco a poco se convierta en una buena fuente de recursos tanto para los alumnos como para cualquier persona interesada en los temas que aquí se tratan.
+
+* DIW                                                            :@diw:
+** Presentación y herramientas de trabajo                     :@diw_herramientas:
+*** DONE Fundamentos de Git I
+    CLOSED: [2019-09-23 lun 11:51]
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: fundamentos-git-1
+    :END:
+
+En este artículo se pretende dar una introducción a los comandos más comunes del software de control de versiones *Git*.
+#+hugo: more
+
+**** Videotutoriales
+  - [[https://www.youtube.com/watch?v=DuewUoPnAmg&index=2&list=PLQg_Bl-6Gfo9k0KQg5vaaV9r6Hg--nMA7][Sesión 1.1]]
+  - [[https://www.youtube.com/watch?v=uwqvuJ5lrIs&list=PLQg_Bl-6Gfo9k0KQg5vaaV9r6Hg--nMA7&index=3][Sesión 1.2]]
+
+**** Índice
+      - Breve introducción a Git
+      - Entornos: consola y escritorio
+      - Instalación
+      - Configuración
+      - Creación de repositorios
+      - Cómo guardar cambios
+      - Historial de cambios
+      - Cómo deshacer cambios
+      - Etiquetado
+
+**** Referencias
+  - [[https://git-scm.com/book/es/v2/][Libro de Git]]
+  - [[https://services.github.com/on-demand/downloads/es_ES/github-git-cheat-sheet/][Hoja de referencia de Git]]
+  - [[https://services.github.com/on-demand/downloads/es_ES/github-git-cheat-sheet.pdf][Hoja de referencia de Git (PDF)]]
+
+**** Contenidos
+***** Instalación
+   - [[https://git-scm.com/download][https://git-scm.com/download]]
+
+***** Configuración
+   #+begin_src bash
+   # Opciones obligatorias (nombre y correo)
+   git config --global user.name "Nombre y apellido"
+   git config --global user.email CORREO@ELECTRONICO
+
+   # Editor de preferencia. Como ejemplos se incluyen el Notepad y el Notepad ++ en Windows
+   # Ejecutar sólo una de los tres comandos siguientes
+   git config --global core.editor notepad # Notepad de Windows
+   git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin" # Notepad ++
+   git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin" # Notepad ++ 32 bit
+
+   # Almacenamiento de credenciales para no pedir usuario y contraseña de GitHub cada vez que se suban cambios al servidor
+   # Ejecutar sólo uno de los dos comandos siguientes en función del sistema
+   git config --global credential.helper cache   # Para Linux
+   git config --global credential.helper wincred # Para Windows
+   #+end_src
+
+***** Creación de repositorios
+   #+begin_src bash
+   git init
+   #+end_src
+
+***** Ciclo de vida
+   [[https://git-scm.com/book/en/v2/images/lifecycle.png]]
+
+***** Revisando el estado
+   #+begin_src bash
+   git status
+   #+end_src
+
+***** Ignorar archivos
+   - Archivo ~.gitignore~
+   - Plantillas de archivos [[https://github.com/github/gitignore][.gitignore]].
+
+***** Visualizar cambios
+   #+begin_src bash
+   git diff
+   git diff <archivo>
+   #+end_src
+
+***** Añadir archivos al área de preparación (stage)
+   #+begin_src bash
+   git add <archivo> # Añadir archivos individuales
+   git add .         # Añadir todos los archivos nuevos o modificados
+   #+end_src
+
+***** Visualizar cambios de los archivos en el área de preparación
+   #+begin_src bash
+   git diff --staged
+   git diff --staged <archivo>
+   #+end_src
+
+***** Confirmar cambios (commit)
+   #+begin_src bash
+   git commit -m "MENSAJE"
+   #+end_src
+
+***** Historial de cambios
+   #+begin_src bash
+   git log
+   git log --graph
+   #+end_src
+
+***** Ver cambios realizados en anteriores commits
+   #+begin_src bash
+   git show <commit>
+   #+end_src
+
+***** Quitar archivo del área de preparación
+   #+begin_src bash
+   git reset HEAD <archivo>
+   #+end_src
+
+***** Eliminar las modificaciones con respecto al último commit
+   #+begin_src bash
+   # ¡PELIGRO! Todos los cambios que se hayan hecho al archivo desde el último commit se eliminarán
+   git checkout -- <archivo>
+   #+end_src
+
+***** Etiquetado
+   #+begin_src bash
+   git tag
+   #+end_src
+
+*** DONE Fundamentos de git II
+    CLOSED: [2019-09-23 lun 12:18]
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: fundamentos-git-2
+    :END:
+Este artículo tiene como objetivo profundizar en el manejo de Git con el uso de *ramas* y *repositorios remotos*.
+#+hugo: more
+
+**** Videotutoriales
+  - [[https://youtu.be/goMcUY9dZzM][Sesión 2.1]]
+  - [[https://youtu.be/1vMheWF6VXo][Sesión 2.2]]
+  - [[https://youtu.be/aYDyT85NOLg][Sesión 2.3]]
+  - [[https://youtu.be/hBJMwbxb-fc][Sesión 2.4]]
+
+**** Índice
+      - Ramas
+      - Fusiones de ramas
+      - Conflictos
+      - Remotos
+      - Flujos de trabajo con ramas
+
+**** Referencias
+  - [[https://git-scm.com/book/es/v2/][Libro de Git]]
+  - [[https://services.github.com/on-demand/downloads/es_ES/github-git-cheat-sheet/][Hoja de referencia de Git]]
+  - [[https://services.github.com/on-demand/downloads/es_ES/github-git-cheat-sheet.pdf][Hoja de referencia de Git (PDF)]]
+  - [[http://git-school.github.io/visualizing-git/][Herramienta "Visualizing Git"]] (muy interesante para comprender el funcionamiento interno de Git y el trabajo con ramas y remotos)
+
+**** Contenidos
+***** Ramas
+****** Definición de ramas
+   - Una rama es un puntero que apunta a un determinado commit.
+   - Un repositorio debe tener una rama como mínimo.
+   - El nombre de la rama que se crea por defecto es ~master~. Este nombre no es especial ni tiene una función o significado especial.
+   - Existe un puntero especial llamado ~HEAD~ que apunta a la rama en la que estamos en ese momento.
+   - Al cambiar de rama se modifica el contenido del directorio de trabajo: éste se muestra tal como estaba en la rama a la que hemos saltado.
+   - La creación y el cambio de ramas se realizan de forma instantánea: no tienen apenas coste.
+   - El trabajo con ramas es muy interesante por los siguientes motivos:
+     - Se pueden hacer pruebas sin modificar el código en producción.
+     - Se puede separar el trabajo en tareas o subproyectos que no afecten unos a otros.
+     - Cada miembro del equipo puede trabajar sin ser interferido por los demás.
+
+****** Crear ramas
+    #+begin_src bash
+    git branch <nombre_rama>
+    #+end_src
+
+****** Ver ramas disponibles
+    #+begin_src bash
+    git branch
+    #+end_src
+
+****** Cambiar de rama
+    #+begin_src bash
+    git checkout <nombre_rama>
+    #+end_src
+
+****** Fusionar una rama
+   - Primero nos posicionamos en la rama sobre la que se va a realizar la fusión
+   - Para realizar la fusión ejecutar:
+
+
+    #+begin_src bash
+    git merge <nombre_rama_a_fusionar>
+    #+end_src
+ 
+****** Eliminar una rama
+    #+begin_src bash
+    git branch -d <nombre_rama>
+    #+end_src
+
+***** Remotos
+****** Clonar un repositorio
+    #+begin_src bash
+    git clone <URL_REPOSITORIO>
+    #+end_src
+
+****** Ver remotos
+    #+begin_src bash
+    git remote -v
+    #+end_src
+
+****** Añadir, eliminar y renombrar remotos
+    #+begin_src bash
+    git remote add <NOMBRE_REMOTO> <URL_REPOSITORIO>   # Añadir remoto
+    git remote rm <NOMBRE_REMOTO>                      # Eliminar remoto
+    git remote rename <NOMBRE_ORIGINAL> <NOMBRE_NUEVO> # Renombrar remoto
+    #+end_src
+
+****** Traer información del remoto
+    #+begin_src bash
+    # Este comando NO realiza la fusión en la rama local
+    # Si se desean incorporar los cambios habría que realizar un git merge
+    git fetch [NOMBRE_REMOTO] # El nombre del remoto por defecto es ORIGIN
+    #+end_src
+
+****** Traer y fusionar cambios del remoto
+    #+begin_src bash
+    git pull [NOMBRE_REMOTO] [NOMBRE_RAMA] # Pull = fetch + merge
+    #+end_src
+
+****** Enviar cambios al remoto
+    #+begin_src bash
+    git push [NOMBRE_REMOTO] [NOMBRE_RAMA]
+    #+end_src
+
+****** Enviar los cambios de una rama al remoto y crear una rama remota asociada
+    #+begin_src bash
+    git push -u NOMBRE_REMOTO NOMBRE_RAMA
+    #+end_src
+*** DONE GitHub
+    CLOSED: [2019-09-23 lun 12:37]
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: uso-github
+    :END:
+
+En este artículo se explicará el uso de la herramienta *GitHub* y las posibilidades que ofrece en el entorno educativo.
+#+hugo: more
+
+**** Videotutoriales
+  - [[https://youtu.be/SJf4iTkMNPo][Sesión 3.1]]
+  - [[https://youtu.be/GMH6hN8FKSU][Sesión 3.2]]
+  - [[https://youtu.be/5EJjRqtpqOM][Sesión 3.3]]
+  - [[https://youtu.be/A5PKw10PmNU][Sesión 3.4]]
+
+**** Índice
+      - Breve descripción y posibilidades en la gestión de tareas del alumnado
+      - Alternativas: GitLab, BitBucket,...
+      - Cuentas
+      - Configuración de la cuenta
+      - Manejo básico de la plataforma
+      - Repositorios: manejo y ajustes
+      - Red social: comentarios, seguidores, etc.
+      - Issues y Proyectos
+      - Colaboración: Forks y Pull Requests
+      - Organizaciones
+
+**** Referencias
+  - [[https://help.github.com/][Ayuda de GitHub]]
+  - [[https://help.github.com/articles/basic-writing-and-formatting-syntax/][Sintaxis de MarkDown]]
+  - [[https://help.github.com/articles/permission-levels-for-a-user-account-repository/#collaborator-access-on-a-repository-owned-by-a-user-account][Permisos de los colaboradores en un repositorio]]
+  - [[https://education.github.com/pack][Solicitud de pack de estudiante]]
+  - [[https://help.github.com/articles/closing-issues-using-keywords/][Cerrar issues a través de mensajes en el commit]]
+
+**** Contenidos
+  - [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-3-presentacion.html][Presentación]]
