@@ -50,7 +50,7 @@ En este artículo se pretende dar una introducción a los comandos más comunes 
 
 **** Referencias
   - [[https://git-scm.com/book/es/v2/][Libro de Git]]
-  - [[https://services.github.com/on-demand/downloads/es_ES/github-git-cheat-sheet/][Hoja de referencia de Git]]
+  - [[https://github.github.com/training-kit/downloads/es_ES/github-git-cheat-sheet/][Hoja de referencia de Git]]
   - [[https://services.github.com/on-demand/downloads/es_ES/github-git-cheat-sheet.pdf][Hoja de referencia de Git (PDF)]]
 
 **** Contenidos
@@ -318,7 +318,7 @@ A continuación se muestran algunas herramientas de desarrollo que considero int
 
 **** Herramientas de desarrollo de navegadores
    - [[https://developers.google.com/web/tools/chrome-devtools/][Chrome DevTools]] (Chrome)
-   - [[https://addons.mozilla.org/es/firefox/addon/firebug/][Firebug]] (Firefox)
+   - [[https://developer.mozilla.org/es/docs/Tools][Firefox Dev Tools]] (Firefox)
 
 **** Servicios de validación
    - [[https://validator.w3.org/][W3C HTML Validation Service]]
