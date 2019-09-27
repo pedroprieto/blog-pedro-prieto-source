@@ -32,7 +32,7 @@ En este artículo se pretende dar una introducción a los comandos más comunes 
 ## Referencias {#referencias}
 
 -   [Libro de Git](https://git-scm.com/book/es/v2/)
--   [Hoja de referencia de Git](https://services.github.com/on-demand/downloads/es%5FES/github-git-cheat-sheet/)
+-   [Hoja de referencia de Git](https://github.github.com/training-kit/downloads/es%5FES/github-git-cheat-sheet/)
 -   [Hoja de referencia de Git (PDF)](https://services.github.com/on-demand/downloads/es%5FES/github-git-cheat-sheet.pdf)
 
 

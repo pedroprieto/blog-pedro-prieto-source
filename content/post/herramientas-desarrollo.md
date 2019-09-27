@@ -39,7 +39,7 @@ A continuación se muestran algunas herramientas de desarrollo que considero int
 ## Herramientas de desarrollo de navegadores {#herramientas-de-desarrollo-de-navegadores}
 
 -   [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/) (Chrome)
--   [Firebug](https://addons.mozilla.org/es/firefox/addon/firebug/) (Firefox)
+-   [Firefox Dev Tools](https://developer.mozilla.org/es/docs/Tools) (Firefox)
 
 
 ## Servicios de validación {#servicios-de-validación}
