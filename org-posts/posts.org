@@ -343,3 +343,199 @@ A continuación se muestran algunas herramientas de desarrollo que considero int
    - [[http://choosealicense.com][Choose a License]]
    - [[https://creativecommons.org/share-your-work/][Creative Commons licenses]] (Para creaciones que no son código, como sitios web, multimedia, textos, libros, etc.)
 
+** Planificación de interfaces web         :@diw_planificacion_interfacesweb:
+*** DONE Fundamentos de la planificación de interfaces web :krug:planificacion:usabilidad:
+    CLOSED: [2019-09-30 lun 10:28]
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: planificacion-fundamentos
+    :END:
+
+    Antes de proceder a la edición de código e incluso antes de la creación de un prototipo es necesario tener claros algunos *principios de diseño* y tomar algunas decisiones relacionadas con el estilo general del sitio, que normalmente vendrán recogidas en la *[[/post/planificacion-guia-estilo][guía de estilo]]*.
+#+hugo: more
+
+En este artículo nos centraremos en analizar algunos de los principios generales de diseño más importantes a tener en cuenta. Para ello se tomará como base el libro "[[http://www.sensible.com/dmmt.html][Don't Make Me Think]]" (/No me hagas pensar/), de Steven Krug.
+
+**** Don't make me think!
+   "No me hagas pensar" es el principio más importante que toda página debería seguir en cuanto a usabilidad. El objetivo principal de toda página web debería ser que fuera evidente, auto-explicativa. El usuario debería ser capaz de ver de un vistazo lo que la página propone sin gastar mucho tiempo pensando sobre ello.
+
+   ¿Cómo de evidente? Lo suficiente como para que una persona que no sea experta en el tema propuesto en la página y que apenas sepa usar el navegador sea capaz de llegar al sitio y decir "Ah, esta página va de...".
+
+**** Errores típicos
+    - Nombres poco claros, como nombres de marcas, específicos del funcionamiento interno de la empresa o siglas o nombres técnicos.
+    - Enlaces y botones que no se muestran de manera obvia y se confunden con texto normal.
+    - Asumir que el usuario conoce una información que en realidad desconoce.
+    - No saber en qué lugar del sitio web se está ni cómo volver a un sitio conocido (como por ejemplo, la página principal).
+    - No ofrecer un punto de entrada claro para empezar a utilizar el sitio.
+    - No mostrar los elementos típicos (menús de navegación, etc.) en los sitios habituales.
+    - Sobrecargar la página con información de manera que no se sepa qué es importante o qué no.
+    - Mezclar el contenido de la página con la publicidad de la misma de manera que sea muy difícil diferenciar ambas cosas.
+
+   El objetivo principal es eliminar todas aquellas preguntas que se pueda hacer el usuario a la hora de utilizar la página.
+
+**** Diseño orientado al escaneo, no a la lectura
+    1. Sigue las *convenciones* del diseño web.
+       - Los elementos (menús, logo, contenido,...) están dispuestos de manera convencional.
+       - Los elementos (cuadros de búsqueda, iconos de vídeo o audio, redes sociales,...) son reconocibles.
+    2. Dispone de una *jerarquía* clara.
+       - Queda claro qué apartados son más importantes que otros.
+       - Los encabezados de distintos niveles son perfectamente distinguibles unos de otros.
+       - Las capas agrupan correctamente los contenidos relacionados entre sí.
+    3. Las páginas están *divididas en áreas* bien definidas.
+    4. Los *enlaces y botones* se distinguen del texto normal.
+    5. No hay contenido que *distraiga* al usuario.
+       - No hay demasiadas zonas que llamen la atención del usuario de manera evidente (animaciones, exclamaciones, anuncios parpadeando,...).
+       - La página muestra un aspecto organizado y es fácil reconocer cada una de las áreas en que está dividida.
+    6. El contenido está *estructurado* de manera que sea fácil escanear la página.
+       - Hay encabezados que separan las secciones de texto.
+       - Queda claro qué encabezado está relacionado con el contenido.
+       - Los párrafos son cortos.
+       - Se utilizan listas para esquematizar el contenido.
+       - La cursiva y la negrita se utilizan pero de manera puntual.
+**** Elecciones sencillas
+   - Los usuarios buscan elecciones sencillas.
+   - Es más recomendable ofrecer pocas opciones  en varios pasos que muchas opciones en pocos pasos.
+   - Las opciones que se ofrecen deben ser lo suficientemente distintas como para no dudar entre una u otra.
+   - Las instrucciones deben desaparecer o minimizarse al máximo. En caso de aparecer, deben ser:
+     - Breves (mínima cantidad de información que sea útil).
+     - Oportunas (deben aparecer exclusivamente cuando sean necesarias).
+     - Visibles (deben captar la atención del usuario y no pasar desapercibidas).
+**** Omisión de palabras inútiles
+   - Es conveniente eliminar la mayoría de palabras inútiles en la página.
+   - Una vez escrito el texto, es conveniente analizarlo para intentar eliminar la mitad de las palabras.
+   - Se debe intentar evitar textos de bienvenida y descripciones al principio de las secciones y en la página principal.
+   - Las instrucciones deben escribirse de manera concisa.
+**** Diseño de la navegación
+***** Tipos de usuarios
+     - Orientados a la navegación.
+     - Orientados a la búsqueda.
+***** Objetivos del menú de navegación
+     - Ayudar a encontrar lo que se está buscando.
+     - Indicar la localización actual dentro del sitio.
+     - Mostrar el contenido del sitio web.
+     - Explicar cómo utilizar el sitio.
+     - Dar confianza en la calidad del sitio.
+***** Convenciones
+   - Los menús de navegación deben aparecer en los sitios convencionales.
+   - La navegación debe de mostrarse de manera consistente en todas las páginas, con algunas excepciones:
+     - Páginas de pago online.
+     - Páginas de registro, suscripción, personalización de preferencias,...
+   - Es conveniente mostrar el logo de la página que actúe de enlace a la página principal en la parte superior izquierda.
+***** Elementos de la navegación
+****** Navegación primaria.
+   - Muestra las secciones principales del sitio.
+****** Utilidades
+   - Son herramientas que utilizará el usuario. Ejemplos: cuadro de búsqueda, carrito de compra, "mi cuenta", enlaces para iniciar sesión,...
+   - Se deben mostrar las cuatro o cinco más importantes en lugar visible (junto a la navegación primaria, por ejemplo).
+   - El resto deben mostrarse en el pie de página.
+****** Enlace a la página principal
+   - En el logo de la empresa.
+   - En la navegación principal.
+****** Navegación secundaria y posteriores
+   - Se debe prestar atención a todos los niveles de navegación, no solo a los principales.
+   - De esta manera se asegura una coherencia a todos los niveles.
+***** Búsqueda
+   - Es conveniente mostrar un cuadro de búsqueda en las utilidades.
+   - El cuadro de búsqueda debe mostrarse de manera convencional (icono de buscar o palabra "Buscar").
+   - No deben mostrarse muchas opciones de búsqueda o filtrado en primera instancia. En su lugar, se deben mostrar cuando ya se haya realizado la primera búsqueda con el objeto de ayudar a filtrar los resultados.
+***** Nombres de las páginas
+   - Se debe mostrar el nombre de cada una de las páginas en la parte superior del contenido.
+   - El nombre debe resaltarse de manera adecuada, ya que es el elemento de mayor jerarquía de la página.
+   - El nombre debe concordar con el nombre de la opción del menú que ha conducido a dicha página.
+***** Localización
+   - El menú de navegación debe resaltar la sección o secciones en las que se está en cada momento.
+   - El resaltado debe ser evidente.
+***** Migas de pan
+   - Deben aparecer en la parte superior.
+   - Se debe utilizar "*>*" para separar niveles.
+   - El último nivel (nombre de la página actual) no debe ser un enlace y debe aparecer destacado.
+***** Pestañas
+   - Son evidentes y fáciles de usar.
+   - Deben estar correctamente configuradas para resaltar la sección actual.
+***** Test de navegación
+   El diseñador siempre piensa que el usuario va a llegar a la página deseada a través de la página principal y desde allí a través de la navegación. Sin embargo, en multitud de ocasiones se llega a una página directamente a través de un enlace enviado por otra persona o a través de un buscador.
+   Por ello, al llegar a una página interior de un sitio web directamente se debería poder contestar a las siguientes preguntas sin demasiada dificultad:
+   - ¿Qué sitio es éste? (Nombre del sitio o compañía)
+   - ¿En qué página estoy? (Nombre de la página)
+   - ¿Cuáles son las secciones principales? (Navegación primaria)
+   - ¿Qué opciones tengo en este nivel? (Navegación local)
+   - ¿En qué lugar me encuentro dentro de la jerarquía? (Localización)
+   - ¿Dónde puedo realizar una búsqueda?
+**** Referencias
+   - [[http://www.sensible.com/dmmt.html][Don't make me think]], enlace a la web del autor del libro, Steven Krug
+   - https://amybughunter.wordpress.com/2014/08/16/book-summary-dont-make-me-think-by-steve-krug/
+   - http://www.squeezedbooks.com/articles/dont-make-me-think-a-common-sense-approach-to-web-usability-%282nd-edition%29--summary.html
+
+*** DONE Guias de estilo                          :guia:estilo:planificacion:
+    CLOSED: [2019-09-30 lun 10:46]
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: planificacion-guia-estilo
+    :END:
+
+Una guía de estilo recoge las normas de diseño que se utilizarán para crear un sitio web. Normalmente hace referencia a una serie de elementos (tipografía, colores, logos, etc.) que se deben utilizar para garantizar la *uniformidad* de la *estructura* y *apariencia visual* del sitio.
+#+hugo: more
+
+**** Logo
+El logo es la imagen del sitio web. Es importante diseñarlo adecuadamente para que refleje correctamente la temática y el contenido del sitio web.
+
+Para diseñar un logo se suele recurrir a algún programa de *[[https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial][dibujo vectorial]]* como [[https://inkscape.org/es/][Inkscape]]. La principal ventaja de los gráficos vectoriales es que no están formados por píxeles, por lo que no pierden calidad. Una vez creado el gráfico vectorial éste puede ser exportado a diferentes *formatos* (PNG, JPG,...) o *personalizado* (blanco y negro, cambio de colores, versiones con o sin texto,...) para su uso en el sitio web.
+
+[[https://upload.wikimedia.org/wikipedia/commons/7/7e/Oldacmelogo.png][https://upload.wikimedia.org/wikipedia/commons/7/7e/Oldacmelogo.png]]
+
+Algunos recursos para crear un logo:
+- https://logomakr.com/
+- [[https://inkscape.org/es/][Inkscape]] (software OpenSource equivalente a Adobe Illustrator)
+- [[https://youtu.be/zhnAHqQQ9gc][Videotutorial: creación de un logo básico con Inkscape]] 
+
+**** Paleta de colores
+A la hora de elegir la paleta de colores es importante definir como mínimo:
+- Un color *principal*
+- Una *paleta* de colores *complementaria* del color principal
+- Un color de fondo
+
+El color principal suele estar presente en el *logo* y todos los aspectos relacionados con la *marca del sitio*. También suele aparecer en los *encabezados* y en los *botones* de formulario que activen la acción principal.
+
+[[https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Nuancier_Pantone_2_%2528Cut_out%2529.jpg/640px-Nuancier_Pantone_2_%2528Cut_out%2529.jpg][https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Nuancier_Pantone_2_%28Cut_out%29.jpg/640px-Nuancier_Pantone_2_%28Cut_out%29.jpg]]
+
+Algunos recursos para generar una paleta de colores:
+- https://colordesigner.io/
+- https://yeun.github.io/open-color/
+- https://coolors.co
+
+**** Tipografía
+La tipografía es uno de los elementos más importantes a tener en cuenta. Se deben elegir cuidadosamente los tipos de letra que mejor casen con la temática del sitio y el diseño del logo. Normalmente se utiliza una tipografía principal para encabezados y otra para el resto del texto.
+
+[[https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Metal_movable_type.jpg/640px-Metal_movable_type.jpg][https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Metal_movable_type.jpg/640px-Metal_movable_type.jpg]]
+
+Algunos recursos para elegir tipografías:
+- https://fonts.google.com/ (Google Fonts ofrece un repositorio de tipografías Open Source para usar libremente en cualquier tipo de proyecto, comercial o no comercial)
+- https://www.smashingmagazine.com/2019/07/gorgeous-free-open-source-typefaces/
+
+**** Estructura
+La estructura del sitio es otro de los aspectos que puede ser incluido en una guía de estilo. La posición de los elementos de navegación (menús, migas de pan,...), el número de capas que tendrá el sitio (contenido, cabecera, pie,...), donde incluir información de contacto (teléfonos, dirección,...) o dónde incorporar una posible área para anuncios son algunos de los puntos que se pueden detallar. Entraremos más en detalle sobre este tema en otros artículos.
+
+[[https://upload.wikimedia.org/wikipedia/commons/e/e7/Diseno-web-responsive-design.jpg][https://upload.wikimedia.org/wikipedia/commons/e/e7/Diseno-web-responsive-design.jpg]]
+
+**** Elementos gráficos
+En este apartado se suele hacer referencia a alguno de estos elementos:
+- Iconos
+- Imágenes (tamaños, uso en fondos de página, efectos, tipos de edición,...)
+- Animaciones
+- Patrones de decoración
+
+[[./images/octicons.png]]
+
+Algunos recursos para elegir elementos gráficos:
+- https://octicons.github.com/
+- https://useiconic.com/open/
+- https://material.io/resources/icons/?style=baseline
+- https://feathericons.com/
+
+**** Ejemplos de guías de estilo
+- [[https://mozilla.design/firefox/][Guía de estilo de Mozilla Firefox]]
+- [[https://design.firefox.com/photon/][Photon Design System]] (para diseño de productos basados en Firefox)
+- [[http://www.upv.es/entidades/ASIC/manuales/guia_estilos_upv.pdf][Guía de estilos de la UPV]]
+- [[https://material.io/design/][Material Design (Google)]]
+
+**** Referencias
+- https://marinarodrigo.com/como-y-por-que-crear-una-guia-de-estilo-para-tu-web/
+- https://www.toptal.com/designers/ui/ui-styleguide-better-ux
