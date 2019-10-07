@@ -539,3 +539,73 @@ Algunos recursos para elegir elementos gráficos:
 **** Referencias
 - https://marinarodrigo.com/como-y-por-que-crear-una-guia-de-estilo-para-tu-web/
 - https://www.toptal.com/designers/ui/ui-styleguide-better-ux
+
+*** DONE Diseño de prototipos     :prototipos:diseño:moqups:wireframe:mockup:
+    CLOSED: [2019-10-07 lun 11:01]
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: diseno-prototipos
+    :END:
+
+  En todo proyecto de desarrollo web es recomendable realizar un prototipo o boceto del interfaz. De esta manera se puede tener una idea aproximada del aspecto visual que tendrá, qué secciones lo compondrán, cómo se verá en pantalla, etc. 
+  #+hugo: more
+
+  El principal objetivo es generar un boceto de manera rápida, sin necesidad de utilizar código. Estos bocetos permiten acordar las características del interfaz web con el cliente o con el resto de miembros del equipo de desarrollo.
+
+  Como paso previo a la creación de un prototipo es necesario [[/post/planificacion-fundamentos][haber planificado adecuadamente la interfaz]] y haber acordado las [[/post/planificacion-guia-estilo][normas de diseño y el aspecto visual]] del sitio.
+
+  Existen varias posibilidades para crear prototipos:
+  - *Papel* - Es la opción más rápida y sencilla.
+  - *Digital* - Hace uso de algún programa de edición sencillo. Puede ofrecer algo de funcionalidad (interacción con enlaces, por ejemplo).
+  - *Nativo* - Está implementado haciendo uso de las tecnologías reales de la aplicación. Normalmente se utiliza como último paso antes del lanzamiento del producto.
+
+**** Prototipos en papel
+   #+CAPTION: Prototipo de papel. Fuente: Wikimedia
+   https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Paper_prototype_of_website_user_interface%2C_2015-04-16.jpg/640px-Paper_prototype_of_website_user_interface%2C_2015-04-16.jpg
+
+   Los prototipos en papel ofrecen una primera aproximación al diseño de la interfaz. Pueden realizarse tan sencillos como se desee (en blanco y negro, en la típica servilleta de bar que se pone como ejemplo de germen de todas las grandes ideas,...) o con un nivel de complejidad más elevado (utilizando distintos tipos de papeles, colores, materiales,...).
+
+   La principal ventaja de este tipo de prototipos es que no necesitan de ningún tipo de conocimiento técnico. Por lo tanto, se suelen utilizar como una primera aproximación para el diseño de la interfaz.
+
+   Una vez creados en papel los bocetos de las distintas páginas que componen el sitio se pueden tomar *fotografías* para simular determinadas interacciones y estados de la aplicación. Esas imágenes pueden utilizarse a su vez para crear *animaciones* y distribuir el prototipo de manera más eficiente sin la necesidad de tener que cargar con el papel de un lado a otro.
+
+   En el siguiente enlace se puede consultar un vídeo sobre cómo Google utiliza este tipo de prototipos: [[https://www.youtube.com/watch?v=JMjozqJS44M][Rapid Prototyping 1 of 3: Sketching & Paper Prototyping]].
+
+**** Prototipos digitales
+   #+CAPTION: Prototipo digital
+   [[./images/prototipo.png]]
+
+   Para la creación de estos prototipos se hace uso de alguna herramienta específica de edición. El objetivo es crear un boceto *más parecido a la realidad* que incluso pueda ofrecer un mínimo nivel de *interactividad*. El diseño puede ser exportado a un *archivo de imagen*, *HTML* o *PDF* para adjuntar a la documentación del proyecto.
+
+   En el siguiente enlace se puede consultar un vídeo sobre cómo Google utiliza este tipo de prototipos: [[https://www.youtube.com/watch?v=KWGBGTGryFk&t=246s][Rapid Prototyping 2 of 3: Digital Prototyping]].
+
+**** Prototipos nativos
+   #+CAPTION: Prototipo nativo
+   https://upload.wikimedia.org/wikipedia/commons/e/e2/Responsive_Web_Design.png
+
+   Los prototipos nativos utilizan las *mismas tecnologías* (lenguajes de programación, librerías,...) y *dispositivos* (teléfonos móviles, pantallas,...) que utilizará la *aplicación real*. Se utilizan por tanto como *último paso* antes del desarrollo de la aplicación real. Una vez el prototipo ha sido correctamente testado en los dispositivos en los que se va a utilizar puede integrarse en la aplicación junto con el resto de componentes (lógica de negocio y almacenamiento de datos).
+
+   En el siguiente enlace se puede consultar un vídeo sobre cómo Google utiliza este tipo de prototipos: [[https://www.youtube.com/watch?v=lusOgox4xMI][Rapid Prototyping 3 of 3: Native Prototyping]].
+
+**** Herramientas de creación de prototipos digitales
+   Existe un gran número de herramientas para creación de prototipos. Muchas de ellas son de pago, aunque hay alternativas gratuitas con una funcionalidad algo más reducida pero que puede ser suficiente para realizar un boceto rápido. Algunas de ellas se enumeran a continuación:
+
+   - [[https://www.figma.com/][Figma]] - Herramienta online. Comercial. Gratuita para 3 proyectos.
+   - [[http://pencil.evolus.vn/][Pencil]] - Programa de escritorio. Open Source.
+   - [[https://wireframe.cc/][wireframe.cc]] - Herramienta online. Comercial. Ofrece demo gratuita.
+   - [[https://moqups.com/][Moqups]] - Herramienta online. Comercial. Ofrece cuentas gratuitas a estudiantes y proyectos Open Source.
+   - [[http://principleformac.com/][Principle]] - Herramienta para Mac. Comercial.
+   - [[https://proto.io/][proto.io]] - Herramienta online. Comercial.
+   - [[https://marvelapp.com/][Marvel]] - Herramienta online. Comercial. Ofrece un plan gratuito para un proyecto.
+   - [[https://www.invisionapp.com/][InVision]] - Herramienta online. Comercial. Ofrece un plan gratuito para un proyecto.
+   - [[https://mockup.io/][mockup.io]] - Herramienta online. Comercial.
+   - [[https://ninjamock.com/][Ninja Mock]] - Herramienta online. Comercial.
+   - [[https://balsamiq.com][Balsamiq]] - Herramienta de escritorio y online. Comercial.
+
+**** Otros recursos
+   A continuación se enumeran algunos enlaces que pueden ser de utilidad en la creación de prototipos:
+
+   - [[https://es.lipsum.com/][Lorem Ipsum]] - Generador de textos de relleno.
+   - [[https://www.smashingmagazine.com/][Smashing Magazine]] - Sitio web relacionado con el desarrollo y diseño web.
+   - [[http://www.webyurt.com/][Web Yurt]] - Sitio web relacionado con el desarrollo y diseño web.
+   - [[https://www.creativebloq.com][Creative Bloq]] - Sitio web dedicado al arte y diseño gráfico.
+
