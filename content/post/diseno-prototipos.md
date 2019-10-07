@@ -52,6 +52,15 @@ Los prototipos nativos utilizan las **mismas tecnologías** (lenguajes de progra
 En el siguiente enlace se puede consultar un vídeo sobre cómo Google utiliza este tipo de prototipos: [Rapid Prototyping 3 of 3: Native Prototyping](https://www.youtube.com/watch?v=lusOgox4xMI).
 
 
+## Diseño web adaptable - Mobile First {#diseño-web-adaptable-mobile-first}
+
+La tendencia actual consiste en diseñar siguiendo la teoría de **Mobile First**, o **Móvil primero**. Esta teoría aboga por realizar el diseño pensando en dispositivos móviles y a continuación añadir o modificar características para adaptar el diseño a otro tipo de dispositivos con pantallas más grandes.
+
+La elección de este patrón de diseño se debe a que **los buscadores dan más peso a los sitios web optimizados para dispositivos móviles** dado que la mayoría de usuarios que se conectan a Internet lo hacen mediante este tipo de dispositivos.
+
+Una vez creado el diseño para móvil se procede a crear las versiones para pantallas más grandes. De esta manera el sitio web **se adapta a distintos tipos de pantallas** siguiendo el [patrón de diseño web adaptativo](https://es.wikipedia.org/wiki/Dise%C3%B1o%5Fweb%5Fadaptable).
+
+
 ## Herramientas de creación de prototipos digitales {#herramientas-de-creación-de-prototipos-digitales}
 
 Existe un gran número de herramientas para creación de prototipos. Muchas de ellas son de pago, aunque hay alternativas gratuitas con una funcionalidad algo más reducida pero que puede ser suficiente para realizar un boceto rápido. Algunas de ellas se enumeran a continuación:
