@@ -56,7 +56,7 @@ En el siguiente enlace se puede consultar un vídeo sobre cómo Google utiliza e
 
 La tendencia actual consiste en diseñar siguiendo la teoría de **Mobile First**, o **Móvil primero**. Esta teoría aboga por realizar el diseño pensando en dispositivos móviles y a continuación añadir o modificar características para adaptar el diseño a otro tipo de dispositivos con pantallas más grandes.
 
-La elección de este patrón de diseño se debe a que **los buscadores dan más peso a los sitios web optimizados para dispositivos móviles** dado que la mayoría de usuarios que se conectan a Internet lo hacen mediante este tipo de dispositivos.
+La elección de este patrón de diseño se debe a que **[los buscadores dan más peso a los sitios web optimizados para dispositivos móviles](https://developers.google.com/search/mobile-sites/mobile-first-indexing)** dado que la mayoría de usuarios que se conectan a Internet lo hacen mediante este tipo de dispositivos.
 
 Una vez creado el diseño para móvil se procede a crear las versiones para pantallas más grandes. De esta manera el sitio web **se adapta a distintos tipos de pantallas** siguiendo el [patrón de diseño web adaptativo](https://es.wikipedia.org/wiki/Dise%C3%B1o%5Fweb%5Fadaptable).
 
