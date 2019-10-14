@@ -616,7 +616,7 @@ Algunos recursos para elegir elementos gráficos:
    - [[http://www.webyurt.com/][Web Yurt]] - Sitio web relacionado con el desarrollo y diseño web.
    - [[https://www.creativebloq.com][Creative Bloq]] - Sitio web dedicado al arte y diseño gráfico.
 
-*** DONE Pautas de accesibilidad
+*** DONE Pautas de accesibilidad        :accesibilidad:accesibility:wai:aria:
     CLOSED: [2019-10-14 lun 13:37]
     :PROPERTIES:
     :EXPORT_FILE_NAME: accesibilidad

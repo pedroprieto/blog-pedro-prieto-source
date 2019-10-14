@@ -1,6 +1,7 @@
 +++
 title = "Pautas de accesibilidad"
 date = 2019-10-14T13:37:00+02:00
+tags = ["accesibilidad", "accesibility", "wai", "aria"]
 categories = ["diw", "diw-planificacion-interfacesweb"]
 draft = false
 +++
