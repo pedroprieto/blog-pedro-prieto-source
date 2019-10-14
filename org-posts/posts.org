@@ -617,7 +617,7 @@ Algunos recursos para elegir elementos gráficos:
    - [[https://www.creativebloq.com][Creative Bloq]] - Sitio web dedicado al arte y diseño gráfico.
 
 *** DONE Pautas de accesibilidad        :accesibilidad:accesibility:wai:aria:
-    CLOSED: [2019-10-14 lun 13:37]
+    CLOSED: [2019-10-14 lun 14:36]
     :PROPERTIES:
     :EXPORT_FILE_NAME: accesibilidad
     :END:
