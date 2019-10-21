@@ -680,3 +680,338 @@ En los siguientes enlaces se ofrece una información más detallada sobre *conse
 
    - [[https://www.w3.org/WAI/standards-guidelines/aria/][Sitio web WAI-ARIA]]
    - [[https://www.w3.org/TR/wai-aria-practices/][Técnicas ARIA para desarrolladores]]
+
+** Estilos y multimedia                         :@diw_estilos_multimedia:css:
+*** DONE Conceptos básicos de CSS
+    CLOSED: [2019-10-21 lun 11:28]
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: conceptos-basicos-css
+    :END:
+
+Este artículo tiene como objetivo ofrecer una introducción sobre *CSS*, explicar los tipos de hojas de estilo, el modelo de cascada y herencia, comprobar qué características están disponibles en los distintos navegadores y proporcionar una serie de recursos donde encontrar información más detallada. 
+#+hugo: more
+
+**** Introducción
+   Las hojas de estilo en cascada *CSS* - /Cascade Style Sheet/ en inglés - se utilizan para *diseñar y dar formato* a las páginas web escritas con HTML. Las razones de su aparición son las siguientes:
+
+   - *HTML* ofrece muy *pocas opciones* para dar formato al texto. Su función es estructurar el texto en secciones tales como tablas, listas, párrafos, etc., pero en cuanto a diseño visual resulta un tanto pobre.
+   - El diseñador de páginas web se encontraba con archivos HTML extremadamente *liosos*, ya que en el mismo texto se agrupaban contenidos, estructuras e instrucciones de formato visual, por lo que su modificación y elaboración resultaba ser muy complicada.
+   - La *modificación* del formato utilizado en un sitio web compuesto por un gran número de páginas resultaba *muy difícil*, ya que se tenían que cambiar manualmente los estilos de cada una de las páginas que formaban el sitio. 
+
+   Frente a esta situación, el organismo W3C decidió crear un sistema por el que las *instrucciones de formato* se encontraran *separadas* de los otros elementos. Así, a partir de la versión 4 de HTML se desaconseja utilizar elementos de formato y se sugiere la utilización de las hojas de estilo en cascada o CSS.
+
+   Un ejemplo de las posibilidades que ofrecen las hojas de estilo se puede encontrar visitando la página [[http://www.csszengarden.com/][Zengarden]], donde se puede observar el efecto que produce en la misma página HTML utilizar una hoja de estilo u otra.
+
+**** Estructura modular
+La versión actual de CSS es *CSS 3*. Esta especificación se ha dividido en una serie de [[https://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3][módulos]] que son desarrollados por separado. Cada uno de dichos módulos hace referencia a una serie de funcionalidades (color, modelo de caja, fuentes, bordes, /layout/, /media queries/, selectores,...).
+
+**** Tipos de hojas de estilo
+   Una hoja de estilos contiene datos de formato relativos a los elementos definidos en la página HTML. Por lo tanto, ambos (documento HTML y hoja de estilo) deben estar relacionados de alguna manera. Existen tres maneras de utilizar hojas de estilo:
+
+   - *Aplicar estilos directamente a elementos HTML*. De esta manera se escribe el código CSS dentro del atributo style de la etiqueta HTML en cuestión.Por ejemplo, para aplicar un estilo css a un párrafo:
+
+   #+BEGIN_SRC html
+       <p style="código_css">HOLA</p>
+   #+END_SRC
+  
+   - *Hojas de estilos internas*. Se utilizan para aplicar estilos a la página en la cual se utiliza. El código de la hoja de estilo se ubicará en la cabecera de la página web, entre las etiquetas siguientes:
+
+   #+BEGIN_SRC html
+     <style type="text/css">
+             <!--  Código_css  -->
+     </style>
+   #+END_SRC
+
+   - *Hojas de estilos externas*. Se utilizan para aplicar el mismo formato a varias páginas de un portal. Se definen en un archivo externo que será consultado por todas las páginas HTML del sitio web, reutilizando por tanto el código. Para ello se escribirá el código CSS en un documento externo con extensión css. Posteriormente se vinculará a la página web mediante la utilización de la siguiente *etiqueta* en la *cabecera* del documento HTML en cuestión:
+
+   #+BEGIN_SRC html
+     <link rel="stylesheet" type="text/css" href="nombre_archivo_css.css">
+   #+END_SRC
+
+**** Cascada y herencia
+   CSS permite definir estilos en varios sitios, tal como hemos visto en el punto anterior. Además, es posible que un elemento reciba estilos de varios orígenes distintos. Algunos ejemplos de ello son:
+
+   - Un elemento tiene asignado un nombre de clase y un identificador. En la hoja de estilos se definen estilos para dicho identificador y dicho nombre de clase.
+   - Un elemento hereda el valor de una propiedad definida en alguno de los elementos que lo contienen.
+   - Un elemento recibe un estilo de una hoja externa, de una hoja interna y de un estilo aplicado directamente en la etiqueta.
+
+   En casos como los descritos, ¿cómo se resuelven los conflictos si se definen valores distintos para la misma propiedad? ¿Son más importantes los estilos definidos para nombres de clase? ¿Los definidos en hojas internas?
+
+   La regla general es la siguiente: *los estilos aplicados a selectores más concretos tienen mayor peso que los aplicados a selectores más generales*. En caso de empate, el *último* estilo que se aplica es el que prevalece (las hojas de estilo externas se considera que se cargan antes que las hojas de estilo internas).
+
+   En concreto, el procedimiento que se aplica es el siguiente (fuente: https://www.w3.org/TR/CSS22/cascade.html#cascade):
+
+   - Se cuenta 1 si la declaración está incluida en un atributo ~style~; si no, se cuenta 0. (Peso "*a*", mayor importancia).
+   - Se cuenta el número de identificadores (ID) que aparezcan en el selector. (Peso "*b*").
+   - Se cuenta el número de atributos (distintos al ID) , clases y pseudo-clases en el selector. (Peso "*c*").
+   - Se cuenta el número de nombres de elementos y pseudo-elementos en el selector. (Peso "*d*", menor importancia).
+
+   Para determinar qué estilo se aplica en caso de conflicto se mira el resultado: el número más alto en la casilla de mayor peso es el que se aplica; en caso de empate, se comprueban los números de los pesos más bajos sucesivamente.
+
+   #+BEGIN_SRC html
+    *             {}  /* a=0 b=0 c=0 d=0 -> especificidad = 0,0,0,0 */
+    li            {}  /* a=0 b=0 c=0 d=1 -> especificidad = 0,0,0,1 */
+    li:first-line {}  /* a=0 b=0 c=0 d=2 -> especificidad = 0,0,0,2 */
+    ul li         {}  /* a=0 b=0 c=0 d=2 -> especificidad = 0,0,0,2 */
+    ul ol+li      {}  /* a=0 b=0 c=0 d=3 -> especificidad = 0,0,0,3 */
+    h1 + *[rel=up]{}  /* a=0 b=0 c=1 d=1 -> especificidad = 0,0,1,1 */
+    ul ol li.red  {}  /* a=0 b=0 c=1 d=3 -> especificidad = 0,0,1,3 */
+    li.red.level  {}  /* a=0 b=0 c=2 d=1 -> especificidad = 0,0,2,1 */
+    #x34y         {}  /* a=0 b=1 c=0 d=0 -> especificidad = 0,1,0,0 */
+    style=""          /* a=1 b=0 c=0 d=0 -> especificidad = 1,0,0,0 . 
+                         Éste último es el que se aplica.*/
+
+   <head>
+     <style type="text/css">
+       #x97z { color: red }
+     </style>
+     </head>
+   <body>
+     <p id="x97z" style="color: green">
+   </body>
+   #+END_SRC
+
+   En el ejemplo, el párrafo tendrá color verde, ya que el valor de su peso "a" es 1. Como el peso "a" es el más importante, es el que se impone a los demás.
+
+**** Hojas de estilo alternativas
+   Es posible incluir más de una hoja de estilo en un sitio web y ofrecer al usuario la posibilidad de usar una u otra mediante el uso de *hojas de estilo alternativas*.
+
+   Algunos navegadores (como Firefox) permiten seleccionar la hoja de estilos a través de sus menús (en Firefox, menú /Ver/ / /Estilo de página/).
+
+   Para incluir hojas de estilo alternativas se debe utilizar la etiqueta ~<link rel="alternate stylesheet">~. A continuación se muestra un ejemplo:
+
+   #+BEGIN_SRC html
+     <link rel="stylesheet" 
+           title="Estilo principal"
+           href="./css/estilos.css">
+
+     <link rel="alternate stylesheet"
+           title="Estilo alternativo 1"
+           href="./css/estilos1.css">
+
+     <link rel="alternate stylesheet"
+           title="Estilo alternativo 2"
+           href="./css/estilos2.css">
+   #+END_SRC
+
+**** Compatibilidad entre navegadores
+En ocasiones es difícil saber si una determinada propiedad CSS, sobre todo las más recientes, es compatible con una determinada versión de navegador. Para ello son muy útiles los siguientes enlaces:
+
+   - [[http://caniuse.com/][Can I Use? (¿Puedo utilizar...?)]]
+   - [[http://www.w3schools.com/cssref/css3_browsersupport.asp][Tabla de compatibilidad de propiedades CSS con los principales navegadores]]
+
+**** Recomendaciones de diseño con CSS
+En el diseño de interfaces es recomendable definir *clases de estilos* para aplicar a determinadas secciones, elementos destacados, etc. De esta manera se conseguirá un código altamente *modular* que permitirá realizar cambios tanto de apariencia como de estructura con relativa facilidad.
+
+Por tanto, se intentará *priorizar el uso de clases* por encima del uso de selectores basados en nombres o agrupaciones de elementos.
+
+**** Enlaces de referencia de CSS
+   - [[https://developer.mozilla.org/es/docs/Learn/CSS][Curso de CSS de Mozilla]] - Excelente curso de CSS de la Fundación Mozilla
+   - [[https://desarrolloweb.com/home/css][Cursos de CSS en desarrolloweb.com]] - Cursos completos de CSS
+   - [[https://www.w3schools.com/css/default.asp][Tutorial CSS en W3Schools]] - Tutorial completo sobre CSS
+   - [[http://w3schools.com/howto/][W3Schools howtos]] - Recetas para crear componentes en CSS
+   - [[https://css-tricks.com][CSS Tricks]] - Sitio web con infinidad de recursos
+   - [[http://www.w3schools.com/cssref/][Guía de referencia de propiedades CSS]] - Listado de propiedades CSS
+   - http://librosweb.es/css/ - Curso completo de CSS pero algo anticuado
+
+*** DONE Notas sobre el modelo de cajas en CSS                  :modelo_caja:
+    CLOSED: [2019-10-21 lun 11:47]
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: modelo-caja-css
+    :END:
+
+El [[https://developer.mozilla.org/es/docs/Web/CSS/CSS_Modelo_Caja/Introducci%C3%B3n_al_modelo_de_caja_de_CSS][modelo de caja de CSS]] tiene como objetivo definir el comportamiento de los elementos en HTML. En concreto define el *contenido*, *relleno*, *bordes* y *márgenes*. Se utiliza en gran medida para disponer los elementos en una estructura determinada (el denominado *layout*). En este artículo veremos un par de características relacionadas con él que pueden ser de mucha utilidad: la propiedad ~box-sizing~ y el comportamiento de la *anchura y altura* de las cajas.
+#+hugo: more
+
+**** La propiedad ~box-sizing~
+  Existe una propiedad en CSS3 denominada ~box-sizing~ que permite cambiar la definición de anchura para ésta que incluya el *contenido, relleno (padding) y bordes* (no se incluye el margen). En este [[http://www.w3schools.com/cssref/css3_pr_box-sizing.asp][enlace]] puedes consultar su funcionamiento.
+
+  De esta manera, al utilizar el código ~box-sizing: border-box;~, no habrá que hacer sumas para calcular el ancho total de las cajas. En este otro [[http://es.learnlayout.com/box-sizing.html][enlace]] puedes encontrar una explicación más detallada.
+
+**** Altura y anchura de los elementos
+  La utilización de porcentajes en la definición de anchuras y alturas tiene algunas diferencias:
+  - La *anchura* de los elementos es *independiente de su contenido*: depende del ancho del elemento contenedor o del ancho de la ventana del navegador en última instancia.
+  - La *altura* de los elementos es *dependiente* de su contenido: si el contenido ocupa más espacio, la altura será mayor; si ocupa menos, será menor.
+
+  Debido a estas características, la utilización del *porcentaje* como unidad de medida varía: mientras que puede utilizarse *sin problemas en la anchura* aunque no se defina una anchura absoluta de base (ya que el 100% corresponde al ancho del contenedor), para que pueda utilizarse en la *altura* deberá definirse una *altura de referencia* en algún elemento *contenedor* para que pueda funcionar correctamente.
+
+  Para solucionar este problema puede utilizarse la unidad ~vh~ en lugar del porcentaje. Puedes encontrar la explicación en este [[http://stackoverflow.com/questions/1622027/percentage-height-html-5-css][enlace]].
+
+  A continuación se muestra un ejemplo de cómo especificar altura de capas: [[http://jsbin.com/hajuki/edit?html,css,output][ver ejemplo de altura de capas]]. 
+
+*** DONE Unidades de medida                        :medida:unidades:viewport:
+    CLOSED: [2019-10-21 lun 12:28]
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: unidades-medida-css
+    :END:
+
+  En este artículo estudiaremos las unidades de medida más utilizadas en CSS, así como las diferencias más importantes entre las unidades *relativas* y las unidades *absolutas*.
+  #+hugo: more
+
+     CSS define distintas unidades para representar medidas. Dichas unidades se pueden consultar en el siguiente enlace: [[http://www.w3schools.com/cssref/css_units.asp][unidades CSS 2.1]].
+
+     CSS 3 define algunas unidades adicionales: [[http://www.w3.org/TR/css3-values/][unidades CSS 3]].
+
+     El uso de una u otra unidad vendrá marcado por el tipo de *pantalla objetivo* (referencia: [[http://www.w3.org/Style/Examples/007/units][aquí]]):
+
+     |           | Recomendado               | Uso ocasional | No recomendado     |
+     |-----------+---------------------------+---------------+--------------------|
+     | Pantalla  | em, px, %                 | ex            | pt, cm, mm, in, pc |
+     | Impresión | em, cm, mm, in, pt, pc, % | px, ex        |                    |
+
+     A continuación veremos un pequeño resumen de las características de las unidades más utilizadas.
+
+**** Unidades absolutas
+  Las unidades absolutas se pueden consultar en este enlace: [[http://www.w3.org/TR/css3-values/#absolute-lengths][unidades absolutas]].
+
+  | unidad | definición                     |
+  |--------+--------------------------------|
+  | ‘cm’   | centímetro                     |
+  | ‘mm’   | milímetros                     |
+  | ‘in’   | pulgadas (1in = 2.54cm)        |
+  | ‘px’   | píxeles (1px = 1/96in)         |
+  | ‘pt’   | puntos (1pt = 1/72in = 0.35mm) |
+  | ‘pc’   | picas (1pc = 12pt = 4.23mm)    |
+
+  La relación entre unidades de medida es la siguiente: 1in = 2.54cm = 25.4mm = 72pt = 6pc 
+
+  En general se utilizarán las unidades absolutas cuando se pretenda determinar el *tamaño exacto* que tendrán los elementos. Estas unidades son especialmente útiles para definir el *tamaño de imágenes* o capas que queremos que ocupen exactamente el tamaño de una imagen.
+
+  Estas unidades son también útiles para definir estilos para *hojas impresas* (por ejemplo, para especificar el tamaño de una fuente en puntos).
+
+  El inconveniente de estas unidades es que *no se adaptan bien a tipos de pantalla distintos* (móviles, tabletas,...) o de distintos tamaños.
+
+**** Unidades relativas
+  Las unidades relativas se pueden consultar en este enlace: [[http://www.w3.org/TR/css3-values/#relative-lengths][unidades relativas]]. Las unidades relativas expresan tamaños en función de otros.
+
+  | unidad | relativa a                                              |
+  |--------+---------------------------------------------------------|
+  | ‘em’   | tamaño de letra del elemento                            |
+  | ‘ex’   | altura del carácter 'x' del tipo de letra del elemento  |
+  | ‘ch’   | anchura del carácter '0' del tipo de letra del elemento |
+  | ‘rem’  | tamaño de letra del elemento raíz                       |
+  | ‘vw’   | 1% de la anchura del viewport                           |
+  | ‘vh’   | 1% de la altura del viewport                            |
+  | ‘vmin’ | 1% de la dimensión más pequeña del viewport             |
+  | ‘vmax’ | 1% de la dimensión más alta del viewport                |
+
+  La ventaja de utilizar estas unidades es que se *adaptan muy bien a distintos tipos y tamaños de pantalla*. 
+
+  El valor de las medidas relativas no se hereda directamente, sino que se hereda su *valor real una vez calculado*. 
+
+  A continuación estudiaremos las características de las unidades más utilizadas.
+
+***** Unidad 'em'
+  Esta unidad hace referencia al *tamaño de letra calculado heredado por el elemento*. Por tanto, para calcular el valor real aplicado habrá que determinar los *valores que se van heredando* de los elementos *contenedores*. A continuación se muestra un ejemplo:
+
+  #+BEGIN_SRC css
+  html {
+    font-size: 12px;
+    text-indent: 1em; /* 1em = 12px */
+  }
+
+  p {                 /* Hereda 1em = 12px; */
+    font-size: 0.5em; /* Tamaño = 6px */
+  }
+
+  p span {            /* Hereda 1em = 6px */
+    font-size: 0.5em; /* Tamaño = 3px */
+  }
+  #+END_SRC
+
+***** Unidad 'rem'
+  Esta unidad tiene una *referencia fija*, que es el *tamaño de letra definido en el elemento raíz*. Por tanto, para calcular el valor real aplicado simplemente hay que mirar el elemento raíz. A continuación se muestra un ejemplo:
+
+  #+BEGIN_SRC css
+  html {
+    font-size: 12px;
+    text-indent: 1rem; /* 1em = 12px */
+  }
+
+  p {                 
+    font-size: 0.5rem; /* Tamaño = 6px */
+  }
+
+  p span {            
+    font-size: 0.5rem; /* Tamaño = 6px */
+  }
+  #+END_SRC
+
+  Estas unidades simplifican los cálculos al tener una referencia fija (no hay que ir calculando valores heredados de los elementos contenedores).
+
+***** Porcentaje
+  El porcentaje suele tomarse como una unidad relativa más. Un porcentaje de un 100% hace referencia al tamaño calculado del elemento contenedor (un tamaño de un 100% en un tipo de letra hace referencia al tamaño del tipo de letra aplicado en el elemento contenedor). Por tanto, para calcular el valor real aplicado habrá que determinar los *valores que se van heredando* de los elementos *contenedores*. A continuación se muestra un ejemplo:
+
+  #+BEGIN_SRC css
+  body {
+    width: 1024px; /* 100% = 1024px */
+  }
+
+  div {            /* Hereda 100% = 1024px */
+    width: 50%;    /* Anchura = 512px */
+  }
+
+  div div {        /* Hereda 100% = 512px */
+    width: 50%;    /* Anchura = 256px */
+  }
+  #+END_SRC
+
+***** Unidades 'vw', 'vh', 'vmin' y 'vmax'
+  Estas unidades hacen referencia al tamaño del *[[https://www.w3schools.com/css/css_rwd_viewport.asp][viewport]]*. CSS define el /viewport/ como el *tamaño del área que se utiliza para representar la página web*. Coincide con el ~<body>~ incluyendo los márgenes. Es importante indicar que en los *navegadores móviles* el /viewport/ tiene un *tamaño superior al tamaño real* de la pantalla: es por ello que las páginas web se muestran completas como vistas desde un zoom de alejamiento (este tema será tratado con más detalle más adelante).
+
+  Estas unidades tienen una *referencia fija*, que es el ancho ('vw'), alto ('vh'), dimensión más pequeña ('vmin') o dimensión más grande ('vmax') del /viewport/. Por tanto, para calcular el valor real aplicado simplemente hay que mirar el elemento raíz. A continuación se muestra un ejemplo:
+
+  #+BEGIN_SRC css
+  /* Suponemos que el ancho de la pantalla
+  del dispositivo es de 1024px, por lo que
+  100vw = 1024px */
+
+  div {            /* 1vw = 1024/100 */
+    width: 50vw;   /* Anchura = 512px */
+  }
+
+  div div {         /* 1vw = 1024/100 */
+    width: 50vw;    /* Anchura = 512px */
+  }
+  #+END_SRC
+
+  Como ocurre con las unidades 'rem', las unidades relativas al /viewport/ simplifican los cálculos al tener una referencia fija.
+*** DONE Minimización de hojas de estilo                :minimizar:optimizar:
+    CLOSED: [2019-10-21 lun 12:39]
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: minimizacion_css
+    :END:
+
+La minimización de código tiene como objetivo *reducir el tamaño del archivo eliminando caracteres innecesarios*. Se utiliza en diseño web para reducir el tamaño de los archivos CSS y JavaScript y así reducir el tiempo de carga del sitio web.
+#+hugo: more
+
+El proceso de minimización es *distinto del de compresión*, ya que el archivo minimizado es totalmente compatible con el original y no requiere de un proceso previo (descompresión) para su correcta interpretación.
+
+El procedimiento consiste en eliminar *espacios en blanco* innecesarios, *saltos de línea* y *comentarios*. En ocasiones también se renombran los nombres de variables (cambiándolas por otros más cortos, como letras) y se optimiza el código eliminando las instrucciones innecesarias o redundantes.
+
+**** Herramientas
+Existen varias herramientas para minimizar código. En concreto, para CSS podemos utilizar algunos de los siguientes servicios online:
+
+- https://jakubpawlowicz.github.io/clean-css/ - Optimizador CSS: además de minimizar es capaz de eliminar reglas duplicadas o reestructurar el código
+- http://cssminifier.com/
+- http://csscompressor.com/
+- http://gpbmike.github.io/refresh-sf/
+
+*** TODO Layout y formularios
+- Formularios HTML - Validación, etc.
+
+*** TODO Diseño responsivo
+- Mobile First + media queries
+*** TODO Ideas
+- Posicionamiento absoluto, floats
+- Animaciones y transiciones CSS
+- API HTML para móvil (cámara, geoloc,...)
+- Componentes CSS+JS (menús, nav, botones,...)
+- Overflow + capas + z-index
+- Imágenes cabecera: tamaños, escalado,...
+- Centrado de elementos
+- Fuentes, iconos, "content"
+- Imágenes vectoriales + píxeles
+- Canvas HTML
+- iFrames
+- Guía de búsqueda de recursos
