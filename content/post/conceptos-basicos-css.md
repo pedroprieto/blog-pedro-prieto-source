@@ -146,5 +146,6 @@ Por tanto, se intentará **priorizar el uso de clases** por encima del uso de se
 -   [Tutorial CSS en W3Schools](https://www.w3schools.com/css/default.asp) - Tutorial completo sobre CSS
 -   [W3Schools howtos](http://w3schools.com/howto/) - Recetas para crear componentes en CSS
 -   [CSS Tricks](https://css-tricks.com) - Sitio web con infinidad de recursos
+-   [CSSScript.com](https://www.cssscript.com) - Más recursos CSS
 -   [Guía de referencia de propiedades CSS](http://www.w3schools.com/cssref/) - Listado de propiedades CSS
 -   <http://librosweb.es/css/> - Curso completo de CSS pero algo anticuado

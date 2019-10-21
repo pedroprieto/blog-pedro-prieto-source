@@ -811,6 +811,7 @@ Por tanto, se intentará *priorizar el uso de clases* por encima del uso de sele
    - [[https://www.w3schools.com/css/default.asp][Tutorial CSS en W3Schools]] - Tutorial completo sobre CSS
    - [[http://w3schools.com/howto/][W3Schools howtos]] - Recetas para crear componentes en CSS
    - [[https://css-tricks.com][CSS Tricks]] - Sitio web con infinidad de recursos
+   - [[https://www.cssscript.com][CSSScript.com]] - Más recursos CSS
    - [[http://www.w3schools.com/cssref/][Guía de referencia de propiedades CSS]] - Listado de propiedades CSS
    - http://librosweb.es/css/ - Curso completo de CSS pero algo anticuado
 
