@@ -4,6 +4,10 @@ theme = "jane"
 enableRobotsTXT = true
 paginate = 3
 
+pygmentsCodeFences = true
+pygmentsStyle = "native"
+# pygmentsOptions = "linenos=true"
+
 defaultContentLanguage = "es"
 [languages.es]
   languageCode = "es"
