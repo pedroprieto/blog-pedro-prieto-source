@@ -101,6 +101,24 @@ Para determinar qué estilo se aplica en caso de conflicto se mira el resultado:
 En el ejemplo, el párrafo tendrá color verde, ya que el valor de su peso "a" es 1. Como el peso "a" es el más importante, es el que se impone a los demás.
 
 
+### !important {#important}
+
+Existe una manera de sobreescribir estilos CSS sin importar las reglas de especificidad: añadiendo `!important` a la regla correspondiente:
+
+```css
+p {
+    color: red !important;
+}
+#parrafo1 {
+    color: green;
+}
+```
+
+```html
+<p id="parrafo1">Será ROJO a pesar de que la regla es menos específica</p>
+```
+
+
 ## Hojas de estilo alternativas {#hojas-de-estilo-alternativas}
 
 Es posible incluir más de una hoja de estilo en un sitio web y ofrecer al usuario la posibilidad de usar una u otra mediante el uso de **hojas de estilo alternativas**.
