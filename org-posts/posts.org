@@ -1014,6 +1014,108 @@ Existen varias herramientas para minimizar código. En concreto, para CSS podemo
 - http://csscompressor.com/
 - http://gpbmike.github.io/refresh-sf/
 
+*** DONE Variables y preprocesadores CSS :variables:preprocesadores:sass:less:
+    CLOSED: [2019-10-22 mar 09:54]
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: variables_preprocesadores_css
+    :END:
+
+En los últimos años han aparecido una gran cantidad de [[https://developer.mozilla.org/es/docs/Glossary/Preprocesador_CSS][preprocesadores CSS]] que permiten incorporar técnicas de lenguajes de programación (variables, anidamiento, [[https://es.wikipedia.org/wiki/Mixin][mixins]],...) a la creación de hojas de estilo. La desventaja que tienen es que el código debe *compilarse* para generar CSS válido que pueda ser utilizado por el navegador.
+
+Frente a esto, es interesante conocer que CSS permite definir *variables* que pueden ser reutilizadas en todo el documento, proporcionando una alternativa sencilla y estándar, aunque lógicamente menos potente.
+#+hugo: more
+
+**** Preprocesadores CSS
+Los preprocesadores CSS permiten utilizar un lenguaje especial para definir código CSS. Dicho lenguaje depende del preprocesador elegido y suele ser muy parecido al CSS convencional.
+
+El lenguaje debe ser *compilado* a CSS para que los navegadores puedan usarlo. A continuación podemos ver un ejemplo de *SASS*:
+
+#+begin_src sass
+$font-stack:    Helvetica, sans-serif
+$primary-color: #333
+
+body
+  font: 100% $font-stack
+  color: $primary-color
+
+nav
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+  li
+    display: inline-block
+
+  a
+    display: block
+    padding: 6px 12px
+    text-decoration: none
+#+end_src
+
+Y el resultado de la compilación en CSS:
+
+#+begin_src css
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+#+end_src
+
+A continuación se enumeran algunos de los preprocesadores CSS más utilizados son:
+- [[https://sass-lang.com/][SASS]]
+- [[http://lesscss.org/][LESS]]
+- [[https://postcss.org/][PostCSS]]
+- [[http://stylus-lang.com/][Stylus]]
+
+**** Variables CSS
+Una de las características quizá más interesantes de utilizar un preprocesador CSS es la posibilidad de crear *variables* que puedan ser reutilizadas en el resto de la hoja de estilos. De esta manera se pueden definir determinados valores (por ejemplo, colores) para poder utilizarlos en múltiples clases CSS. Pensemos por ejemplo en la creación de una biblioteca de componentes CSS personalizados: puede ser interesante *parametrizar* determinados aspectos como el color o el color de fondo para diseñar distintos componentes (botones, menús, tablas,...) que muestren un aspecto visual común y que permitan una posterior personalización. 
+
+Es posible hacer uso de esta característica sin tener que recurrir a un preprocesador haciendo uso de las *[[https://developer.mozilla.org/es/docs/Web/CSS/Using_CSS_custom_properties][propiedades personalizadas CSS]]*. A continuación se muestra un ejemplo:
+
+#+begin_src css -n :hl_lines 2,7,16,23
+:root {
+  --color-fondo-principal: brown;
+}
+
+.uno {
+  color: white;
+  background-color: var(--color-fondo-principal);
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+.dos {
+  color: white;
+  background-color: var(--color-fondo-principal);
+  margin: 10px;
+  width: 75px;
+}
+
+.tres {
+  color: white;
+  background-color: var(--color-fondo-principal);
+  margin: 10px;
+  width: 100px;
+}
+
+#+end_src
+
 *** TODO Layout y formularios
 - Formularios HTML - Validación, etc.
 
@@ -1032,3 +1134,4 @@ Existen varias herramientas para minimizar código. En concreto, para CSS podemo
 - Canvas HTML
 - iFrames
 - Guía de búsqueda de recursos
+- Diseño con clases CSS: BEM y otras estrategias
