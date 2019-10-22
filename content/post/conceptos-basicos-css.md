@@ -154,7 +154,7 @@ En ocasiones es difícil saber si una determinada propiedad CSS, sobre todo las 
 
 En el diseño de interfaces es recomendable definir **clases de estilos** para aplicar a determinadas secciones, elementos destacados, etc. De esta manera se conseguirá un código altamente **modular** que permitirá realizar cambios tanto de apariencia como de estructura con relativa facilidad.
 
-Por tanto, se intentará **priorizar el uso de clases** por encima del uso de selectores basados en nombres o agrupaciones de elementos.
+Por tanto, se intentará **priorizar el uso de clases** por encima del uso de selectores basados en nombres o agrupaciones de elementos. En [este artículo](/post/estrategias_diseno_css/) se intenta entrar más en detalle sobre el tema.
 
 
 ## Enlaces de referencia de CSS {#enlaces-de-referencia-de-css}
