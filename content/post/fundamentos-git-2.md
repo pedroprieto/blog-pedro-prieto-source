@@ -1,6 +1,7 @@
 +++
 title = "Fundamentos de git II"
 date = 2019-09-23T12:18:00+02:00
+tags = ["git"]
 categories = ["diw", "diw-herramientas-desarrollo"]
 draft = false
 +++

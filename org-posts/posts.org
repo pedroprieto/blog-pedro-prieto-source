@@ -24,7 +24,7 @@ Mi nombre es Pedro Prieto. Soy profesor del IES Mare Nostrum de Alicante. Este b
 
 * DIW                                                            :@diw:
 ** Presentación y herramientas de trabajo      :@diw_herramientas_desarrollo:
-*** DONE Fundamentos de Git I
+*** DONE Fundamentos de Git I                                           :git:
     CLOSED: [2019-09-23 lun 11:51]
     :PROPERTIES:
     :EXPORT_FILE_NAME: fundamentos-git-1
@@ -142,7 +142,7 @@ En este artículo se pretende dar una introducción a los comandos más comunes 
    git tag
    #+end_src
 
-*** DONE Fundamentos de git II
+*** DONE Fundamentos de git II                                          :git:
     CLOSED: [2019-09-23 lun 12:18]
     :PROPERTIES:
     :EXPORT_FILE_NAME: fundamentos-git-2
@@ -251,7 +251,7 @@ Este artículo tiene como objetivo profundizar en el manejo de Git con el uso de
     #+begin_src bash
     git push -u NOMBRE_REMOTO NOMBRE_RAMA
     #+end_src
-*** DONE GitHub
+*** DONE GitHub                                                  :git:github:
     CLOSED: [2019-09-23 lun 12:37]
     :PROPERTIES:
     :EXPORT_FILE_NAME: uso-github
@@ -287,7 +287,7 @@ En este artículo se explicará el uso de la herramienta *GitHub* y las posibili
 
 **** Contenidos
   - [[https://pedroprieto.github.io/curso-github/presentaciones/sesion-3-presentacion.html][Presentación]]
-*** DONE Herramientas de desarrollo
+*** DONE Herramientas de desarrollo               :editores:ide:herramientas:
     CLOSED: [2019-09-24 mar 00:43]
     :PROPERTIES:
     :EXPORT_FILE_NAME: herramientas-desarrollo
