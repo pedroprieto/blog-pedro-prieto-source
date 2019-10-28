@@ -1,6 +1,5 @@
 #+hugo_base_dir: ../
 #+hugo_section: post
-#+property: header-args :eval no
 
 * Homepage
 :PROPERTIES:
@@ -1265,6 +1264,292 @@ Como hemos podido ver, tenemos dos posibilidades de enfocar el diseño de clases
 - http://getbem.com/
 - https://frontstuff.io/in-defense-of-utility-first-css
 - https://adamwathan.me/css-utility-classes-and-separation-of-concerns/
+
+*** DONE Tipos de layouts                                            :layout:
+    CLOSED: [2019-10-28 lun 13:15]
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: tipos_layout
+    :END:
+
+   El /layout/ o *estructura* de un interfaz web es la manera de organizar o disponer los elementos visuales en la página. El diseño del layout determina la posición de cada uno de los elementos que componen el interfaz web (cabecera, menús, banners, contenido, etc.).
+#+hugo: more
+
+   Además, el diseño del layout comprende también una serie de decisiones que afectan a las siguientes *características*:
+
+   - Tamaño de los márgenes.
+   - Tamaño y posición de imágenes y figuras.
+   - Número de columnas (o áreas) en que se divide la página.
+   - Áreas dejadas en blanco intencionadamente.
+
+**** Santo Grial
+   Uno de los patrones de diseño más utilizados es un diseño formado por varias (normalmente tres) columnas, con el contenido principal ocupando una de ellas (normalmente en el centro) y el resto de elementos (menús, banners,...) en las otras columnas. Las columnas idealmente deben tener la misma altura independientemente de su contenido y opcionalmente pueden tener bordes o colores de fondo diferenciados.
+   
+   #+BEGIN_SRC ditaa :results silent :file ./images/holy_grial.png
+         +---------------------+
+         +-----+--------+------+
+         |     |        |      |
+         |     |        |      |
+         |     |        |      |
+         |     |        |      |
+         |     |        |      |
+         |     |        |      |
+         +-----+--------+------+
+         +---------------------+
+   #+END_SRC
+
+   #+CAPTION: Diseño de Santo Grial
+   #+ATTR_HTML: :alt Diseño de Santo Grial
+   [[../../images/02_02_holy_grial.png][file:./images/holy_grial.png]]
+
+
+   Aunque parece sencillo de conseguir, no hay ninguna solución óptima para este diseño. Todas ellas tienen algún inconveniente:
+
+   - Visualización incorrecta en algún navegador.
+   - Utilización de muchas etiquetas HTML.
+   - Utilización de etiquetas HTML sin significado semántico (es decir, que se utilicen no para estructurar el contenido, sino para alterar la apariencia visual).
+   - Adaptación incorrecta en dispositivos móviles.
+   - Necesidad de utilizar lenguaje de script.
+
+**** Métodos antiguos
+***** Tablas
+   - Problemas semánticos.
+   - Mezcla de estructura (HTML) con presentación visual.
+   - Difícil de mantener.
+   - Problemas con lectores de pantalla.
+   - Problemas de tiempo de respuesta de los navegadores.
+
+   #+BEGIN_SRC ditaa :results silent :file ./images/layout_tables.png
+        +---------------------------+------------------------------+
+        |                           |                              |
+        |                           |                              |
+        |        tr td 1.1          |                              |
+        |                           |                              |
+        |                           |            td 2.1            |
+        |                           |                              |
+        +---------------------------+                              |
+        |                           |                              |
+        |        tr td 1.2          |                              |
+        |                           |                              |
+        +---------------------------+------------------------------+
+   #+END_SRC
+
+   #+CAPTION: Diseño basado en tablas
+   #+ATTR_HTML: :alt Diseño basado en tablas
+   [[../../images/02_02_tables.png][file:./images/layout_tables.png]]
+
+***** Posicionamiento absoluto
+   - Rígido e inflexible.
+   - Utilizado para versiones que deban ser impresas
+   - Unidades de medida absolutas (cm, mm,...).
+
+***** Anchura fija
+   - Muy popular.
+   - Se crea una capa contenedora que alberga todo el contenido de la página.
+   - Se asigna una anchura fija al contenedor: típicamente un tamaño de 980px, 960px o 760px.
+   - El contenedor se centra automáticamente cuando se muestra en una pantalla grande.
+   - Aparece una barra de desplazamiento horizontal cuando se muestra en una pantalla pequeña.
+   - Utiliza el píxel como unidad de medida principal.
+
+   Ventajas:
+   - Ajuste perfecto. Son sitios que hacen uso de gran cantidad de imágenes y estructuras muy complejas. Necesitan controlar exactamente el tamaño de las capas para que las imágenes acoplen perfectamente.
+   - Fácil de desarrollar y mantener.
+
+   Desventajas:
+   - Poco usabilidad en pantallas pequeñas.
+   - No se adaptan correctamente a dispositivos móviles.
+   - No se adaptan correctamente frente a un aumento de zoom o aumento del tamaño del texto.
+
+**** Diseño responsivo
+   Los métodos actuales de diseño de layouts suelen tener las siguientes características:
+
+   - No utilizan anchuras fijas.
+   - Se adaptan correctamente a pantallas pequeñas y grandes.
+   - Utilizan unidades CSS relativas (ems, rems, porcentajes, valores mínimos y máximos,...).
+   - Utilizan media queries CSS3 para proporcionar versiones distintas a cada dispositivo en función de su resolución de pantalla.
+
+   Ventajas:
+   - Muy buena experiencia de uso independientemente del dispositivo o tamaño de pantalla elegido.
+
+   Desventajas:
+   - Todos los dispositivos reciben todo el código independientemente de si lo van a utilizar o no.
+   - Difícil de desarrollar y testear.
+   - No hay un control perfecto a nivel de píxel: por tanto, puede ser difícil adaptar imágenes de tamaño fijo.
+
+   Ejemplos:
+   - http://designmodo.com/responsive-design-examples/
+   - http://seesparkbox.com/
+
+***** Conclusiones
+   Independientemente del modelo de layout elegido, el objetivo que se persigue es:
+
+   - Proporcionar a los usuarios una buena *experiencia de uso*.
+   - Servir una página web que funcione y se comporte de manera óptima independientemente del dispositivo o tamaño de pantalla utilizado sin comprometer la experiencia de uso.
+
+*** DONE Técnicas para crear layouts                    :layout:flexbox:grid:
+    CLOSED: [2019-10-28 lun 18:02]
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: tecnicas_layout
+    :END:
+
+  En la actualidad existen muchas maneras de crear layouts utilizando CSS. A las técnicas tradicionales (~float~, ~inline-block~) se suman otras nuevas aportadas por CSS3, como [[https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Conceptos_Basicos_de_Flexbox][flexbox]] o [[https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout][CSS Grid Layout]].
+#+hugo: more
+
+  A continuación veremos las principales técnicas de creación de layouts utilizadas en el diseño web.
+
+**** Float
+  Se utilizan para layouts que no necesitan centrado vertical ni alturas de capas iguales.
+
+  Ventajas:
+  - Método más popular.
+  - Al ser el método más popular, los fallos que se producen están muy bien documentados y se han desarrollado muchos métodos para corregirlos.
+
+  Desventajas:
+  - Necesitan ser reseteados ([[http://stackoverflow.com/questions/8554043/what-is-clearfix][clearfix]]). Si se utilizan /media queries/ para personalizar la apariencia en función del dispositivo será necesario hacer un /clear/ para cada adaptación.
+  - No se pueden alinear en vertical.
+  - Las alturas de las capas no son iguales.
+  - Dependen del orden en que aparezcan las capas en el HTML.
+
+**** Inline-block
+  Se utilizan cuando se necesitan layouts con las siguientes características:
+
+  - Sitios que necesitan alineación vertical.
+  - Para evitar tener que realizar el /clear/ de los floats cuando se utilizan /media queries/.
+  - Para realizar menús horizontales utilizando listas.
+
+  Ventajas:
+  - Posibilidad de alineación vertical.
+  - No necesitan hacer /clear/ en diseños complejos adaptados a muchos dispositivos con /media queries/.
+
+  Desventajas:
+  - Las alturas de las capas no son iguales.
+  - Dependen del orden en que aparezcan las capas en el HTML.
+  - Tienen un fallo que consiste en *crear un espacio en blanco adicional* (/whitespace bug/) entre los elementos. La solución si utilizamos listas consiste en utilizar tipos de documento HTML5 y no cerrar los elementos ~<li>~. En este [[http://blog.karenmenezes.com/2013/aug/30/inline-block-conundrum-part-2/][enlace]] se muestra el problema.
+
+  Ejemplo de galería con ~inline-block~: http://karenmenezes.com/inlineblockgrid/
+
+**** Display table
+  La propiedad ~display: table~ automáticamente transforma la apariencia de una capa en la de una tabla. De esta manera se consigue un diseño basado en columnas de manera muy sencilla sin tener que utilizar tablas reales (que, recordemos, no son recomendables).
+
+  Sin embargo, para tener un control total es necesario replicar la estructura de una tabla utilizando ~divs~, por lo que se termina cayendo en el mismo error que al diseñar utilizando tablas.
+
+  #+BEGIN_SRC html
+    <div class="tableWrap">    
+      <div class="tableBlock">    
+
+        <div class="tableRow">
+          <div class="tableCell"> </div>
+          <div class="tableCell"> </div>
+          <div class="tableCell"> </div>
+        </div>
+
+        <div class="tableRow">
+          <div class="tableCell"> </div>
+          <div class="tableCell"> </div>
+          <div class="tableCell"> </div>
+        </div>
+
+      </div>
+    </div> 
+
+  #+END_SRC
+
+  Ventajas:
+  - Posibilidad de alineación vertical.
+  - Permite crear capas de alturas iguales.
+
+  Desventajas:
+  - Es necesario crear ~<div>~ adicionales para simular la estructura de las tablas. No obstante, la especificación indica que no es obligatorio.
+  - Dependen del orden en que aparezcan las capas en el HTML.
+  - Para separar las celdas no se pueden utilizar los márgenes: hay que utilizar la propiedad ~border-collapse~ del elemento padre.
+  - Es posible que el contenido traspase los límites de las celdas.
+  - Es difícil de adaptar para crear diseños responsivos con varios puntos de ruptura.
+  - Problemas con IE6 y IE7.
+
+**** Cajas Flexibles (FlexBox)
+
+  *FlexBox* ofrece un mecanismo muy completo para realizar layouts. Tiene una gran variedad de opciones y es muy versátil.
+
+  Para aprender a manejar FlexBox se pueden consultar estos tutoriales:
+  - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  - https://developer.mozilla.org/es/docs/Web/Guide/CSS/Cajas_flexibles
+  - http://demo.agektmr.com/flexbox/
+
+  Ventajas:
+  - Independencia del orden en que aparezcan las capas en el HTML. Elimina la necesidad de utilizar JavaScript para esto.
+  - Ofrecen alineación vertical.
+  - Permiten crear capas con la misma altura.
+  - Permiten la estructura en filas o columnas de manera sencilla.
+  - Ofrecen una gran flexibilidad en cuanto a las opciones a utilizar.
+  - Las cajas pueden ocupar automáticamente el espacio disponible, crecer o menguar a petición.
+
+  Desventajas:
+  - Existe una especificación inicial que ha quedado desfasada (hay que tener cuidado al buscar tutoriales en Internet).
+  - La sintaxis es algo compleja.
+  - Es necesario utilizar prefijos para soportar todos los navegadores.
+  - No es compatible con IE9 y anteriores.
+
+**** COMMENT Template module
+  Especificación: http://www.w3.org/TR/2009/WD-css3-layout-20090402/ o http://dev.w3.org/csswg/css-template/
+  Código JQuery: http://code.google.com/p/css-template-layout/
+  ¿Abandonado?
+
+**** Grid layout
+  Su funcionamiento consiste en definir una serie de zonas dispuestas a modo de rejilla para a continuación asignar cada capa o sección a la zona correspondiente.
+
+  Tiene múltiples ventajas, entre las que destacan las siguientes:
+  - *Eliminación* total de la necesidad de definir *capas contenedoras*. Bastará con tener una capa para cada área independiente de la página.
+  - Independencia del orden en que aparezcan las capas en el HTML.
+  - *Independencia completa* entre *HTML* y *presentación visual*.
+
+  Para aprender más sobre Grid Layout puedes consultar:
+  - https://css-tricks.com/snippets/css/complete-guide-grid/
+  - https://www.w3schools.com/css/css_grid.asp
+  - https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout/Conceptos_B%C3%A1sicos_del_Posicionamiento_con_Rejillas
+  - https://developer.mozilla.org/es/docs/Web/CSS/grid-template-areas
+
+**** Algunos consejos de diseño
+   - Los bloques que aparecen uno *debajo del otro no presentan problemas*: se muestran correctamente si son ~display: block~ (recordemos que estos elementos introducen saltos de línea, por lo que se muestran uno a continuación del otro).
+   - El *problema* aparece cuando tenemos capas que deben aparecer a la *derecha o izquierda* de otras. En ese caso tendremos que utilizar alguno de los métodos propuestos.
+   - La manera más sencilla de diseñar el layout consiste en hacer *agrupaciones por filas o columnas*:
+     - Se deben buscar las *filas* que lleguen a los extremos de las capas contenedoras.
+     - Dentro de cada fila se procederá a agrupar por *columnas* que lleguen a su vez a los extremos de los contenedores.
+     - Se continuará de esta manera (filas, columnas,...) hasta completar el diseño.
+
+
+   #+BEGIN_SRC  ditaa :results silent :file ./images/disenyo_layout.png
+
+
+
+                                                                                 
+     +------------------------+       +------------------------+       +------------------------+       +------------------------+
+     |        Cabecera        |       |           A            |       |            A           |       |            A           |
+     +------+----------+------+       +------------------------+       +------+-----------+-----+       +------+-----------+-----+
+     |      |          |      |       |                        |       |      |           |     |       |      |           |     |
+     |  L1  |          |      |       |                        |       |      |           |     |       | B11  |           |     |
+     |      |          |      |       |                        |       |      |           |     |       |      |           |     |
+     +------+          |      |       |                        | ----> |      |           |     | ----> +------+           |     |
+     |      |  Cuerpo  |  R1  |       |           B            |       |  B1  |    B2     | B3  |       |      |    B2     | B3  |
+     |      |          |      |       |                        |       |      |           |     |       |      |           |     |
+     |  L2  |          |      |       |                        |       |      |           |     |       | B12  |           |     |
+     |      |          |      |       |                        |       |      |           |     |       |      |           |     |
+     |      |          |      |       |                        |       |      |           |     |       |      |           |     |
+     +------+----------+------+       +------------------------+       +------+-----------+-----+       +------+-----------+-----+
+     |           Pie          |       |           C            |       |            C           |       |            C           |
+     |                        |       |                        |       |                        |       |                        |
+     +------------------------+       +------------------------+       +------------------------+       +------------------------+
+                 :                                                                                                    ^        
+                 |                                                                                                    |         
+                 +----------------------------------------------------------------------------------------------------+            
+                                                                                                                             
+   #+END_SRC
+
+   #+CAPTION: Agrupación por filas y columnas
+   #+ATTR_HTML: :alt Agrupación por filas y columnas
+   [[../../images/02_02_disenyo.png][file:./images/disenyo_layout.png]]
+
+
+
+   Por último, es recomendable pensar en el layout más adecuado para *dispositivos móviles* o pantallas pequeñas. Este tema será abordado con más detalle en otros artículos.
 
 *** TODO Layout y formularios
 - Formularios HTML - Validación, etc.
