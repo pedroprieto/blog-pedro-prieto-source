@@ -95,9 +95,9 @@ Desventajas:
 
 ## Cajas Flexibles (FlexBox) {#cajas-flexibles--flexbox}
 
-**FlexBox** ofrece un mecanismo muy completo para realizar layouts. Tiene una gran variedad de opciones y es muy versátil.
+**FlexBox** ofrece un mecanismo muy completo para realizar layouts. Tiene una gran variedad de opciones y es muy versátil. En este [videotutorial sobre Flexbox](https://youtu.be/DVtKcX6U4Ro) se explica su funcionamiento.
 
-Para aprender a manejar FlexBox se pueden consultar estos tutoriales:
+Los siguientes recursos también son muy interesantes:
 
 -   <https://css-tricks.com/snippets/css/a-guide-to-flexbox/>
 -   <https://developer.mozilla.org/es/docs/Web/Guide/CSS/Cajas%5Fflexibles>
