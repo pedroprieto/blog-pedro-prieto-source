@@ -1494,7 +1494,7 @@ Como hemos podido ver, tenemos dos posibilidades de enfocar el diseño de clases
   ¿Abandonado?
 
 **** Grid layout
-  Su funcionamiento consiste en definir una serie de zonas dispuestas a modo de rejilla para a continuación asignar cada capa o sección a la zona correspondiente.
+  Su funcionamiento consiste en definir una serie de zonas dispuestas a modo de rejilla para a continuación asignar cada capa o sección a la zona correspondiente. En este [[https://youtu.be/Ve7TnakTTAc][videotutorial sobre CSS Grid]] se explica su funcionamiento.
 
   Tiene múltiples ventajas, entre las que destacan las siguientes:
   - *Eliminación* total de la necesidad de definir *capas contenedoras*. Bastará con tener una capa para cada área independiente de la página.

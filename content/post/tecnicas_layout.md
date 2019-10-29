@@ -122,7 +122,7 @@ Desventajas:
 
 ## Grid layout {#grid-layout}
 
-Su funcionamiento consiste en definir una serie de zonas dispuestas a modo de rejilla para a continuación asignar cada capa o sección a la zona correspondiente.
+Su funcionamiento consiste en definir una serie de zonas dispuestas a modo de rejilla para a continuación asignar cada capa o sección a la zona correspondiente. En este [videotutorial sobre CSS Grid](https://youtu.be/Ve7TnakTTAc) se explica su funcionamiento.
 
 Tiene múltiples ventajas, entre las que destacan las siguientes:
 
