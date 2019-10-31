@@ -1841,6 +1841,91 @@ La mayoría de los navegadores permiten almacenar valores introducidos en formul
    - [[http://www.slideshare.net/AaronGustafson/learning-to-love-forms-web-directions-south-07][Recomendaciones para diseño de formularios (en inglés)]]
    - [[http://www.slideshare.net/psykoreactor/best-practices-for-form-design][Consejos de usabilidad de formularios (en inglés)]]
 
+*** DONE Fuentes en CSS                                             :fuentes:
+    CLOSED: [2019-10-31 jue 16:12]
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: css_fonts
+    :END:
+En este artículo se aborda el uso de tipos de letra (fuentes) en CSS: cómo incorporar fuentes desde *servidores externos*, qué tipos de *fuente genéricos* existen y cómo establecer *tipos de fuentes seguros* para que sean compatibles con todos los navegadores y sistemas operativos.
+#+hugo: more
+
+**** Tipos de fuente
+En general podemos distinguir 5 grandes tipos de fuentes:
+- *Serif* :: Tipo de letra con remates en los extremos de las líneas. Se suele utilizar mucho en textos impresos. Tiene un aspecto visual más formal.
+- *Sans-Serif* :: Tipo de letra sin remates. Suele utilizarse para textos en pantalla. Se considera más informal.
+- *Monospaciada* :: Tipo de letra monoespaciada: todos los caracteres ocupan el mismo ancho. Se suele utilizar para código.
+- *Cursiva* :: Tipo de letra que simula la escritura a mano.
+- *Fantasía* :: Tipo de letra que muestra caracteres extraños o personalizados.
+
+
+   #+CAPTION: Tipos de fuente
+[[./images/font_types.png]]
+
+**** Fuentes en CSS
+En CSS se pueden distinguir dos tipos de fuentes que pueden utilizarse con la propiedad ~font-family~:
+- *Genéricas* :: Son unos tipos de fuente consideradas *seguras*, ya que son compatibles con todos los navegadores y sistemas operativos. El tipo de letra que se mostrará corresponderá al tipo de letra configurada por defecto en el sistema correspondiente. Por ejemplo, si un navegador Firefox tiene definida "Arial" como tipo de letra Sans-Serif predeterminada, un tipo de letra ~sans-serif~ en CSS se mostrará en pantalla como "Arial". En este enlace se puede ver un [[https://jsbin.com/nuhuzux/edit?html,css,output][ejemplo de los tipos de letra genéricos en CSS]]. Dichos tipos genéricos son:
+  - ~serif~
+  - ~sans-serif~
+  - ~monospace~
+  - ~cursive~
+  - ~fantasy~
+- *Tipos de letra concretos* :: Por ejemplo, ~font-family: "Arial"~. Hay que tener en cuenta que especificar un tipo de letra concreto implica dar por supuesto que dicho tipo de letra *está instalada en el sistema operativo del cliente* (a no ser que se importe un tipo de letra desde un archivo o servidor externo, que veremos en un apartado posterior). Si el tipo de letra especificado no está disponible, el navegador mostrará el tipo de letra que tenga configurado por defecto. Además, es casi seguro que [[https://www.w3.org/Style/Examples/007/fonts.en.html][distintos sistemas operativos mostrarán las fuentes de manera diferente]].
+
+**** Configuración segura de tipos de fuentes
+A la hora de definir los tipos de fuente mediante la propiedad ~font-family~ es una buena práctica especificar no una, sino *varios tipos de fuente separados por comas* indicando *en último lugar un tipo de fuente genérica*. El navegador tratará de cargar el tipo de fuente de la primera opción y si no lo consigue, probará el siguiente. De esta manera garantizamos en última instancia que se mostrará un tipo de fuente adecuado (/serif/, /sans-serif/, /monospace/, /cursive/ o /fantasy/) independientemente del navegador o sistema operativo utilizado.
+
+Algunos ejemplos de tipos de fuente seguros son:
+
+#+begin_src css
+
+font-family: "Times New Roman", Times, serif;
+font-family: Arial, Helvetica, sans-serif;
+font-family: "Courier New", Courier, monospace;
+
+#+end_src
+
+**** Cargar fuentes desde archivos o URLs
+Para incluir una fuente desde un archivo (tanto almacenado en el propio servidor como en una URL ajena) se utiliza la propiedad ~@font-face~ de CSS:
+
+#+begin_src css
+  @font-face {
+      font-family: miFuente;
+      src: url(ruta_archivo_fuente.woff);
+  }
+#+end_src
+
+Una vez importada puede utilizarse así:
+
+#+begin_src css
+div {
+  font-family: miFuente;
+}
+#+end_src
+
+Algunos servicios como [[https://fonts.google.com/][Google Fonts]] ofrecen la posibilidad de seleccionar una o varias fuentes para incorporar a nuestra web utilizando etiquetas ~<link>~ en el archivo HTML o ~@import~ en CSS (este último método es [[https://stackoverflow.com/questions/1022695/difference-between-import-and-link-in-css][menos aconsejable]]). Si accedemos a la URL definida en dicha etiqueta ~<link>~ veremos que el código corresponde a código CSS que hace uso de la regla ~@font-face~ para cargar las fuentes correspondientes. A continuación se muestra un ejemplo para incorporar la fuente ~Roboto~:
+
+#+begin_src html
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+#+end_src
+
+De manera alternativa se puede cargar a través de CSS (menos aconsejable, tal como hemos comentado antes):
+
+#+begin_src html
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  </style> 
+#+end_src
+
+Una vez incluida la etiqueta ~<link>~ en el archivo HTML podremos hacer uso de la fuente en los ficheros CSS de la siguiente maner:
+
+#+begin_src css
+  font-family: 'Roboto', sans-serif;
+#+end_src
+
+**** Más información
+Para obtener más información sobre fuentes se puede consultar el artículo "[[https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization?hl=es][Optimización de fuentes web]]" de Google. En él se explica con mayor detalle la teoría relacionada con fuentes, tipos de formatos para almacenar fuentes (formatos ~woff~, ~woff2~ o ~truetype~), compresión o subdivisión de Unicode para seleccionar los glifos correspondientes a una determinada familia de lenguajes (latino, cirílico, griego,...).
+
+
 *** TODO Diseño responsivo
 - Mobile First + media queries
 *** TODO Ideas
