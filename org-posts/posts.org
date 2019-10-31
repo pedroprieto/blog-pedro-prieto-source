@@ -1902,7 +1902,9 @@ div {
 }
 #+end_src
 
-Algunos servicios como [[https://fonts.google.com/][Google Fonts]] ofrecen la posibilidad de seleccionar una o varias fuentes para incorporar a nuestra web utilizando etiquetas ~<link>~ en el archivo HTML o ~@import~ en CSS (este último método es [[https://stackoverflow.com/questions/1022695/difference-between-import-and-link-in-css][menos aconsejable]]). Si accedemos a la URL definida en dicha etiqueta ~<link>~ veremos que el código corresponde a código CSS que hace uso de la regla ~@font-face~ para cargar las fuentes correspondientes. A continuación se muestra un ejemplo para incorporar la fuente ~Roboto~:
+Algunos servicios como [[https://fonts.google.com/][Google Fonts]] ofrecen la posibilidad de seleccionar una o varias fuentes para incorporar a nuestra web utilizando etiquetas ~<link>~ en el archivo HTML o ~@import~ en CSS (este último método es [[https://stackoverflow.com/questions/1022695/difference-between-import-and-link-in-css][menos aconsejable]]). 
+
+A continuación se muestra un ejemplo para incorporar la fuente ~Roboto~:
 
 #+begin_src html
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
@@ -1916,15 +1918,25 @@ De manera alternativa se puede cargar a través de CSS (menos aconsejable, tal c
   </style> 
 #+end_src
 
-Una vez incluida la etiqueta ~<link>~ en el archivo HTML podremos hacer uso de la fuente en los ficheros CSS de la siguiente maner:
+Si [[https://fonts.googleapis.com/css?family=Roboto&display=swap][accedemos a la URL]] definida en la etiqueta ~<link>~ o en ~@import~ veremos que el código corresponde a código CSS que hace uso de la regla ~@font-face~ para cargar las fuentes correspondientes. 
+
+Una vez incluida la etiqueta ~<link>~ en el archivo HTML o la regla ~@import~ en CSS podremos hacer uso de la fuente en los ficheros CSS de la siguiente manera:
 
 #+begin_src css
   font-family: 'Roboto', sans-serif;
 #+end_src
 
 **** Más información
-Para obtener más información sobre fuentes se puede consultar el artículo "[[https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization?hl=es][Optimización de fuentes web]]" de Google. En él se explica con mayor detalle la teoría relacionada con fuentes, tipos de formatos para almacenar fuentes (formatos ~woff~, ~woff2~ o ~truetype~), compresión o subdivisión de Unicode para seleccionar los glifos correspondientes a una determinada familia de lenguajes (latino, cirílico, griego,...).
+Para obtener más información sobre fuentes se puede consultar el artículo "[[https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization?hl=es][Optimización de fuentes web]]" de Google. En él se explica con mayor detalle la teoría relacionada con fuentes, tipos de formatos para almacenar fuentes (formatos ~woff~, ~woff2~ o ~truetype~), compresión o subdivisión de Unicode para seleccionar los caracteres correspondientes a una determinada familia de lenguajes (latino, cirílico, griego,...).
 
+**** Referencias
+- https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization?hl=es
+- https://developer.mozilla.org/es/docs/Web/CSS/@font-face
+- https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp
+- https://www.w3.org/Style/Examples/007/fonts.en.html
+- https://stackoverflow.com/questions/14676613/how-to-import-google-web-font-in-css-file
+- https://stackoverflow.com/questions/56141957/difference-between-font-face-and-import-url
+- https://stackoverflow.com/questions/1022695/difference-between-import-and-link-in-css
 
 *** TODO Diseño responsivo
 - Mobile First + media queries
