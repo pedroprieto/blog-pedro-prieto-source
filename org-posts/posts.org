@@ -2417,34 +2417,80 @@ Para obtener más información sobre animaciones pueden consultarse los siguient
 - [[https://www.w3schools.com/css/css3_animations.asp]] 
 - [[https://developer.mozilla.org/es/docs/Web/CSS/@keyframes]] 
 
-*** Audio en la web :audio:
+*** DONE Audio y vídeo en HTML                                  :audio:video:
+    CLOSED: [2019-11-12 mar 00:55]
     :PROPERTIES:
-    :EXPORT_FILE_NAME: audio_web
+    :EXPORT_FILE_NAME: audio_video_html
     :END:
 
-**** Fundamentos técnicos
+HTML5 define las etiquetas ~<audio>~ y ~<video>~ para incorporar archivos de audio y vídeo respectivamente en páginas web. En este artículo veremos cómo utilizar dichas etiquetas, qué *formatos* de vídeo y audio son compatibles con los distintos navegadores y qué *programas* podemos utilizar para *editar* y *realizar conversiones* entre distintos formatos.
+#+hugo: more
 
-**** Formatos
+**** Audio
+***** Etiqueta ~<audio>~
+Los archivos de audio pueden insertarse en una página web mediante la etiqueta ~<audio>~. Dicha etiqueta permite especificar *varios archivos de audio* de manera *ordenada*. De esta manera, el navegador *intentará reproducir el primer archivo de la lista para el que tenga soporte*. 
 
-**** Software
-Edición, conversión
+#+begin_src html
+ <audio controls>
+  <source src="cancion.ogg" type="audio/ogg">
+  <source src="cancion.mp3" type="audio/mpeg">
+  El navegador no soporta la etiqueta audio.
+</audio> 
+#+end_src
 
-**** Insertar audio en la web
-Etiquetas, audio vs música de fondo
+En el ejemplo anterior, el navegador intentará reproducir el archivo ~cancion.ogg~; en caso de que no soporte ese tipo de archivo, intentará reproducir ~cancion.mp3~.
 
-*** Vídeo en la web :video:
-    :PROPERTIES:
-    :EXPORT_FILE_NAME: video_web
-    :END:
+La etiqueta ~<audio>~ admite varios atributos. En el caso del ejemplo, el atributo ~controls~ indica que se deben mostrar los controles de reproducción.
 
-**** Fundamentos técnicos
+Para más información sobre las opciones de la etiqueta ~<audio>~ se pueden consultar los siguientes enlaces:
+- https://developer.mozilla.org/es/docs/Web/HTML/Elemento/audio
+- https://www.w3schools.com/tags/tag_audio.asp
 
-**** Formatos
+***** Formatos de audio
+Los principales formatos utilizados para audio son:
+- *MP3* - Formato más utilizado. Compatible con *todos los navegadores*.
+- *OGG* - Formato OGG Vorbis. No compatible con IE ni con Safari.
+- *WAV* - No compatible con IE.
 
-**** Software
-edición, conversión
+Para más información sobre compatibilidad de formatos multimedia puede consultarse:
+- https://developer.mozilla.org/es/docs/Web/HTML/Formatos_admitidos_de_audio_y_video_en_html5
 
-**** Insertar vídeo en la web
+***** Programas de edición de audio
+- [[https://www.audacityteam.org/][Audacity]] - Programa de edición de audio Open Source.
+
+**** Vídeo
+***** Etiqueta ~<video>~
+Los archivos de vídeo pueden insertarse en una página web mediante la etiqueta ~<video>~. Dicha etiqueta permite especificar *varios archivos de vídeo* de manera *ordenada*. De esta manera, el navegador *intentará reproducir el primer archivo de la lista para el que tenga soporte*. 
+
+#+begin_src html
+ <video width="320" height="240" controls>
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.ogg" type="video/ogg">
+  El navegador no soporta la etiqueta video.
+</video> 
+#+end_src
+
+En el ejemplo anterior, el navegador intentará reproducir el archivo ~video.mp4~; en caso de que no soporte ese tipo de archivo, intentará reproducir ~video.ogg~.
+
+La etiqueta ~<video>~ admite varios atributos. En el caso del ejemplo, el atributo ~controls~ indica que se deben mostrar los controles de reproducción.
+
+Para más información sobre las opciones de la etiqueta ~<video>~ se pueden consultar los siguientes enlaces:
+- https://developer.mozilla.org/es/docs/Web/HTML/Elemento/video
+- https://www.w3schools.com/tags/tag_video.asp
+
+***** Formatos de vídeo
+Los principales formatos utilizados para vídeo son:
+- *MP4* - Contenedor MP4, códec de vídeo H264 y códec de audio AAC. Formato más utilizado. Compatible con *todos los navegadores*. 
+- *OGG* - Contenedor OGG, códec de vídeo Theora y códec de audio Vorbis. No compatible con IE ni con Safari.
+- *WebM* - Contenedor WebM, códec de vídeo VP8 y códec de audio Vorbis. No compatible con IE ni con Safari.
+
+Para más información sobre compatibilidad de formatos multimedia puede consultarse:
+- https://developer.mozilla.org/es/docs/Web/HTML/Formatos_admitidos_de_audio_y_video_en_html5
+
+***** Programas de edición de vídeo
+- [[https://www.openshot.org/es/][Openshot]] - Editor de vídeo Open Source
+- [[https://handbrake.fr/][Handbrake]] - Conversor de formatos de vídeo
+- [[https://obsproject.com/es/][OBS Studio]] - Software de grabación de vídeo y transmisión en vivo
 
 * TODO Ideas
 - Posicionamiento absoluto, floats
