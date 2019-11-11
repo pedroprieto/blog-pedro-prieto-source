@@ -98,3 +98,8 @@ A continuación se indican algunos enlaces con más información sobre el tema:
 -   [MDN - El elemento `<picture>`](https://developer.mozilla.org/es/docs/Web/HTML/Elemento/picture)
 -   [MDN - Imágenes responsivas](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia%5Fand%5Fembedding/Responsive%5Fimages)
 -   [Generador de imágenes responsivas](https://www.responsivebreakpoints.com/)
+
+
+## Aplicar estilos a imágenes {#aplicar-estilos-a-imágenes}
+
+En ocasiones hacer que las imágenes se muestren adecuadamente puede ser complicado. En el siguiente enlace se muestran algunas [técnicas para personalizar la apariencia de las imágenes mediante CSS](https://www.w3schools.com/css/css3%5Fimages.asp). En él se muestran técnicas de **centrado**, **diseño responsivo** o **creación de efectos o filtros**.

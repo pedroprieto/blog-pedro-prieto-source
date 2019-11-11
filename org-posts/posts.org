@@ -2293,6 +2293,9 @@ A continuación se indican algunos enlaces con más información sobre el tema:
 - [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images][MDN - Imágenes responsivas]] 
 - [[https://www.responsivebreakpoints.com/][Generador de imágenes responsivas]] 
 
+**** Aplicar estilos a imágenes
+En ocasiones hacer que las imágenes se muestren adecuadamente puede ser complicado. En el siguiente enlace se muestran algunas [[https://www.w3schools.com/css/css3_images.asp][técnicas para personalizar la apariencia de las imágenes mediante CSS]]. En él se muestran técnicas de *centrado*, *diseño responsivo* o *creación de efectos o filtros*.
+
 *** Animaciones :animaciones:
     :PROPERTIES:
     :EXPORT_FILE_NAME: animaciones_web
