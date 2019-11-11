@@ -2296,10 +2296,126 @@ A continuación se indican algunos enlaces con más información sobre el tema:
 **** Aplicar estilos a imágenes
 En ocasiones hacer que las imágenes se muestren adecuadamente puede ser complicado. En el siguiente enlace se muestran algunas [[https://www.w3schools.com/css/css3_images.asp][técnicas para personalizar la apariencia de las imágenes mediante CSS]]. En él se muestran técnicas de *centrado*, *diseño responsivo* o *creación de efectos o filtros*.
 
-*** Animaciones :animaciones:
+*** DONE Transformaciones, transiciones y animaciones en CSS    :animaciones:transiciones:transformaciones:
+    CLOSED: [2019-11-12 mar 00:09]
     :PROPERTIES:
-    :EXPORT_FILE_NAME: animaciones_web
+    :EXPORT_FILE_NAME: transiciones_css
     :END:
+
+En este artículo estudiaremos las herramientas disponibles en CSS para crear transformaciones, transiciones y animaciones.
+#+hugo: more
+
+**** Transformaciones
+Las transformaciones CSS permiten *mover*, *rotar*, *escalar* o *inclinar* elementos. CSS permite realizar transformaciones *2D* y *3D*.
+
+Las transformaciones en principio son *estáticas*: es decir, no están animadas (aunque pueden estarlo mediante transiciones o animaciones). Un ejemplo de transformación sería el siguiente:
+
+#+begin_src css
+  #div1 {
+    transform: rotate(20deg); /* Rotación 2D de 20º */
+  }
+
+  #div2 {
+      transform: rotateY(150deg); /* Rotación 3D de 150º en el eje Y */
+  }
+
+#+end_src
+
+En este enlace puede verse un [[https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_rotate][ejemplo de rotación 2D]]. En este otro puede verse un [[https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_rotateY][ejemplo de rotación 3D]].
+
+En los siguientes enlaces puede consultarse información más detallada sobre las distintas transformaciones que pueden realizarse en CSS:
+- [[https://www.w3schools.com/css/css3_2dtransforms.asp][Transformaciones 2D]]
+- [[https://www.w3schools.com/css/css3_3dtransforms.asp][Transformaciones 3D]]
+
+**** Transiciones
+Las *transiciones CSS* permiten realizar *cambios graduales de determinadas propiedades con una duración determinada*. Para definir una transición es necesario especificar:
+1. La(s) propiedad(es) a animar
+2. La duración de la transición
+3. Opcionalmente, el retraso y la curva de velocidad de la transición
+
+Es importante tener claro que la transición se ejecutará *cuando se produzca un cambio en el valor de la propiedad definida en la transición*. Por ejemplo, si se define una transición para la propiedad ~width~ de una capa, la transición se producirá cuando se realice un cambio en la anchura de dicha capa. Los cambios de valor de la propiedad pueden realizarse básicamente de *dos maneras*:
+1. A través de una [[https://www.w3schools.com/css/css_pseudo_classes.asp][pseudo-clase]] (como por ejemplo, ~:hover~, que se activa al pasar el ratón por encima)
+2. A través de JavaScript
+
+Por último, hay que tener en cuenta que *solo se pueden realizar transiciones (y animaciones) sobre propiedades CSS que sean [[https://www.w3schools.com/cssref/css_animatable.asp][animables]]*.
+
+A continuación se muestra un ejemplo de transición de la propiedad ~width~ de una capa (en este enlace puede verse el [[https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1][ejemplo en ejecución]]):
+#+begin_src css
+  div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+  }
+
+  div:hover {
+    width: 300px;
+  }
+#+end_src
+
+En el ejemplo se ha definido una transición para la propiedad ~width~ con una duración de 2 segundos. Cuando cambie el valor de dicha propiedad, el cambio no se realizará bruscamente, sino que se realizará *progresivamente hasta alcanzar el nuevo valor pasados 2 segundos*. En este caso el cambio de valor de ~width~ se produce al pasar el ratón por encima de la capa, aunque también funcionaría si se cambia el valor de dicha propiedad ~width~ a través de JavaScript.
+
+A continuación se muestra un [[https://jsbin.com/qugopah/1/edit?html,css,js,output][ejemplo de transición con pseudo-clases y JavaScript]].
+
+En el siguiente enlace puede consultarse más [[https://www.w3schools.com/css/css3_transitions.asp][información sobre transiciones CSS]].
+
+**** Animaciones
+Las animaciones CSS permiten ejecutar *cambios de estilos* sobre un determinado elemento de manera *gradual* a través de una serie de *estados* denominados *fotogramas clave (keyframes)*.
+
+Un ejemplo de animación sería el siguiente:
+#+begin_src css
+  /* Definición de la animación */
+  @keyframes cambios{
+      0% {
+          background-color: red;
+          width: 100px;
+      }
+      25% {
+          background-color: yellow;
+          width: 50px;
+          transform: translate(0, 100px);      
+      }
+      50% {
+          background-color: blue;
+          width: 100px;
+          transform: translate(100px, 100px);      
+
+      }
+      75% {
+          background-color: blue;
+          width: 150px;
+          transform: translate(100px, 0);      
+
+      }
+      100% {
+          background-color: red;
+          width: 100px;
+          transform: translate(0, 0);      
+
+      }
+  }
+  /* Elemento que recibe la animación */
+  div {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      animation-name: cambios;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+  } 
+#+end_src
+
+El funcionamiento del ejemplo se describe a continuación:
+- En primer lugar se definen los fotogramas clave mediante ~@keyframes~ indicando el nombre de la animación (~cambios~). 
+- En este caso se definen 5 fotogramas clave que representan los estilos deseados en los instantes de tiempo definidos en porcentajes.
+- En cada fotograma clave es posible definir varios estilos.
+- Los cambios de estilos entre fotogramas clave se realizan progresivamente mediante *transiciones*.
+- Por último, se asigna la animación a la capa deseada mediante la propiedad ~animation-name~ indicando el nombre de la animación definida con anterioridad (~cambios~) y se especifica un tiempo mediante ~animation-duration~.
+- Opcionalmente se pueden definir el número de veces que se ejecutará la animación con ~animation-iteration-count~.
+
+Para obtener más información sobre animaciones pueden consultarse los siguientes enlaces:
+- [[https://www.w3schools.com/css/css3_animations.asp]] 
+- [[https://developer.mozilla.org/es/docs/Web/CSS/@keyframes]] 
 
 *** Audio en la web :audio:
     :PROPERTIES:
@@ -2339,7 +2455,8 @@ edición, conversión
 - Imágenes cabecera: tamaños, escalado,...
 - Centrado de elementos
 - Iconos, "content"
-- Canvas HTML
 - iFrames
 - Guía de búsqueda de recursos
 - Artículos sobre optimización de descarga / velocidad de conexión
+- Animaciones con GIF y APNG
+- Canvas y SVG
