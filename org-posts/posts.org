@@ -2214,32 +2214,84 @@ En el caso de querer utilizar un determinado recurso y *no tener claro* bajo qu�
 - https://choosealicense.com/ - Asistente para elegir una licencia copyleft.
 - [[https://commons.wikimedia.org]] - Recursos multimedia con licencias copyleft
  
-*** Imágenes en la web :imagenes:
+*** DONE Imágenes en la web                                        :imagenes:
+    CLOSED: [2019-11-11 lun 13:22]
     :PROPERTIES:
     :EXPORT_FILE_NAME: imagenes_web
     :END:
 
+Las imágenes incluidas en los sitios web son responsables de gran parte del *tamaño de descarga*. Por tanto, es de vital importancia utilizar las técnicas adecuadas tanto para su *correcta visualización* (independientemente del tipo de dispositivo utilizado) como para su *optimización de tamaño* de cara a mejorar la velocidad de carga del sitio.
 #+hugo: more
 
+**** Fundamentos técnicos
+***** Tipos de imagen
 
-**** Tipos: raster vs vector
+#+caption: Imagen raster y vectorial
+https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Bitmap_VS_SVG.svg/320px-Bitmap_VS_SVG.svg.png
 
-**** Profundidad de color
+Podemos distinguir entre dos grandes grupos de imágenes:
+- *Mapas de bits* (/raster/) - Son imágenes compuestas por *píxeles*. Son las captadas por las cámaras o creadas por programas de edición.
+- *Vectoriales* - Son imágenes que muestran su información mediante *descripciones matemáticas*. Están creadas exclusivamente por programas de edición.
 
-**** Resolución
+Las imágenes de [[https://es.wikipedia.org/wiki/Imagen_de_mapa_de_bits][mapa de bits]] se suelen utilizar en *fotografías*. Tienen una *resolución fija*, por lo que *al ampliarse pierden calidad* (a este proceso se le denomina [[https://es.wikipedia.org/wiki/Aliasing#En_la_computaci%C3%B3n_gr%C3%A1fica][aliasing]]). Suelen ocupar *mucho espacio de almacenamiento* y por ello se suelen almacenar en formatos que soportan *compresión*.
 
-**** Compresión
+Las imágenes [[https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial][vectoriales]] se suelen utilizar en *diseño* (carteles, folletos, logos, cómics,...). No tienen una resolución fija, por lo que *no pierden calidad al ampliarse*. Suelen ocupar *poco espacio de almacenamiento*. No están pensadas para imágenes de muy alta complejidad. Para mostrarse en pantallas se tienen que *convertir a mapas de bits* mediante un proceso llamado *render*.
+
+***** Profundidad de color
+La [[https://es.wikipedia.org/wiki/Profundidad_de_color][profundidad de color]] se refiere a la *cantidad de bits* utilizados para representar *un píxel* de una imagen. Actualmente se utiliza una profundidad de color de 32 bits:
+- 8 bits para el color rojo (256 gamas de rojo)
+- 8 bits para el color verde (256 gamas de verde)
+- 8 bits para el color azul (256 gamas de azul)
+- 8 bits para el [[https://es.wikipedia.org/wiki/Composici%C3%B3n_alfa][canal alfa]] (256 gamas de transparencia/opacidad)
+
+***** Resolución
+La [[https://es.wikipedia.org/wiki/Resoluci%C3%B3n_de_imagen][resolución de imagen]] indica la *cantidad de píxeles* que componen una imagen. Está directamente relacionada con el *nivel de detalle*: a mayor resolución, mayor nivel de detalle.
+
+Normalmente se especifica en formato ~ancho x alto~ o en *megapíxeles* (multiplicación del ancho por el alto): por ejemplo, una imagen de 1600 x 1200 píxeles = 1.920.000 píxeles = 1.92 Megapíxeles.
+
+***** Compresión
+El *tamaño* de una imagen sin comprimir depende de la *resolución* y de la *profundidad de color*. Así, una imagen de 1600x1200px con color de 32 bits tendrá un tamaño:
+
+Tamaño = 1600 * 1200 * 32 = 61440000 bits = 7680000 Bytes = *7.32 MB*
+
+Es necesario por tanto *comprimir* la imagen mediante alguno de los formatos específicos creados para ello.
 
 **** Formatos
+Los formatos más utilizados en el *diseño web* son:
+Algunos de los formatos más habituales son:
+- BMP - Mapa de bits sin compresión.
+- ICO - Mapa de bits sin compresión. Utilizado para iconos.
+- JPEG - Mapa de bits comprimido. Utilizado para fotografías.
+- PNG - Mapa de bits con o sin compresión. Utilizado para fotografías o dibujos.
+- APNG - Mapa de bits animado con o sin compresión.
+- GIF - Mapa de bits animado con compresión. Utilizado para animaciones de *baja calidad*.
+- WebP - Mapa de bits con compresión. Utilizado para fotografías o dibujos (no soportado en Safari).
+- SVG - Imagen vectorial.
+
+Para más información se puede consultar este artículo sobre [[https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types][compatibilidad de formatos de imagen en navegadores]].
 
 **** Software
-Edición, conversión, animaciones
+A continuación se indican algunos de los programas *Open Source* más utilizados para la edición de imágenes:
+- [[http://www.gimp.org.es/][GIMP]] - Programa de edición de imágenes de *mapa de bits* similar a Photoshop.
+- [[https://inkscape.org/es/][Inkscape]] - Programa de edición de imágenes *vectoriales*.
 
 **** Optimización de imágenes para web
+La optimización de imágenes es fundamental para mejorar el *tiempo de carga* de los sitios web. Uno de las técnicas más interesantes para ello es la utilización de la etiqueta ~<picture>~ de HTML. Esta etiqueta permite especificar *diferentes versiones de una imagen* para *distintos tipos de dispositivos*. De esta manera, el dispositivo solo descargará aquella imagen que sea más apropiada para sus características, como puede ser el formato (~webp~, ~jpeg~,...) o la resolución. A continuación se muestra un ejemplo de uso:
 
-***** Herramientas
+#+begin_src html
+  <picture>
+    <source media="(min-width: 650px)" srcset="img_650.jpg">
+    <source media="(min-width: 465px)" srcset="img_465.jpg">
+    <img src="img.jpg" alt="Flowers">
+  </picture> 
+#+end_src
 
-***** Etiqueta <picture>
+En el ejemplo se proporcionan tres archivos de imagen con distinta resolución. Si el dispositivo tiene una anchura de más de 650 píxeles se mostrará la imagen ~img_650.jpg~; si su anchura es mayor de 465px, se mostrará ~img_465.jpg~; por último, si su resolución es inferior a 465px *o no soporta la etiqueta* ~<picture>~, cargará ~img.jpg~.
+
+A continuación se indican algunos enlaces con más información sobre el tema:
+- [[https://developer.mozilla.org/es/docs/Web/HTML/Elemento/picture][MDN - El elemento ~<picture>~]]
+- [[https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images][MDN - Imágenes responsivas]] 
+- [[https://www.responsivebreakpoints.com/][Generador de imágenes responsivas]] 
 
 *** Animaciones :animaciones:
     :PROPERTIES:
