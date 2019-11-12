@@ -73,6 +73,15 @@ En el ejemplo anterior, el navegador intentará reproducir el archivo `video.mp4
 
 La etiqueta `<video>` admite varios atributos. En el caso del ejemplo, el atributo `controls` indica que se deben mostrar los controles de reproducción.
 
+Para que los vídeos se adapten correctamente a **cualquier ancho de pantalla** se puede definir su **anchura** al **100%**. De esta manera se adaptará al ancho del elemento contenedor. Es importante dejar la **altura** en `auto` para preservar la relación de aspecto. Un ejemplo de código CSS sería el siguiente:
+
+```css
+video {
+    width: 100%;
+    height: auto;
+}
+```
+
 Para más información sobre las opciones de la etiqueta `<video>` se pueden consultar los siguientes enlaces:
 
 -   <https://developer.mozilla.org/es/docs/Web/HTML/Elemento/video>
