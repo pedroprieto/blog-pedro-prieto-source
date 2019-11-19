@@ -1,6 +1,6 @@
 +++
 title = "Fundamentos del CMS Jekyll"
-date = 2019-11-19T12:27:00+01:00
+date = 2019-11-19T12:30:00+01:00
 tags = ["css", "jekyll", "cms"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false

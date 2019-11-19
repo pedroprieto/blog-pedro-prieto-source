@@ -2604,7 +2604,7 @@ Para más información sobre compatibilidad de formatos multimedia puede consult
 - [[https://obsproject.com/es/][OBS Studio]] - Software de grabación de vídeo y transmisión en vivo
 
 *** DONE Fundamentos del CMS Jekyll                              :jekyll:cms:
-    CLOSED: [2019-11-19 mar 12:27]
+    CLOSED: [2019-11-19 mar 12:30]
     :PROPERTIES:
     :EXPORT_FILE_NAME: jekyllcms
     :END:
