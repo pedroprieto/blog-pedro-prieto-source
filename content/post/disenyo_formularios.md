@@ -143,7 +143,7 @@ La alineación de controles o etiquetas puede conseguirse utilizando cualquiera 
 
 En el caso concreto de formularios es recomendable utilizar `flexbox` o `display: inline-block` definiendo una anchura igual para las etiquetas junto con otra anchura igual para los controles. La separación entre ambos puede realizarse utilizando el margen.
 
-A continuación se muestra un ejemplo del código utilizado para ello:
+A continuación se muestra un ejemplo del código utilizando `display: inline-block`:
 
 ```css
 label {
@@ -165,15 +165,15 @@ Es posible (y recomendable) utilizar etiquetas `<span>` para agrupar etiquetas y
     <legend>Título</legend>
 
     <ul>
-      <li>
+      <li class="grupo-control">
         <span class="etiqueta"><label for="name">Nombre</label></span>
         <span class="control"><input type="text" name="name" id="name"></span>
       </li>
-      <li>
+      <li class="grupo-control">
         <span class="etiqueta"><label for="lname">Apellidos</label></span>
         <span class="control"><input type="text" name="lname" id="lname"></span>
       </li>
-      <li>
+      <li class="grupo-control">
         <span class="etiqueta"><label for="email">Email</label></span>
         <span class="control"><input type="text" name="email" id="email"></span>
       </li>
@@ -182,6 +182,28 @@ Es posible (y recomendable) utilizar etiquetas `<span>` para agrupar etiquetas y
   </fieldset>
 
 </form>
+```
+
+Partiendo del código anterior, se muestra a continuación el código necesario para alinear los campos utilizando `flexbox`:
+
+```css
+.grupo-control {
+  display: flex;
+}
+
+.etiqueta {
+    flex: 1 1 0;
+}
+
+.control {
+  flex: 2 1 0;
+}
+
+input {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 
