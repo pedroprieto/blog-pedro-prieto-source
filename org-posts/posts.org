@@ -2630,7 +2630,6 @@ Para más información sobre compatibilidad de formatos multimedia puede consult
     :EXPORT_FILE_NAME: jekyllcms
     :END:
 
-**** Introducción
    [[https://jekyllrb.com][Jekyll]] es un [[https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_contenidos][gestor de contenido]] de tipo *estático* (/static site generator/). No depende de ninguna base de datos ni de ningún lenguaje de servidor. Utiliza ficheros de texto para almacenar los contenidos y los datos. Dado que no utiliza tecnologías de servidor, es necesario realizar un proceso de *generación* o compilación para producir archivos HTML válidos que puedan ser alojados en un servidor y procesados adecuadamente por un navegador web convencional.
 #+hugo: more
 
@@ -2697,6 +2696,30 @@ Puede consultarse más información sobre el /front matter/ en https://jekyllrb.
    Jekyll está integrado en el servicio de GitHub Pages. Si se sube un repositorio con un proyecto Jekyll a la rama de GitHub Pages (~gh-pages~), este se compilará automáticamente y será publicado en Internet. Por tanto, no es necesario compilarlo antes de subirlo ni subir la carpeta ~_site~.
 
 En estos enlaces puede consultarse más información sobre [[https://pages.github.com/][GitHub Pages]] y [[https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/][Jekyll y GitHub Pages]].
+
+** Diseño web con Bootstrap :@diw_bootstrap:bootstrap:
+*** DONE Bootstrap                                            :bootstrap:css:
+    CLOSED: [2019-12-16 lun 12:43]
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: bootstrap
+    :END:
+
+[[https://getbootstrap.com][Bootstrap]] es una biblioteca de clases CSS pensada para facilitar la creación de prototipos web. Ofrece una serie de *clases CSS* listas para ser usadas en cualquier proyecto *prácticamente sin necesidad de tener que crear código CSS*. Los estilos han sido diseñados para *ofrecer un aspecto visual uniforme* independientemente del tipo de navegador o sistema operativo utilizado.
+#+hugo: more
+
+**** Modo de trabajar
+Bootstrap nos proporciona el código CSS ya hecho. Por tanto, nuestra tarea consistirá en utilizar las clases que necesitemos para crear los componentes necesarios para nuestra interfaz. Para ello ofrecen una [[https://getbootstrap.com/docs/4.4/getting-started/introduction/][detallada documentación]].
+
+**** Alternativas
+Existe una gran multitud de alternativas a Bootstrap. El funcionamiento de todas ellas es similar, únicamente cambian algunos nombre de clases. Entre las más interesantes podemos destacar:
+- [[https://bulma.io/][Bulma]]
+- [[https://purecss.io/][Pure CSS]]
+- [[https://materializecss.com/][Materialize]]
+
+**** Tutoriales de uso
+- [[https://youtu.be/J-kU-GEKarI][Bootstrap: introducción y uso]]
+- [[https://youtu.be/4xwuUhp1kBA][Bootstrap: layout]]
+- [[https://www.youtube.com/watch?v=p8cCMsb6oLo][Bootstrap: utilidades y edición de contenido]]
 
 * TODO Ideas
 - Posicionamiento absoluto, floats
