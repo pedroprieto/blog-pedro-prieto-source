@@ -2720,6 +2720,7 @@ Existe una gran multitud de alternativas a Bootstrap. El funcionamiento de todas
 - [[https://youtu.be/J-kU-GEKarI][Bootstrap: introducción y uso]]
 - [[https://youtu.be/4xwuUhp1kBA][Bootstrap: layout]]
 - [[https://www.youtube.com/watch?v=p8cCMsb6oLo][Bootstrap: utilidades y edición de contenido]]
+- [[https://youtu.be/oEgTFnVZhRQ][Bootstrap: componentes]]
 
 * TODO Ideas
 - Posicionamiento absoluto, floats

@@ -30,3 +30,4 @@ Existe una gran multitud de alternativas a Bootstrap. El funcionamiento de todas
 -   [Bootstrap: introducción y uso](https://youtu.be/J-kU-GEKarI)
 -   [Bootstrap: layout](https://youtu.be/4xwuUhp1kBA)
 -   [Bootstrap: utilidades y edición de contenido](https://www.youtube.com/watch?v=p8cCMsb6oLo)
+-   [Bootstrap: componentes](https://youtu.be/oEgTFnVZhRQ)
