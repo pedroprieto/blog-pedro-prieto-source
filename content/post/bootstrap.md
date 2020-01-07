@@ -1,6 +1,6 @@
 +++
 title = "Bootstrap"
-date = 2019-12-16T12:43:00+01:00
+date = 2020-01-07T12:56:00+01:00
 tags = ["bootstrap", "css"]
 categories = ["diw", "diw-bootstrap"]
 draft = false

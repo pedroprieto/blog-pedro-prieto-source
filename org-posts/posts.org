@@ -2699,7 +2699,7 @@ En estos enlaces puede consultarse más información sobre [[https://pages.githu
 
 ** Diseño web con Bootstrap :@diw_bootstrap:bootstrap:
 *** DONE Bootstrap                                            :bootstrap:css:
-    CLOSED: [2019-12-16 lun 12:43]
+    CLOSED: [2020-01-07 mar 12:56]
     :PROPERTIES:
     :EXPORT_FILE_NAME: bootstrap
     :END:
