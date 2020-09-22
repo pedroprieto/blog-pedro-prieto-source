@@ -31,8 +31,8 @@ Este artículo tiene como objetivo profundizar en el manejo de Git con el uso de
 ## Referencias {#referencias}
 
 -   [Libro de Git](https://git-scm.com/book/es/v2/)
--   [Hoja de referencia de Git](https://services.github.com/on-demand/downloads/es%5FES/github-git-cheat-sheet/)
--   [Hoja de referencia de Git (PDF)](https://services.github.com/on-demand/downloads/es%5FES/github-git-cheat-sheet.pdf)
+-   [Hoja de referencia de Git](https://training.github.com/downloads/es%5FES/github-git-cheat-sheet/)
+-   [Hoja de referencia de Git (PDF)](https://training.github.com/downloads/es%5FES/github-git-cheat-sheet.pdf)
 -   [Herramienta "Visualizing Git"](http://git-school.github.io/visualizing-git/) (muy interesante para comprender el funcionamiento interno de Git y el trabajo con ramas y remotos)
 
 
@@ -81,6 +81,8 @@ git checkout <nombre_rama>
 
 -   Primero nos posicionamos en la rama sobre la que se va a realizar la fusión
 -   Para realizar la fusión ejecutar:
+
+<!--listend-->
 
 ```bash
 git merge <nombre_rama_a_fusionar>
