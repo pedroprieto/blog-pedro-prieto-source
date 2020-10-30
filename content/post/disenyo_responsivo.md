@@ -10,7 +10,7 @@ En este artículo trataremos los fundamentos del diseño web adaptable o adaptat
 
 <!--more-->
 
-> El diseño web adaptable (también **diseño web adaptativo** o **responsivo**; este último calco del inglés _responsive web design_), es una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de las páginas web al dispositivo que se esté utilizando para visitarlas. Hoy día las páginas web se ven en multitud de dispositivos como tabletas, teléfonos inteligentes, libros electrónicos, portátiles, PC, etcétera. Además, aún dentro de cada tipo, cada dispositivo tiene sus características concretas: tamaño de pantalla, resolución, potencia de CPU, sistema operativo o capacidad de memoria entre otras. Esta tecnología pretende que con un único diseño web, todo se vea correctamente en cualquier dispositivo. ---_Fuente: [Wikipedia](https://es.wikipedia.org/wiki/Diseño%5Fweb%5Fadaptable)_
+> El diseño web adaptable (también **diseño web adaptativo** o **responsivo**; este último calco del inglés _responsive web design_), es una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de las páginas web al dispositivo que se esté utilizando para visitarlas. Hoy día las páginas web se ven en multitud de dispositivos como tabletas, teléfonos inteligentes, libros electrónicos, portátiles, PC, etcétera. Además, aún dentro de cada tipo, cada dispositivo tiene sus características concretas: tamaño de pantalla, resolución, potencia de CPU, sistema operativo o capacidad de memoria entre otras. Esta tecnología pretende que con un único diseño web, todo se vea correctamente en cualquier dispositivo. ---_Fuente: [Wikipedia](https://es.wikipedia.org/wiki/Dise%25C3%25B1o%5Fweb%5Fadaptable)_
 
 
 ## Mobile First {#mobile-first}
@@ -24,7 +24,6 @@ Una vez garantizado que el diseño base es capaz de funcionar en todos los dispo
 Puedes consultar información más detallada sobre la filosofía _Mobile First_ en estos enlaces:
 
 -   [Qué es mobile first y cómo puede mejorar tu posicionamiento](https://www.initcoms.com/que-es-mobile-first-posicionamiento/)
--   [Mobile First](https://zurb.com/word/mobile-first)
 
 
 ## Dispositivos y resoluciones de pantalla {#dispositivos-y-resoluciones-de-pantalla}
@@ -59,7 +58,7 @@ Es importante dejar claro que la resolución del _ViewPort_ es **distinta de la 
 
 ### Etiqueta `<meta name="viewport">` {#etiqueta-meta-name-viewport}
 
-En el diseño adaptativo se busca que la apariencia visual de la página web esté ajustada al tamaño de la pantalla. Para ello se utiliza la etiqueta [<meta name="viewport">](https://developer.mozilla.org/es/docs/Móvil/Viewport%5Fmeta%5Ftag). Esta etiqueta sirve para **indicar al navegador** qué **tamaño** debe definir para su _ViewPort_. En la mayoría de ocasiones utilizaremos la etiqueta de la siguiente manera:
+En el diseño adaptativo se busca que la apariencia visual de la página web esté ajustada al tamaño de la pantalla. Para ello se utiliza la etiqueta [<meta name="viewport">](https://developer.mozilla.org/es/docs/M%25C3%25B3vil/Viewport%5Fmeta%5Ftag). Esta etiqueta sirve para **indicar al navegador** qué **tamaño** debe definir para su _ViewPort_. En la mayoría de ocasiones utilizaremos la etiqueta de la siguiente manera:
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,7 +68,7 @@ Este código indica al navegador que debe utilizar la **anchura CSS** (`width=de
 
 > **¡IMPORTANTE!** Esta etiqueta **sólo debe utilizarse** con diseños web **optimizados para móvil** o diseños web **adaptativos**. Si la página no está adaptada para móvil no se debe usar, ya que se visualizaría de manera incorrecta.
 
-Puedes consultar más información relacionada con esta etiqueta en este [artículo sobre ViewPort en MDN](https://developer.mozilla.org/es/docs/Móvil/Viewport%5Fmeta%5Ftag).
+Puedes consultar más información relacionada con esta etiqueta en este [artículo sobre ViewPort en MDN](https://developer.mozilla.org/es/docs/M%25C3%25B3vil/Viewport%5Fmeta%5Ftag).
 
 
 ## Media queries {#media-queries}
@@ -240,6 +239,6 @@ De esta manera se reduce el tamaño de los archivos y se aumenta la velocidad de
 
 -   [Guía de RWD en W3Schools](http://www.w3schools.com/css/css%5Frwd%5Fintro.asp)
 -   [Aspectos básicos del diseño web adaptable (Google)](https://developers.google.com/web/fundamentals/design-and-ux/responsive/?hl=es)
--   [Diseño Responsivo (MDN)](https://developer.mozilla.org/es/docs/Web%5FDevelopment/Mobile/Diseño%5Fresponsivo)
+-   [Diseño Responsivo (MDN)](https://developer.mozilla.org/es/docs/Web%5FDevelopment/Mobile/Dise%C3%B1o%5Fresponsivo)
 -   [Responsive Design (MDN)](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS%5Flayout/Responsive%5FDesign)
 -   [The building blocks of responsive design (MDN)](https://developer.mozilla.org/en-US/docs/Web/Progressive%5Fweb%5Fapps/Responsive/responsive%5Fdesign%5Fbuilding%5Fblocks)
