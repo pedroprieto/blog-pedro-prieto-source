@@ -1981,7 +1981,6 @@ Una vez garantizado que el diseño base es capaz de funcionar en todos los dispo
 
 Puedes consultar información más detallada sobre la filosofía /Mobile First/ en estos enlaces:
 - [[https://www.initcoms.com/que-es-mobile-first-posicionamiento/][Qué es mobile first y cómo puede mejorar tu posicionamiento]]
-- [[https://zurb.com/word/mobile-first][Mobile First]]
 
 **** Dispositivos y resoluciones de pantalla
 A continuación vamos a explicar algunos conceptos relacionados con las resoluciones de pantalla de los dispositivos y cómo afectan al Desarrollo Web, en concreto al diseño con CSS.
