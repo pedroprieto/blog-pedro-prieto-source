@@ -493,7 +493,7 @@ A la hora de elegir la paleta de colores es importante definir como mínimo:
 
 El color principal suele estar presente en el *logo* y todos los aspectos relacionados con la *marca del sitio*. También suele aparecer en los *encabezados* y en los *botones* de formulario que activen la acción principal.
 
-[[https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Nuancier_Pantone_2_%2528Cut_out%2529.jpg/640px-Nuancier_Pantone_2_%2528Cut_out%2529.jpg][https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Nuancier_Pantone_2_%28Cut_out%29.jpg/640px-Nuancier_Pantone_2_%28Cut_out%29.jpg]]
+[[https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Nuancier_Pantone_2_%28Cut_out%29.jpg/640px-Nuancier_Pantone_2_%28Cut_out%29.jpg][https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Nuancier_Pantone_2_%28Cut_out%29.jpg/640px-Nuancier_Pantone_2_%28Cut_out%29.jpg]]
 
 Algunos recursos para generar una paleta de colores:
 - https://colordesigner.io/
@@ -1969,7 +1969,7 @@ Para obtener más información sobre fuentes se puede consultar el artículo "[[
 #+hugo: more
 
 #+begin_quote
-El diseño web adaptable (también *diseño web adaptativo* o *responsivo*; este último calco del inglés /responsive web design/), es una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de las páginas web al dispositivo que se esté utilizando para visitarlas. Hoy día las páginas web se ven en multitud de dispositivos como tabletas, teléfonos inteligentes, libros electrónicos, portátiles, PC, etcétera. Además, aún dentro de cada tipo, cada dispositivo tiene sus características concretas: tamaño de pantalla, resolución, potencia de CPU, sistema operativo o capacidad de memoria entre otras. Esta tecnología pretende que con un único diseño web, todo se vea correctamente en cualquier dispositivo. ---/Fuente: [[https://es.wikipedia.org/wiki/Dise%25C3%25B1o_web_adaptable][Wikipedia]]/
+El diseño web adaptable (también *diseño web adaptativo* o *responsivo*; este último calco del inglés /responsive web design/), es una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de las páginas web al dispositivo que se esté utilizando para visitarlas. Hoy día las páginas web se ven en multitud de dispositivos como tabletas, teléfonos inteligentes, libros electrónicos, portátiles, PC, etcétera. Además, aún dentro de cada tipo, cada dispositivo tiene sus características concretas: tamaño de pantalla, resolución, potencia de CPU, sistema operativo o capacidad de memoria entre otras. Esta tecnología pretende que con un único diseño web, todo se vea correctamente en cualquier dispositivo. ---/Fuente: [[https://es.wikipedia.org/wiki/Dise%C3%B1o_web_adaptable][Wikipedia]]/
 #+end_quote
 
 **** Mobile First
@@ -2006,7 +2006,7 @@ A continuación vamos a explicar algunos conceptos relacionados con las resoluci
    Es importante dejar claro que la resolución del /ViewPort/ es *distinta de la resolución física y la resolución CSS*. En los sistemas *Android* el ancho es de *800px* y en los sistemas *iOS* es de *980px*.
 
 ***** Etiqueta ~<meta name="viewport">~
-   En el diseño adaptativo se busca que la apariencia visual de la página web esté ajustada al tamaño de la pantalla. Para ello se utiliza la etiqueta [[https://developer.mozilla.org/es/docs/M%25C3%25B3vil/Viewport_meta_tag][<meta name="viewport">]]. Esta etiqueta sirve para *indicar al navegador* qué *tamaño* debe definir para su /ViewPort/. En la mayoría de ocasiones utilizaremos la etiqueta de la siguiente manera:
+   En el diseño adaptativo se busca que la apariencia visual de la página web esté ajustada al tamaño de la pantalla. Para ello se utiliza la etiqueta [[https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag][<meta name="viewport">]]. Esta etiqueta sirve para *indicar al navegador* qué *tamaño* debe definir para su /ViewPort/. En la mayoría de ocasiones utilizaremos la etiqueta de la siguiente manera:
 
    #+BEGIN_SRC html
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2018,7 +2018,7 @@ A continuación vamos a explicar algunos conceptos relacionados con las resoluci
    *¡IMPORTANTE!* Esta etiqueta *sólo debe utilizarse* con diseños web *optimizados para móvil* o diseños web *adaptativos*. Si la página no está adaptada para móvil no se debe usar, ya que se visualizaría de manera incorrecta.
 #+end_quote
 
-Puedes consultar más información relacionada con esta etiqueta en este [[https://developer.mozilla.org/es/docs/M%25C3%25B3vil/Viewport_meta_tag][artículo sobre ViewPort en MDN]].
+Puedes consultar más información relacionada con esta etiqueta en este [[https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag][artículo sobre ViewPort en MDN]].
 
 **** Media queries
    Las /media queries/ son expresiones que se utilizan en CSS3 para *identificar el dispositivo* al que va dirigido un determinado *conjunto de reglas de estilo CSS*.
