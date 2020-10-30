@@ -2006,7 +2006,7 @@ A continuación vamos a explicar algunos conceptos relacionados con las resoluci
    Es importante dejar claro que la resolución del /ViewPort/ es *distinta de la resolución física y la resolución CSS*. En los sistemas *Android* el ancho es de *800px* y en los sistemas *iOS* es de *980px*.
 
 ***** Etiqueta ~<meta name="viewport">~
-   En el diseño adaptativo se busca que la apariencia visual de la página web esté ajustada al tamaño de la pantalla. Para ello se utiliza la etiqueta [[https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag][<meta name="viewport">]]. Esta etiqueta sirve para *indicar al navegador* qué *tamaño* debe definir para su /ViewPort/. En la mayoría de ocasiones utilizaremos la etiqueta de la siguiente manera:
+   En el diseño adaptativo se busca que la apariencia visual de la página web esté ajustada al tamaño de la pantalla. Para ello se utiliza la etiqueta [[https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag][meta name="viewport"]]. Esta etiqueta sirve para *indicar al navegador* qué *tamaño* debe definir para su /ViewPort/. En la mayoría de ocasiones utilizaremos la etiqueta de la siguiente manera:
 
    #+BEGIN_SRC html
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
