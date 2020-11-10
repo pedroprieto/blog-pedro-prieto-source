@@ -23,9 +23,9 @@ Podemos distinguir entre dos grandes grupos de imágenes:
 -   **Mapas de bits** (_raster_) - Son imágenes compuestas por **píxeles**. Son las captadas por las cámaras o creadas por programas de edición.
 -   **Vectoriales** - Son imágenes que muestran su información mediante **descripciones matemáticas**. Están creadas exclusivamente por programas de edición.
 
-Las imágenes de [mapa de bits](https://es.wikipedia.org/wiki/Imagen%5Fde%5Fmapa%5Fde%5Fbits) se suelen utilizar en **fotografías**. Tienen una **resolución fija**, por lo que **al ampliarse pierden calidad** (a este proceso se le denomina [aliasing](https://es.wikipedia.org/wiki/Aliasing#En%5Fla%5Fcomputación%5Fgráfica)). Suelen ocupar **mucho espacio de almacenamiento** y por ello se suelen almacenar en formatos que soportan **compresión**.
+Las imágenes de [mapa de bits](https://es.wikipedia.org/wiki/Imagen%5Fde%5Fmapa%5Fde%5Fbits) se suelen utilizar en **fotografías**. Tienen una **resolución fija**, por lo que **al ampliarse pierden calidad** (a este proceso se le denomina [aliasing](https://es.wikipedia.org/wiki/Aliasing#En%5Fla%5Fcomputaci%C3%B3n%5Fgr%C3%A1fica)). Suelen ocupar **mucho espacio de almacenamiento** y por ello se suelen almacenar en formatos que soportan **compresión**.
 
-Las imágenes [vectoriales](https://es.wikipedia.org/wiki/Gráfico%5Fvectorial) se suelen utilizar en **diseño** (carteles, folletos, logos, cómics,...). No tienen una resolución fija, por lo que **no pierden calidad al ampliarse**. Suelen ocupar **poco espacio de almacenamiento**. No están pensadas para imágenes de muy alta complejidad. Para mostrarse en pantallas se tienen que **convertir a mapas de bits** mediante un proceso llamado **render**.
+Las imágenes [vectoriales](https://es.wikipedia.org/wiki/Gr%C3%A1fico%5Fvectorial) se suelen utilizar en **diseño** (carteles, folletos, logos, cómics,...). No tienen una resolución fija, por lo que **no pierden calidad al ampliarse**. Suelen ocupar **poco espacio de almacenamiento**. No están pensadas para imágenes de muy alta complejidad. Para mostrarse en pantallas se tienen que **convertir a mapas de bits** mediante un proceso llamado **render**.
 
 
 ### Profundidad de color {#profundidad-de-color}
@@ -35,12 +35,12 @@ La [profundidad de color](https://es.wikipedia.org/wiki/Profundidad%5Fde%5Fcolor
 -   8 bits para el color rojo (256 gamas de rojo)
 -   8 bits para el color verde (256 gamas de verde)
 -   8 bits para el color azul (256 gamas de azul)
--   8 bits para el [canal alfa](https://es.wikipedia.org/wiki/Composición%5Falfa) (256 gamas de transparencia/opacidad)
+-   8 bits para el [canal alfa](https://es.wikipedia.org/wiki/Composici%C3%B3n%5Falfa) (256 gamas de transparencia/opacidad)
 
 
 ### Resolución {#resolución}
 
-La [resolución de imagen](https://es.wikipedia.org/wiki/Resolución%5Fde%5Fimagen) indica la **cantidad de píxeles** que componen una imagen. Está directamente relacionada con el **nivel de detalle**: a mayor resolución, mayor nivel de detalle.
+La [resolución de imagen](https://es.wikipedia.org/wiki/Resoluci%C3%B3n%5Fde%5Fimagen) indica la **cantidad de píxeles** que componen una imagen. Está directamente relacionada con el **nivel de detalle**: a mayor resolución, mayor nivel de detalle.
 
 Normalmente se especifica en formato `ancho x alto` o en **megapíxeles** (multiplicación del ancho por el alto): por ejemplo, una imagen de 1600 x 1200 píxeles = 1.920.000 píxeles = 1.92 Megapíxeles.
 
@@ -133,8 +133,8 @@ En este caso supondremos que la imagen va a ocupar el **distinto ancho de pantal
 
 En este caso, para optimizar la elección de la imagen a cargar habrá que tener en cuenta no solo el tamaño de las imágenes, sino también **qué espacio van a ocupar**. Así, tendremos que:
 
--   Si la resolución del dispositivo es de **900px**, en principio parece que debería utilizar la imagen de 1400px. Sin embargo, en nuestro código CSS hemos configurado las imágenes para que ocupen un 50% de la pantalla. Por tanto, la imagen ocupará 450px. Bastará entonces con cargar la **imagen de 854px**.
--   Si la resolución del dispositivo es de **700px** queremos que la imagen se muestre ocupando un 100% de la pantalla. Por tanto, se deberá cargar también la imagen de **854px**.
+-   Si la resolución del dispositivo es de **900px**, en principio parece que debería utilizar la imagen de 1400px. Sin embargo, en nuestro código CSS hemos configurado las imágenes para que ocupen un 50% de la pantalla. Por tanto, la imagen ocupará 450px. Bastará entonces con cargar la **imagen de 450px**.
+-   Si la resolución del dispositivo es de **700px** queremos que la imagen se muestre ocupando un 100% de la pantalla. Por tanto, se deberá cargar la imagen de **850px**.
 -   Para cargar la imagen de 1400px el **dispositivo** deberá tener una **resolución mínima de 1701px**: en este caso la imagen ocupará un 50% de la pantalla, es decir, 850.5px, por lo que no le bastará con la de 850px y deberá cargar la de 1400px,
 
 Para que el navegador tenga en cuenta los tamaños que van a ocupar las imágenes en los distintos tipos de dispositivo hay que utilizar el atributo `sizes` del elmento `<img>`: este atributo permite especificar condiciones de tamaño en forma de `media queries` junto con una referencia al tamaño que ocupará la imagen (por ejemplo, en unidades `vw`).
