@@ -2338,8 +2338,8 @@ En este caso supondremos que la imagen va a ocupar el *distinto ancho de pantall
 - En pantallas *pequeñas* (<768px), la imagen ocupará el *100%* de la pantalla.
 
 En este caso, para optimizar la elección de la imagen a cargar habrá que tener en cuenta no solo el tamaño de las imágenes, sino también *qué espacio van a ocupar*. Así, tendremos que:
-- Si la resolución del dispositivo es de *900px*, en principio parece que debería utilizar la imagen de 1400px. Sin embargo, en nuestro código CSS hemos configurado las imágenes para que ocupen un 50% de la pantalla. Por tanto, la imagen ocupará 450px. Bastará entonces con cargar la *imagen de 854px*.
-- Si la resolución del dispositivo es de *700px* queremos que la imagen se muestre ocupando un 100% de la pantalla. Por tanto, se deberá cargar también la imagen de *854px*.
+- Si la resolución del dispositivo es de *900px*, en principio parece que debería utilizar la imagen de 1400px. Sin embargo, en nuestro código CSS hemos configurado las imágenes para que ocupen un 50% de la pantalla. Por tanto, la imagen ocupará 450px. Bastará entonces con cargar la *imagen de 450px*.
+- Si la resolución del dispositivo es de *700px* queremos que la imagen se muestre ocupando un 100% de la pantalla. Por tanto, se deberá cargar la imagen de *850px*.
 - Para cargar la imagen de 1400px el *dispositivo* deberá tener una *resolución mínima de 1701px*: en este caso la imagen ocupará un 50% de la pantalla, es decir, 850.5px, por lo que no le bastará con la de 850px y deberá cargar la de 1400px,
 
 Para que el navegador tenga en cuenta los tamaños que van a ocupar las imágenes en los distintos tipos de dispositivo hay que utilizar el atributo ~sizes~ del elmento ~<img>~: este atributo permite especificar condiciones de tamaño en forma de ~media queries~ junto con una referencia al tamaño que ocupará la imagen (por ejemplo, en unidades ~vw~).
