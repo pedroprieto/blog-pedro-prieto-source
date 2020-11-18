@@ -840,9 +840,15 @@ El [[https://developer.mozilla.org/es/docs/Web/CSS/CSS_Modelo_Caja/Introducci%C3
 #+hugo: more
 
 **** La propiedad ~box-sizing~
-  Existe una propiedad en CSS3 denominada ~box-sizing~ que permite cambiar la definición de anchura para ésta que incluya el *contenido, relleno (padding) y bordes* (no se incluye el margen). En este [[http://www.w3schools.com/cssref/css3_pr_box-sizing.asp][enlace]] puedes consultar su funcionamiento.
+  Existe una propiedad en CSS3 denominada ~box-sizing~ que permite cambiar la definición de anchura para ésta que incluya el *contenido, relleno (padding) y bordes* (no se incluye el margen). En este [[http://www.w3schools.com/cssref/css3_pr_box-sizing.asp][enlace]] puedes consultar su funcionamiento. De esta manera, al utilizar el código ~box-sizing: border-box;~, no habrá que hacer sumas para calcular el ancho total de las cajas.
 
-  De esta manera, al utilizar el código ~box-sizing: border-box;~, no habrá que hacer sumas para calcular el ancho total de las cajas. En este otro [[http://es.learnlayout.com/box-sizing.html][enlace]] puedes encontrar una explicación más detallada.
+  Es habitual utilizar este código si se va a usar esta propiedad:
+
+#+begin_src css
+  * {
+      box-sizing: border-box;
+  }
+#+end_src
 
 **** Altura y anchura de los elementos
   La utilización de porcentajes en la definición de anchuras y alturas tiene algunas diferencias:

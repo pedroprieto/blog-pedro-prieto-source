@@ -13,9 +13,15 @@ El [modelo de caja de CSS](https://developer.mozilla.org/es/docs/Web/CSS/CSS%5FM
 
 ## La propiedad `box-sizing` {#la-propiedad-box-sizing}
 
-Existe una propiedad en CSS3 denominada `box-sizing` que permite cambiar la definición de anchura para ésta que incluya el **contenido, relleno (padding) y bordes** (no se incluye el margen). En este [enlace](http://www.w3schools.com/cssref/css3%5Fpr%5Fbox-sizing.asp) puedes consultar su funcionamiento.
+Existe una propiedad en CSS3 denominada `box-sizing` que permite cambiar la definición de anchura para ésta que incluya el **contenido, relleno (padding) y bordes** (no se incluye el margen). En este [enlace](http://www.w3schools.com/cssref/css3%5Fpr%5Fbox-sizing.asp) puedes consultar su funcionamiento. De esta manera, al utilizar el código `box-sizing: border-box;`, no habrá que hacer sumas para calcular el ancho total de las cajas.
 
-De esta manera, al utilizar el código `box-sizing: border-box;`, no habrá que hacer sumas para calcular el ancho total de las cajas. En este otro [enlace](http://es.learnlayout.com/box-sizing.html) puedes encontrar una explicación más detallada.
+Es habitual utilizar este código si se va a usar esta propiedad:
+
+```css
+* {
+    box-sizing: border-box;
+}
+```
 
 
 ## Altura y anchura de los elementos {#altura-y-anchura-de-los-elementos}
