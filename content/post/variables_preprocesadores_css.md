@@ -105,5 +105,4 @@ Es posible hacer uso de esta característica sin tener que recurrir a un preproc
   margin: 10px;
   width: 100px;
 }
-
 {{< /highlight >}}

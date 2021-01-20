@@ -35,11 +35,15 @@ Una hoja de estilos contiene datos de formato relativos a los elementos definido
 
 -   **Aplicar estilos directamente a elementos HTML**. De esta manera se escribe el código CSS dentro del atributo style de la etiqueta HTML en cuestión.Por ejemplo, para aplicar un estilo css a un párrafo:
 
+<!--listend-->
+
 ```html
 <p style="código_css">HOLA</p>
 ```
 
 -   **Hojas de estilos internas**. Se utilizan para aplicar estilos a la página en la cual se utiliza. El código de la hoja de estilo se ubicará en la cabecera de la página web, entre las etiquetas siguientes:
+
+<!--listend-->
 
 ```html
 <style type="text/css">
@@ -48,6 +52,8 @@ Una hoja de estilos contiene datos de formato relativos a los elementos definido
 ```
 
 -   **Hojas de estilos externas**. Se utilizan para aplicar el mismo formato a varias páginas de un portal. Se definen en un archivo externo que será consultado por todas las páginas HTML del sitio web, reutilizando por tanto el código. Para ello se escribirá el código CSS en un documento externo con extensión css. Posteriormente se vinculará a la página web mediante la utilización de la siguiente **etiqueta** en la **cabecera** del documento HTML en cuestión:
+
+<!--listend-->
 
 ```html
 <link rel="stylesheet" type="text/css" href="nombre_archivo_css.css">
@@ -167,3 +173,4 @@ Por tanto, se intentará **priorizar el uso de clases** por encima del uso de se
 -   [CSSScript.com](https://www.cssscript.com) - Más recursos CSS
 -   [Guía de referencia de propiedades CSS](http://www.w3schools.com/cssref/) - Listado de propiedades CSS
 -   <http://librosweb.es/css/> - Curso completo de CSS pero algo anticuado
+-   <https://www.websiteplanet.com/blog/html-guide-beginners/> - Conceptos básicos de HTML

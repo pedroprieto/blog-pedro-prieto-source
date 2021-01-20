@@ -1,6 +1,6 @@
 +++
 title = "Licencias y propiedad intelectual"
-date = 2019-11-11T11:47:00+01:00
+date = 2019-11-11T12:23:00+01:00
 tags = ["css", "licencias"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false

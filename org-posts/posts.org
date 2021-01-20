@@ -829,6 +829,7 @@ Por tanto, se intentará *priorizar el uso de clases* por encima del uso de sele
    - [[https://www.cssscript.com][CSSScript.com]] - Más recursos CSS
    - [[http://www.w3schools.com/cssref/][Guía de referencia de propiedades CSS]] - Listado de propiedades CSS
    - http://librosweb.es/css/ - Curso completo de CSS pero algo anticuado
+   - https://www.websiteplanet.com/blog/html-guide-beginners/ - Conceptos básicos de HTML
 
 *** DONE Notas sobre el modelo de cajas en CSS                  :modelo_caja:
     CLOSED: [2019-10-21 lun 11:47]

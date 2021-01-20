@@ -36,7 +36,7 @@ A la hora de elegir la paleta de colores es importante definir como mínimo:
 
 El color principal suele estar presente en el **logo** y todos los aspectos relacionados con la **marca del sitio**. También suele aparecer en los **encabezados** y en los **botones** de formulario que activen la acción principal.
 
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Nuancier%5FPantone%5F2%5F%28Cut%5Fout%29.jpg/640px-Nuancier%5FPantone%5F2%5F%28Cut%5Fout%29.jpg" link="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Nuancier%5FPantone%5F2%5F%2528Cut%5Fout%2529.jpg/640px-Nuancier%5FPantone%5F2%5F%2528Cut%5Fout%2529.jpg" >}}
+{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Nuancier%5FPantone%5F2%5F%28Cut%5Fout%29.jpg/640px-Nuancier%5FPantone%5F2%5F%28Cut%5Fout%29.jpg" link="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Nuancier%5FPantone%5F2%5F%28Cut%5Fout%29.jpg/640px-Nuancier%5FPantone%5F2%5F%28Cut%5Fout%29.jpg" >}}
 
 Algunos recursos para generar una paleta de colores:
 

@@ -153,6 +153,8 @@ Como podemos ver, las clases CSS hacen referencia a características genéricas 
 
 -   Aumenta el número de clases a aplicar en etiquetas HTML, por lo que el código HTML puede resultar más difícil de leer:
 
+<!--listend-->
+
 ```html
 <h2 class="font-16 font-bold font-purple">Game of Thrones</h2>
 ```
