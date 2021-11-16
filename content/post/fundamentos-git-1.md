@@ -57,11 +57,6 @@ git config --global user.email CORREO@ELECTRONICO
 git config --global core.editor notepad # Notepad de Windows
 git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin" # Notepad ++
 git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin" # Notepad ++ 32 bit
-
-# Almacenamiento de credenciales para no pedir usuario y contraseña de GitHub cada vez que se suban cambios al servidor
-# Ejecutar sólo uno de los dos comandos siguientes en función del sistema
-git config --global credential.helper cache   # Para Linux
-git config --global credential.helper wincred # Para Windows
 ```
 
 
