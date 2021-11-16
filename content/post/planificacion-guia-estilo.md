@@ -95,3 +95,7 @@ Algunos recursos para elegir elementos gráficos:
 
 -   <https://marinarodrigo.com/como-y-por-que-crear-una-guia-de-estilo-para-tu-web/>
 -   <https://www.toptal.com/designers/ui/ui-styleguide-better-ux>
+-   <https://www.krasamo.com/creating-ui-style-guide-for-web-and-mobile-apps/>
+-   <https://www.uoc.edu/portal/en/llibre-estil/guies/digital/index.html>
+-   <https://www.smashingmagazine.com/2018/02/comprehensive-guide-to-mobile-app-design/>
+-   <https://developer.android.com/design>
