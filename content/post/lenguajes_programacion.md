@@ -42,11 +42,11 @@ La **compilación** es el proceso de generación de ejecutables a partir del có
 -   **Interpretación** - Los ficheros de código fuente no se transforman a código máquina: en lugar de ello, un programa, denominado **intérprete**, lee línea a línea el código fuente y va realizando la compilación de cada línea de manera independiente.
 -   **Compilación JIT** o _Just In Time_ - Los ficheros de código fuente no se transforman a código máquina: en su lugar, un programa se encarga de realizar la compilación **en el momento de la ejecución**. Se trata de un híbrido entre la compilación y la interpretación.
 
-{{< figure src="/ox-hugo/compilacion.png" >}}
+{{< figure src="/ox-hugo/compilacion.png" caption="<span class=\"figure-number\">Figure 1: </span>Ejemplo de compilación" >}}
 
-{{< figure src="/ox-hugo/interpretacion.png" >}}
+{{< figure src="/ox-hugo/interpretacion.png" caption="<span class=\"figure-number\">Figure 2: </span>Ejemplo de interpretación" >}}
 
-{{< figure src="/ox-hugo/jit.png" >}}
+{{< figure src="/ox-hugo/jit.png" caption="<span class=\"figure-number\">Figure 3: </span>Ejemplo de compilación JIT" >}}
 
 
 ## Enlace {#enlace}

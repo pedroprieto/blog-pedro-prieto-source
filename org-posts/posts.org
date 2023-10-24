@@ -2765,7 +2765,6 @@ La *compilación* es el proceso de generación de ejecutables a partir del códi
 - *Interpretación* - Los ficheros de código fuente no se transforman a código máquina: en lugar de ello, un programa, denominado *intérprete*, lee línea a línea el código fuente y va realizando la compilación de cada línea de manera independiente.
 - *Compilación JIT* o /Just In Time/ - Los ficheros de código fuente no se transforman a código máquina: en su lugar, un programa se encarga de realizar la compilación *en el momento de la ejecución*. Se trata de un híbrido entre la compilación y la interpretación.
 
-#+CAPTION: Ejemplo de compilación
 #+begin_src plantuml :results silent :file ./images/compilacion.png
   @startuml
   #palegreen:Código fuente;
@@ -2775,11 +2774,11 @@ La *compilación* es el proceso de generación de ejecutables a partir del códi
   @enduml
 #+end_src
 
+#+CAPTION: Ejemplo de compilación
 #+RESULTS:
 [[./images/compilacion.png]]
 
 
-#+CAPTION: Ejemplo de interpretación
 #+begin_src plantuml :file ./images/interpretacion.png
   @startuml
   #palegreen:Línea de código fuente;
@@ -2788,11 +2787,11 @@ La *compilación* es el proceso de generación de ejecutables a partir del códi
   @enduml
 #+end_src
 
+#+CAPTION: Ejemplo de interpretación
 #+RESULTS:
 [[./images/interpretacion.png]]
 
 
-#+CAPTION: Ejemplo de compilación JIT
 #+begin_src plantuml :file ./images/jit.png
   @startuml
   #palegreen:Código fuente;
@@ -2801,6 +2800,7 @@ La *compilación* es el proceso de generación de ejecutables a partir del códi
   @enduml
 #+end_src
 
+#+CAPTION: Ejemplo de compilación JIT
 #+RESULTS:
 [[./images/jit.png]]
 
