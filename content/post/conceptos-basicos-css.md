@@ -4,6 +4,7 @@ date = 2019-10-21T11:28:00+02:00
 tags = ["css"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 Este artículo tiene como objetivo ofrecer una introducción sobre **CSS**, explicar los tipos de hojas de estilo, el modelo de cascada y herencia, comprobar qué características están disponibles en los distintos navegadores y proporcionar una serie de recursos donde encontrar información más detallada.
@@ -26,7 +27,7 @@ Un ejemplo de las posibilidades que ofrecen las hojas de estilo se puede encontr
 
 ## Estructura modular {#estructura-modular}
 
-La versión actual de CSS es **CSS 3**. Esta especificación se ha dividido en una serie de [módulos](https://en.wikipedia.org/wiki/Cascading%5FStyle%5FSheets#CSS%5F3) que son desarrollados por separado. Cada uno de dichos módulos hace referencia a una serie de funcionalidades (color, modelo de caja, fuentes, bordes, _layout_, _media queries_, selectores,...).
+La versión actual de CSS es **CSS 3**. Esta especificación se ha dividido en una serie de [módulos](https://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3) que son desarrollados por separado. Cada uno de dichos módulos hace referencia a una serie de funcionalidades (color, modelo de caja, fuentes, bordes, _layout_, _media queries_, selectores,...).
 
 
 ## Tipos de hojas de estilo {#tipos-de-hojas-de-estilo}
@@ -153,7 +154,7 @@ Para incluir hojas de estilo alternativas se debe utilizar la etiqueta `<link re
 En ocasiones es difícil saber si una determinada propiedad CSS, sobre todo las más recientes, es compatible con una determinada versión de navegador. Para ello son muy útiles los siguientes enlaces:
 
 -   [Can I Use? (¿Puedo utilizar...?)](http://caniuse.com/)
--   [Tabla de compatibilidad de propiedades CSS con los principales navegadores](http://www.w3schools.com/cssref/css3%5Fbrowsersupport.asp)
+-   [Tabla de compatibilidad de propiedades CSS con los principales navegadores](http://www.w3schools.com/cssref/css3_browsersupport.asp)
 
 
 ## Recomendaciones de diseño con CSS {#recomendaciones-de-diseño-con-css}

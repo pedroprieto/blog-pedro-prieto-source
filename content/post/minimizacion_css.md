@@ -4,6 +4,7 @@ date = 2019-10-21T12:39:00+02:00
 tags = ["css", "minimizar", "optimizar"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 La minimización de código tiene como objetivo **reducir el tamaño del archivo eliminando caracteres innecesarios**. Se utiliza en diseño web para reducir el tamaño de los archivos CSS y JavaScript y así reducir el tiempo de carga del sitio web.

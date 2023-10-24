@@ -4,6 +4,7 @@ date = 2019-10-22T11:51:00+02:00
 tags = ["css", "BEM"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 En ocasiones resulta difícil pensar en cómo abordar el diseño con CSS. Las recomendaciones actuales van en la línea de priorizar el **uso de clases** para poder utilizarlas dentro de los archivos HTML. Dentro de esta recomendación nos encontramos con dos posibilidades: priorizar el **diseño de componentes** o priorizar el diseño de **clases de utilidades**.
@@ -146,7 +147,7 @@ Como podemos ver, las clases CSS hacen referencia a características genéricas 
 ### Ventajas: {#ventajas}
 
 -   El código CSS resulta altamente **reutilizable**, ya que las clases no suelen estar asociadas a estructuras HTML determinadas o con función específica.
--   Favorece el patrón de **[composición sobre herencia](https://en.wikipedia.org/wiki/Composition%5Fover%5Finheritance)**, por lo que la creación de componentes ligeramente distintos de los originalmente planteados resulta más fácil que con el patrón de diseño basado en componentes.
+-   Favorece el patrón de **[composición sobre herencia](https://en.wikipedia.org/wiki/Composition_over_inheritance)**, por lo que la creación de componentes ligeramente distintos de los originalmente planteados resulta más fácil que con el patrón de diseño basado en componentes.
 
 
 ### Desventajas: {#desventajas}

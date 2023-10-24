@@ -4,9 +4,10 @@ date = 2019-10-22T09:54:00+02:00
 tags = ["css", "variables", "preprocesadores", "sass", "less"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false
+author = "Pedro Prieto"
 +++
 
-En los últimos años han aparecido una gran cantidad de [preprocesadores CSS](https://developer.mozilla.org/es/docs/Glossary/Preprocesador%5FCSS) que permiten incorporar técnicas de lenguajes de programación (variables, anidamiento, [mixins](https://es.wikipedia.org/wiki/Mixin),...) a la creación de hojas de estilo. La desventaja que tienen es que el código debe **compilarse** para generar CSS válido que pueda ser utilizado por el navegador.
+En los últimos años han aparecido una gran cantidad de [preprocesadores CSS](https://developer.mozilla.org/es/docs/Glossary/Preprocesador_CSS) que permiten incorporar técnicas de lenguajes de programación (variables, anidamiento, [mixins](https://es.wikipedia.org/wiki/Mixin),...) a la creación de hojas de estilo. La desventaja que tienen es que el código debe **compilarse** para generar CSS válido que pueda ser utilizado por el navegador.
 
 Frente a esto, es interesante conocer que CSS permite definir **variables** que pueden ser reutilizadas en todo el documento, proporcionando una alternativa sencilla y estándar, aunque lógicamente menos potente.
 
@@ -76,9 +77,9 @@ A continuación se enumeran algunos de los preprocesadores CSS más utilizados s
 
 Una de las características quizá más interesantes de utilizar un preprocesador CSS es la posibilidad de crear **variables** que puedan ser reutilizadas en el resto de la hoja de estilos. De esta manera se pueden definir determinados valores (por ejemplo, colores) para poder utilizarlos en múltiples clases CSS. Pensemos por ejemplo en la creación de una biblioteca de componentes CSS personalizados: puede ser interesante **parametrizar** determinados aspectos como el color o el color de fondo para diseñar distintos componentes (botones, menús, tablas,...) que muestren un aspecto visual común y que permitan una posterior personalización.
 
-Es posible hacer uso de esta característica sin tener que recurrir a un preprocesador haciendo uso de las **[propiedades personalizadas CSS](https://developer.mozilla.org/es/docs/Web/CSS/Using%5FCSS%5Fcustom%5Fproperties)**. A continuación se muestra un ejemplo:
+Es posible hacer uso de esta característica sin tener que recurrir a un preprocesador haciendo uso de las **[propiedades personalizadas CSS](https://developer.mozilla.org/es/docs/Web/CSS/Using_CSS_custom_properties)**. A continuación se muestra un ejemplo:
 
-{{< highlight css "linenos=table, linenostart=1, hl_lines=2 7 16 23" >}}
+```css { linenos=true, linenostart=1, hl_lines=["2","7","16","23"] }
 :root {
   --color-fondo-principal: brown;
 }
@@ -105,4 +106,4 @@ Es posible hacer uso de esta característica sin tener que recurrir a un preproc
   margin: 10px;
   width: 100px;
 }
-{{< /highlight >}}
+```

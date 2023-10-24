@@ -4,6 +4,7 @@ date = 2019-11-12T00:09:00+01:00
 tags = ["css", "animaciones", "transiciones", "transformaciones"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 En este artículo estudiaremos las herramientas disponibles en CSS para crear transformaciones, transiciones y animaciones.
@@ -27,12 +28,12 @@ Las transformaciones en principio son **estáticas**: es decir, no están animad
 }
 ```
 
-En este enlace puede verse un [ejemplo de rotación 2D](https://www.w3schools.com/css/tryit.asp?filename=trycss3%5Ftransform%5Frotate). En este otro puede verse un [ejemplo de rotación 3D](https://www.w3schools.com/css/tryit.asp?filename=trycss3%5Ftransform%5FrotateY).
+En este enlace puede verse un [ejemplo de rotación 2D](https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_rotate). En este otro puede verse un [ejemplo de rotación 3D](https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_rotateY).
 
 En los siguientes enlaces puede consultarse información más detallada sobre las distintas transformaciones que pueden realizarse en CSS:
 
--   [Transformaciones 2D](https://www.w3schools.com/css/css3%5F2dtransforms.asp)
--   [Transformaciones 3D](https://www.w3schools.com/css/css3%5F3dtransforms.asp)
+-   [Transformaciones 2D](https://www.w3schools.com/css/css3_2dtransforms.asp)
+-   [Transformaciones 3D](https://www.w3schools.com/css/css3_3dtransforms.asp)
 
 
 ## Transiciones {#transiciones}
@@ -45,12 +46,12 @@ Las **transiciones CSS** permiten realizar **cambios graduales de determinadas p
 
 Es importante tener claro que la transición se ejecutará **cuando se produzca un cambio en el valor de la propiedad definida en la transición**. Por ejemplo, si se define una transición para la propiedad `width` de una capa, la transición se producirá cuando se realice un cambio en la anchura de dicha capa. Los cambios de valor de la propiedad pueden realizarse básicamente de **dos maneras**:
 
-1.  A través de una [pseudo-clase](https://www.w3schools.com/css/css%5Fpseudo%5Fclasses.asp) (como por ejemplo, `:hover`, que se activa al pasar el ratón por encima)
+1.  A través de una [pseudo-clase](https://www.w3schools.com/css/css_pseudo_classes.asp) (como por ejemplo, `:hover`, que se activa al pasar el ratón por encima)
 2.  A través de JavaScript
 
-Por último, hay que tener en cuenta que **solo se pueden realizar transiciones (y animaciones) sobre propiedades CSS que sean [animables](https://www.w3schools.com/cssref/css%5Fanimatable.asp)**.
+Por último, hay que tener en cuenta que **solo se pueden realizar transiciones (y animaciones) sobre propiedades CSS que sean [animables](https://www.w3schools.com/cssref/css_animatable.asp)**.
 
-A continuación se muestra un ejemplo de transición de la propiedad `width` de una capa (en este enlace puede verse el [ejemplo en ejecución](https://www.w3schools.com/css/tryit.asp?filename=trycss3%5Ftransition1)):
+A continuación se muestra un ejemplo de transición de la propiedad `width` de una capa (en este enlace puede verse el [ejemplo en ejecución](https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1)):
 
 ```css
 div {
@@ -69,7 +70,7 @@ En el ejemplo se ha definido una transición para la propiedad `width` con una d
 
 A continuación se muestra un [ejemplo de transición con pseudo-clases y JavaScript](https://jsbin.com/qugopah/1/edit?html,css,js,output).
 
-En el siguiente enlace puede consultarse más [información sobre transiciones CSS](https://www.w3schools.com/css/css3%5Ftransitions.asp).
+En el siguiente enlace puede consultarse más [información sobre transiciones CSS](https://www.w3schools.com/css/css3_transitions.asp).
 
 
 ## Animaciones {#animaciones}
@@ -131,5 +132,5 @@ El funcionamiento del ejemplo se describe a continuación:
 
 Para obtener más información sobre animaciones pueden consultarse los siguientes enlaces:
 
--   <https://www.w3schools.com/css/css3%5Fanimations.asp>
+-   <https://www.w3schools.com/css/css3_animations.asp>
 -   <https://developer.mozilla.org/es/docs/Web/CSS/@keyframes>

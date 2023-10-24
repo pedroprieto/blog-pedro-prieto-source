@@ -4,16 +4,17 @@ date = 2019-10-21T11:47:00+02:00
 tags = ["css", "modelo-caja"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false
+author = "Pedro Prieto"
 +++
 
-El [modelo de caja de CSS](https://developer.mozilla.org/es/docs/Web/CSS/CSS%5FModelo%5FCaja/Introducci%C3%B3n%5Fal%5Fmodelo%5Fde%5Fcaja%5Fde%5FCSS) tiene como objetivo definir el comportamiento de los elementos en HTML. En concreto define el **contenido**, **relleno**, **bordes** y **márgenes**. Se utiliza en gran medida para disponer los elementos en una estructura determinada (el denominado **layout**). En este artículo veremos un par de características relacionadas con él que pueden ser de mucha utilidad: la propiedad `box-sizing` y el comportamiento de la **anchura y altura** de las cajas.
+El [modelo de caja de CSS](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Modelo_Caja/Introducci%C3%B3n_al_modelo_de_caja_de_CSS) tiene como objetivo definir el comportamiento de los elementos en HTML. En concreto define el **contenido**, **relleno**, **bordes** y **márgenes**. Se utiliza en gran medida para disponer los elementos en una estructura determinada (el denominado **layout**). En este artículo veremos un par de características relacionadas con él que pueden ser de mucha utilidad: la propiedad `box-sizing` y el comportamiento de la **anchura y altura** de las cajas.
 
 <!--more-->
 
 
 ## La propiedad `box-sizing` {#la-propiedad-box-sizing}
 
-Existe una propiedad en CSS3 denominada `box-sizing` que permite cambiar la definición de anchura para ésta que incluya el **contenido, relleno (padding) y bordes** (no se incluye el margen). En este [enlace](http://www.w3schools.com/cssref/css3%5Fpr%5Fbox-sizing.asp) puedes consultar su funcionamiento. De esta manera, al utilizar el código `box-sizing: border-box;`, no habrá que hacer sumas para calcular el ancho total de las cajas.
+Existe una propiedad en CSS3 denominada `box-sizing` que permite cambiar la definición de anchura para ésta que incluya el **contenido, relleno (padding) y bordes** (no se incluye el margen). En este [enlace](http://www.w3schools.com/cssref/css3_pr_box-sizing.asp) puedes consultar su funcionamiento. De esta manera, al utilizar el código `box-sizing: border-box;`, no habrá que hacer sumas para calcular el ancho total de las cajas.
 
 Es habitual utilizar este código si se va a usar esta propiedad:
 

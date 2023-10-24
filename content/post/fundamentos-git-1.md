@@ -4,6 +4,7 @@ date = 2019-09-23T11:51:00+02:00
 tags = ["git"]
 categories = ["diw", "diw-herramientas-desarrollo"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 En este artículo se pretende dar una introducción a los comandos más comunes del software de control de versiones **Git**.
@@ -13,8 +14,8 @@ En este artículo se pretende dar una introducción a los comandos más comunes 
 
 ## Videotutoriales {#videotutoriales}
 
--   [Sesión 1.1](https://www.youtube.com/watch?v=DuewUoPnAmg&index=2&list=PLQg%5FBl-6Gfo9k0KQg5vaaV9r6Hg--nMA7)
--   [Sesión 1.2](https://www.youtube.com/watch?v=uwqvuJ5lrIs&list=PLQg%5FBl-6Gfo9k0KQg5vaaV9r6Hg--nMA7&index=3)
+-   [Sesión 1.1](https://www.youtube.com/watch?v=DuewUoPnAmg&index=2&list=PLQg_Bl-6Gfo9k0KQg5vaaV9r6Hg--nMA7)
+-   [Sesión 1.2](https://www.youtube.com/watch?v=uwqvuJ5lrIs&list=PLQg_Bl-6Gfo9k0KQg5vaaV9r6Hg--nMA7&index=3)
 
 
 ## Índice {#índice}
@@ -33,8 +34,8 @@ En este artículo se pretende dar una introducción a los comandos más comunes 
 ## Referencias {#referencias}
 
 -   [Libro de Git](https://git-scm.com/book/es/v2/)
--   [Hoja de referencia de Git](https://github.github.com/training-kit/downloads/es%5FES/github-git-cheat-sheet/)
--   [Hoja de referencia de Git (PDF)](https://services.github.com/on-demand/downloads/es%5FES/github-git-cheat-sheet.pdf)
+-   [Hoja de referencia de Git](https://github.github.com/training-kit/downloads/es_ES/github-git-cheat-sheet/)
+-   [Hoja de referencia de Git (PDF)](https://services.github.com/on-demand/downloads/es_ES/github-git-cheat-sheet.pdf)
 
 
 ## Contenidos {#contenidos}

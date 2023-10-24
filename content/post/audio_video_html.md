@@ -4,6 +4,7 @@ date = 2019-11-12T00:55:00+01:00
 tags = ["css", "audio", "video"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 HTML5 define las etiquetas `<audio>` y `<video>` para incorporar archivos de audio y vídeo respectivamente en páginas web. En este artículo veremos cómo utilizar dichas etiquetas, qué **formatos** de vídeo y audio son compatibles con los distintos navegadores y qué **programas** podemos utilizar para **editar** y **realizar conversiones** entre distintos formatos.
@@ -33,7 +34,7 @@ La etiqueta `<audio>` admite varios atributos. En el caso del ejemplo, el atribu
 Para más información sobre las opciones de la etiqueta `<audio>` se pueden consultar los siguientes enlaces:
 
 -   <https://developer.mozilla.org/es/docs/Web/HTML/Elemento/audio>
--   <https://www.w3schools.com/tags/tag%5Faudio.asp>
+-   <https://www.w3schools.com/tags/tag_audio.asp>
 
 
 ### Formatos de audio {#formatos-de-audio}
@@ -46,7 +47,7 @@ Los principales formatos utilizados para audio son:
 
 Para más información sobre compatibilidad de formatos multimedia puede consultarse:
 
--   <https://developer.mozilla.org/es/docs/Web/HTML/Formatos%5Fadmitidos%5Fde%5Faudio%5Fy%5Fvideo%5Fen%5Fhtml5>
+-   <https://developer.mozilla.org/es/docs/Web/HTML/Formatos_admitidos_de_audio_y_video_en_html5>
 
 
 ### Programas de edición de audio {#programas-de-edición-de-audio}
@@ -85,7 +86,7 @@ video {
 Para más información sobre las opciones de la etiqueta `<video>` se pueden consultar los siguientes enlaces:
 
 -   <https://developer.mozilla.org/es/docs/Web/HTML/Elemento/video>
--   <https://www.w3schools.com/tags/tag%5Fvideo.asp>
+-   <https://www.w3schools.com/tags/tag_video.asp>
 
 
 ### Formatos de vídeo {#formatos-de-vídeo}
@@ -98,7 +99,7 @@ Los principales formatos utilizados para vídeo son:
 
 Para más información sobre compatibilidad de formatos multimedia puede consultarse:
 
--   <https://developer.mozilla.org/es/docs/Web/HTML/Formatos%5Fadmitidos%5Fde%5Faudio%5Fy%5Fvideo%5Fen%5Fhtml5>
+-   <https://developer.mozilla.org/es/docs/Web/HTML/Formatos_admitidos_de_audio_y_video_en_html5>
 
 
 ### Programas de edición de vídeo {#programas-de-edición-de-vídeo}

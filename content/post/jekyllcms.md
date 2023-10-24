@@ -4,9 +4,10 @@ date = 2019-11-19T12:30:00+01:00
 tags = ["css", "jekyll", "cms"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false
+author = "Pedro Prieto"
 +++
 
-[Jekyll](https://jekyllrb.com) es un [gestor de contenido](https://es.wikipedia.org/wiki/Sistema%5Fde%5Fgesti%C3%B3n%5Fde%5Fcontenidos) de tipo **estático** (_static site generator_). No depende de ninguna base de datos ni de ningún lenguaje de servidor. Utiliza ficheros de texto para almacenar los contenidos y los datos. Dado que no utiliza tecnologías de servidor, es necesario realizar un proceso de **generación** o compilación para producir archivos HTML válidos que puedan ser alojados en un servidor y procesados adecuadamente por un navegador web convencional.
+[Jekyll](https://jekyllrb.com) es un [gestor de contenido](https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_contenidos) de tipo **estático** (_static site generator_). No depende de ninguna base de datos ni de ningún lenguaje de servidor. Utiliza ficheros de texto para almacenar los contenidos y los datos. Dado que no utiliza tecnologías de servidor, es necesario realizar un proceso de **generación** o compilación para producir archivos HTML válidos que puedan ser alojados en un servidor y procesados adecuadamente por un navegador web convencional.
 
 <!--more-->
 

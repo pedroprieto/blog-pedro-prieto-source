@@ -4,6 +4,7 @@ date = 2019-09-23T12:37:00+02:00
 tags = ["git", "github"]
 categories = ["diw", "diw-herramientas-desarrollo"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 En este artículo se explicará el uso de la herramienta **GitHub** y las posibilidades que ofrece en el entorno educativo.

@@ -4,6 +4,7 @@ date = 2019-09-23T12:18:00+02:00
 tags = ["git"]
 categories = ["diw", "diw-herramientas-desarrollo"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 Este artículo tiene como objetivo profundizar en el manejo de Git con el uso de **ramas** y **repositorios remotos**.
@@ -31,8 +32,8 @@ Este artículo tiene como objetivo profundizar en el manejo de Git con el uso de
 ## Referencias {#referencias}
 
 -   [Libro de Git](https://git-scm.com/book/es/v2/)
--   [Hoja de referencia de Git](https://training.github.com/downloads/es%5FES/github-git-cheat-sheet/)
--   [Hoja de referencia de Git (PDF)](https://training.github.com/downloads/es%5FES/github-git-cheat-sheet.pdf)
+-   [Hoja de referencia de Git](https://training.github.com/downloads/es_ES/github-git-cheat-sheet/)
+-   [Hoja de referencia de Git (PDF)](https://training.github.com/downloads/es_ES/github-git-cheat-sheet.pdf)
 -   [Herramienta "Visualizing Git"](http://git-school.github.io/visualizing-git/) (muy interesante para comprender el funcionamiento interno de Git y el trabajo con ramas y remotos)
 
 

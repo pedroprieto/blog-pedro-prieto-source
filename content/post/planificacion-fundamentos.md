@@ -4,6 +4,7 @@ date = 2019-09-30T10:28:00+02:00
 tags = ["krug", "planificacion", "usabilidad"]
 categories = ["diw", "diw-planificacion-interfacesweb"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 Antes de proceder a la edición de código e incluso antes de la creación de un prototipo es necesario tener claros algunos **principios de diseño** y tomar algunas decisiones relacionadas con el estilo general del sitio, que normalmente vendrán recogidas en la **[guía de estilo](/post/planificacion-guia-estilo)**.
@@ -152,7 +153,7 @@ El objetivo principal es eliminar todas aquellas preguntas que se pueda hacer el
 ### Migas de pan {#migas-de-pan}
 
 -   Deben aparecer en la parte superior.
--   Se debe utilizar "**>**" para separar niveles.
+-   Se debe utilizar "**&gt;**" para separar niveles.
 -   El último nivel (nombre de la página actual) no debe ser un enlace y debe aparecer destacado.
 
 

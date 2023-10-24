@@ -1,5 +1,7 @@
 #+hugo_base_dir: ../
 #+hugo_section: post
+#+author:
+#+hugo_custom_front_matter: :author "Pedro Prieto"
 
 * Homepage
 :PROPERTIES:
@@ -2726,6 +2728,99 @@ Existe una gran multitud de alternativas a Bootstrap. El funcionamiento de todas
 - [[https://youtu.be/4xwuUhp1kBA][Bootstrap: layout]]
 - [[https://www.youtube.com/watch?v=p8cCMsb6oLo][Bootstrap: utilidades y edición de contenido]]
 - [[https://youtu.be/oEgTFnVZhRQ][Bootstrap: componentes]]
+
+* Puesta en Producción Segura                                :@puestaprodseg:
+** Prueba de aplicaciones                          :@puestaprodseg_lenguajes:
+*** DONE Lenguajes de programación                    :lenguaje:programacion:
+CLOSED: [2023-10-24 mar 13:16]
+:PROPERTIES:
+:EXPORT_FILE_NAME: lenguajes_programacion
+:END:
+
+**** Código fuente
+Conjunto de ficheros que almacenan *texto* escrito en un lenguaje legible por el ser humano. Dicho lenguaje, denominado *lenguaje de programación*, tiene una sintaxis específica. El texto escrito en dicho lenguaje especifica las *acciones* que llevará a cabo el programa cuando se ejecute.
+
+El código fuente debe traducirse a *código máquina* para que pueda ser ejecutado en un computador mediante un proceso denominado *compilación*.
+
+[[https://en.wikipedia.org/wiki/Source_code][Código fuente en la Wikipedia]].
+
+**** Código máquina, arquitectura y sistemas operativos
+El código máquina, también denominado código ejecutable, contiene las *instrucciones* que deberá ejecutar un computador en su CPU para que pueda funcionar el programa correspondiente.
+
+El código máquina depende de la *arquitectura* del computador para la que se haya generado: el *conjunto de instrucciones* soportado por el procesador. Por ello, el código máquina de un programa suele ser *incompatible* con *otras arquitecturas* para las que no ha sido producido.
+
+Ejemplos de arquitecturas:
+- x86
+- Arm
+- Arm64
+- PowerPC
+
+El código máquina también depende del *sistema operativo* para el que se haya generado: normalmente, el código fuente utiliza una serie de *librerías* para utilizar funciones específicas de un sistema operativo (acceso al sistema de ficheros, redes, elementos hardware,...). Cuando se ejecuta, el programa hace uso de esas librerías, que están en el Sistema Operativo en cuestión. 
+
+[[https://en.wikipedia.org/wiki/Machine_code][Código máquina en la Wikipedia]].
+
+**** Compilación
+La *compilación* es el proceso de generación de ejecutables a partir del código fuente. Existen varias métodos:
+- *Compilación y enlace* - Los ficheros de código fuente se transforman a ficheros de código máquina. Posteriormente, el *enlazador* genera un ejecutable a partir de los ficheros de código máquina, conectándolo con las librerías adicionales necesarias para su funcionamiento.
+- *Interpretación* - Los ficheros de código fuente no se transforman a código máquina: en lugar de ello, un programa, denominado *intérprete*, lee línea a línea el código fuente y va realizando la compilación de cada línea de manera independiente.
+- *Compilación JIT* o /Just In Time/ - Los ficheros de código fuente no se transforman a código máquina: en su lugar, un programa se encarga de realizar la compilación *en el momento de la ejecución*. Se trata de un híbrido entre la compilación y la interpretación.
+
+#+CAPTION: Ejemplo de compilación
+#+begin_src plantuml :results silent :file ./images/compilacion.png
+  @startuml
+  #palegreen:Código fuente;
+  #yellow:Código máquina;
+  #mediumseagreen:Ejecutable;
+  #indianred:Ejecución del programa;
+  @enduml
+#+end_src
+
+#+RESULTS:
+[[./images/compilacion.png]]
+
+
+#+CAPTION: Ejemplo de interpretación
+#+begin_src plantuml :file ./images/interpretacion.png
+  @startuml
+  #palegreen:Línea de código fuente;
+  #yellow:Intérprete;
+  #indianred:Resultado de ejecución;
+  @enduml
+#+end_src
+
+#+RESULTS:
+[[./images/interpretacion.png]]
+
+
+#+CAPTION: Ejemplo de compilación JIT
+#+begin_src plantuml :file ./images/jit.png
+  @startuml
+  #palegreen:Código fuente;
+  #yellow:Compilador JIT;
+  #indianred:Ejecución del programa;
+  @enduml
+#+end_src
+
+#+RESULTS:
+[[./images/jit.png]]
+
+**** Enlace
+**** Intérpretes
+**** Compilación JIT
+**** ByteCode
+- .NET
+- Java
+- Python, JavaScript (JIT)
+
+**** Sintaxis
+***** Variables
+***** Tipos de datos
+***** Condicionales
+***** Bucles
+***** Asignación
+***** Funciones
+**** Módulos, clases, ficheros
+
 
 * TODO Ideas
 - Posicionamiento absoluto, floats

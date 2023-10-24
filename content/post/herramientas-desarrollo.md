@@ -4,6 +4,7 @@ date = 2019-09-24T00:43:00+02:00
 tags = ["editores", "ide", "herramientas"]
 categories = ["diw", "diw-herramientas-desarrollo"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 A continuación se muestran algunas herramientas de desarrollo que considero interesantes. Este artículo estará en continua revisión.

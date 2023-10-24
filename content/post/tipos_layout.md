@@ -4,6 +4,7 @@ date = 2019-10-28T13:15:00+01:00
 tags = ["css", "layout"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 El _layout_ o **estructura** de un interfaz web es la manera de organizar o disponer los elementos visuales en la página. El diseño del layout determina la posición de cada uno de los elementos que componen el interfaz web (cabecera, menús, banners, contenido, etc.).
@@ -22,7 +23,7 @@ Además, el diseño del layout comprende también una serie de decisiones que af
 
 Uno de los patrones de diseño más utilizados es un diseño formado por varias (normalmente tres) columnas, con el contenido principal ocupando una de ellas (normalmente en el centro) y el resto de elementos (menús, banners,...) en las otras columnas. Las columnas idealmente deben tener la misma altura independientemente de su contenido y opcionalmente pueden tener bordes o colores de fondo diferenciados.
 
-{{< figure src="/./holy_grial.png" alt="Diseño de Santo Grial" caption="Figura 1: Diseño de Santo Grial" link="../../images/02_02_holy_grial.png" >}}
+{{< figure src="/ox-hugo/holy_grial.png" alt="Diseño de Santo Grial" caption="<span class=\"figure-number\">Figure 1: </span>Diseño de Santo Grial" link="../../images/02_02_holy_grial.png" >}}
 
 Aunque parece sencillo de conseguir, no hay ninguna solución óptima para este diseño. Todas ellas tienen algún inconveniente:
 
@@ -44,7 +45,7 @@ Aunque parece sencillo de conseguir, no hay ninguna solución óptima para este 
 -   Problemas con lectores de pantalla.
 -   Problemas de tiempo de respuesta de los navegadores.
 
-{{< figure src="/./layout_tables.png" alt="Diseño basado en tablas" caption="Figura 2: Diseño basado en tablas" link="../../images/02_02_tables.png" >}}
+{{< figure src="/ox-hugo/layout_tables.png" alt="Diseño basado en tablas" caption="<span class=\"figure-number\">Figure 2: </span>Diseño basado en tablas" link="../../images/02_02_tables.png" >}}
 
 
 ### Posicionamiento absoluto {#posicionamiento-absoluto}

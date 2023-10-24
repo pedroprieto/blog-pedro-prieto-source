@@ -4,13 +4,14 @@ date = 2019-10-21T12:28:00+02:00
 tags = ["css", "medida", "unidades", "viewport"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 En este artículo estudiaremos las unidades de medida más utilizadas en CSS, así como las diferencias más importantes entre las unidades **relativas** y las unidades **absolutas**.
 
 <!--more-->
 
-CSS define distintas unidades para representar medidas. Dichas unidades se pueden consultar en el siguiente enlace: [unidades CSS 2.1](http://www.w3schools.com/cssref/css%5Funits.asp).
+CSS define distintas unidades para representar medidas. Dichas unidades se pueden consultar en el siguiente enlace: [unidades CSS 2.1](http://www.w3schools.com/cssref/css_units.asp).
 
 CSS 3 define algunas unidades adicionales: [unidades CSS 3](http://www.w3.org/TR/css3-values/).
 
@@ -131,7 +132,7 @@ div div {        /* Hereda 100% = 512px */
 
 ### Unidades 'vw', 'vh', 'vmin' y 'vmax' {#unidades-vw-vh-vmin-y-vmax}
 
-Estas unidades hacen referencia al tamaño del **[viewport](https://www.w3schools.com/css/css%5Frwd%5Fviewport.asp)**. CSS define el _viewport_ como el **tamaño del área que se utiliza para representar la página web**. Coincide con el `<body>` incluyendo los márgenes. Es importante indicar que en los **navegadores móviles** el _viewport_ tiene un **tamaño superior al tamaño real** de la pantalla: es por ello que las páginas web se muestran completas como vistas desde un zoom de alejamiento (este tema será tratado con más detalle más adelante).
+Estas unidades hacen referencia al tamaño del **[viewport](https://www.w3schools.com/css/css_rwd_viewport.asp)**. CSS define el _viewport_ como el **tamaño del área que se utiliza para representar la página web**. Coincide con el `<body>` incluyendo los márgenes. Es importante indicar que en los **navegadores móviles** el _viewport_ tiene un **tamaño superior al tamaño real** de la pantalla: es por ello que las páginas web se muestran completas como vistas desde un zoom de alejamiento (este tema será tratado con más detalle más adelante).
 
 Estas unidades tienen una **referencia fija**, que es el ancho ('vw'), alto ('vh'), dimensión más pequeña ('vmin') o dimensión más grande ('vmax') del _viewport_. Por tanto, para calcular el valor real aplicado simplemente hay que mirar el elemento raíz. A continuación se muestra un ejemplo:
 

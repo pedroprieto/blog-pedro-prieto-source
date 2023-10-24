@@ -4,9 +4,10 @@ date = 2019-10-28T18:02:00+01:00
 tags = ["css", "layout", "flexbox", "grid"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false
+author = "Pedro Prieto"
 +++
 
-En la actualidad existen muchas maneras de crear layouts utilizando CSS. A las técnicas tradicionales (`float`, `inline-block`) se suman otras nuevas aportadas por CSS3, como [flexbox](https://developer.mozilla.org/es/docs/Web/CSS/CSS%5FFlexible%5FBox%5FLayout/Conceptos%5FBasicos%5Fde%5FFlexbox) o [CSS Grid Layout](https://developer.mozilla.org/es/docs/Web/CSS/CSS%5FGrid%5FLayout).
+En la actualidad existen muchas maneras de crear layouts utilizando CSS. A las técnicas tradicionales (`float`, `inline-block`) se suman otras nuevas aportadas por CSS3, como [flexbox](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Conceptos_Basicos_de_Flexbox) o [CSS Grid Layout](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout).
 
 <!--more-->
 
@@ -100,7 +101,7 @@ Desventajas:
 Los siguientes recursos también son muy interesantes:
 
 -   <https://css-tricks.com/snippets/css/a-guide-to-flexbox/>
--   <https://developer.mozilla.org/es/docs/Web/Guide/CSS/Cajas%5Fflexibles>
+-   <https://developer.mozilla.org/es/docs/Web/Guide/CSS/Cajas_flexibles>
 -   <http://demo.agektmr.com/flexbox/>
 
 Ventajas:
@@ -133,8 +134,8 @@ Tiene múltiples ventajas, entre las que destacan las siguientes:
 Para aprender más sobre Grid Layout puedes consultar:
 
 -   <https://css-tricks.com/snippets/css/complete-guide-grid/>
--   <https://www.w3schools.com/css/css%5Fgrid.asp>
--   <https://developer.mozilla.org/es/docs/Web/CSS/CSS%5FGrid%5FLayout/Conceptos%5FB%C3%A1sicos%5Fdel%5FPosicionamiento%5Fcon%5FRejillas>
+-   <https://www.w3schools.com/css/css_grid.asp>
+-   <https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout/Conceptos_B%C3%A1sicos_del_Posicionamiento_con_Rejillas>
 -   <https://developer.mozilla.org/es/docs/Web/CSS/grid-template-areas>
 
 
@@ -147,6 +148,6 @@ Para aprender más sobre Grid Layout puedes consultar:
     -   Dentro de cada fila se procederá a agrupar por **columnas** que lleguen a su vez a los extremos de los contenedores.
     -   Se continuará de esta manera (filas, columnas,...) hasta completar el diseño.
 
-{{< figure src="/./disenyo_layout.png" alt="Agrupación por filas y columnas" caption="Figura 1: Agrupación por filas y columnas" link="../../images/02_02_disenyo.png" >}}
+{{< figure src="/ox-hugo/disenyo_layout.png" alt="Agrupación por filas y columnas" caption="<span class=\"figure-number\">Figure 1: </span>Agrupación por filas y columnas" link="../../images/02_02_disenyo.png" >}}
 
 Por último, es recomendable pensar en el layout más adecuado para **dispositivos móviles** o pantallas pequeñas. Este tema será abordado con más detalle en otros artículos.

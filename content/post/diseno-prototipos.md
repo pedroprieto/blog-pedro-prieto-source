@@ -4,6 +4,7 @@ date = 2019-10-07T11:01:00+02:00
 tags = ["prototipos", "diseño", "moqups", "wireframe", "mockup"]
 categories = ["diw", "diw-planificacion-interfacesweb"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 En todo proyecto de desarrollo web es recomendable realizar un prototipo o boceto del interfaz. De esta manera se puede tener una idea aproximada del aspecto visual que tendrá, qué secciones lo compondrán, cómo se verá en pantalla, etc.
@@ -23,7 +24,7 @@ Existen varias posibilidades para crear prototipos:
 
 ## Prototipos en papel {#prototipos-en-papel}
 
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Paper%5Fprototype%5Fof%5Fwebsite%5Fuser%5Finterface%2C%5F2015-04-16.jpg/640px-Paper%5Fprototype%5Fof%5Fwebsite%5Fuser%5Finterface%2C%5F2015-04-16.jpg" caption="Figura 1: Prototipo de papel. Fuente: Wikimedia" >}}
+{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Paper_prototype_of_website_user_interface%2C_2015-04-16.jpg/640px-Paper_prototype_of_website_user_interface%2C_2015-04-16.jpg" caption="<span class=\"figure-number\">Figure 1: </span>Prototipo de papel. Fuente: Wikimedia" >}}
 
 Los prototipos en papel ofrecen una primera aproximación al diseño de la interfaz. Pueden realizarse tan sencillos como se desee (en blanco y negro, en la típica servilleta de bar que se pone como ejemplo de germen de todas las grandes ideas,...) o con un nivel de complejidad más elevado (utilizando distintos tipos de papeles, colores, materiales,...).
 
@@ -31,12 +32,12 @@ La principal ventaja de este tipo de prototipos es que no necesitan de ningún t
 
 Una vez creados en papel los bocetos de las distintas páginas que componen el sitio se pueden tomar **fotografías** para simular determinadas interacciones y estados de la aplicación. Esas imágenes pueden utilizarse a su vez para crear **animaciones** y distribuir el prototipo de manera más eficiente sin la necesidad de tener que cargar con el papel de un lado a otro.
 
-En el siguiente enlace se puede consultar un vídeo sobre cómo Google utiliza este tipo de prototipos: [Rapid Prototyping 1 of 3: Sketching & Paper Prototyping](https://www.youtube.com/watch?v=JMjozqJS44M).
+En el siguiente enlace se puede consultar un vídeo sobre cómo Google utiliza este tipo de prototipos: [Rapid Prototyping 1 of 3: Sketching &amp; Paper Prototyping](https://www.youtube.com/watch?v=JMjozqJS44M).
 
 
 ## Prototipos digitales {#prototipos-digitales}
 
-{{< figure src="/./prototipo.png" caption="Figura 2: Prototipo digital" >}}
+{{< figure src="/ox-hugo/prototipo.png" caption="<span class=\"figure-number\">Figure 2: </span>Prototipo digital" >}}
 
 Para la creación de estos prototipos se hace uso de alguna herramienta específica de edición. El objetivo es crear un boceto **más parecido a la realidad** que incluso pueda ofrecer un mínimo nivel de **interactividad**. El diseño puede ser exportado a un **archivo de imagen**, **HTML** o **PDF** para adjuntar a la documentación del proyecto.
 
@@ -45,7 +46,7 @@ En el siguiente enlace se puede consultar un vídeo sobre cómo Google utiliza e
 
 ## Prototipos nativos {#prototipos-nativos}
 
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Responsive%5FWeb%5FDesign.png" caption="Figura 3: Prototipo nativo" >}}
+{{< figure src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Responsive_Web_Design.png" caption="<span class=\"figure-number\">Figure 3: </span>Prototipo nativo" >}}
 
 Los prototipos nativos utilizan las **mismas tecnologías** (lenguajes de programación, librerías,...) y **dispositivos** (teléfonos móviles, pantallas,...) que utilizará la **aplicación real**. Se utilizan por tanto como **último paso** antes del desarrollo de la aplicación real. Una vez el prototipo ha sido correctamente testado en los dispositivos en los que se va a utilizar puede integrarse en la aplicación junto con el resto de componentes (lógica de negocio y almacenamiento de datos).
 
@@ -58,7 +59,7 @@ La tendencia actual consiste en diseñar siguiendo la teoría de **Mobile First*
 
 La elección de este patrón de diseño se debe a que **[los buscadores dan más peso a los sitios web optimizados para dispositivos móviles](https://developers.google.com/search/mobile-sites/mobile-first-indexing)** dado que la mayoría de usuarios que se conectan a Internet lo hacen mediante este tipo de dispositivos.
 
-Una vez creado el diseño para móvil se procede a crear las versiones para pantallas más grandes. De esta manera el sitio web **se adapta a distintos tipos de pantallas** siguiendo el [patrón de diseño web adaptativo](https://es.wikipedia.org/wiki/Dise%C3%B1o%5Fweb%5Fadaptable).
+Una vez creado el diseño para móvil se procede a crear las versiones para pantallas más grandes. De esta manera el sitio web **se adapta a distintos tipos de pantallas** siguiendo el [patrón de diseño web adaptativo](https://es.wikipedia.org/wiki/Dise%C3%B1o_web_adaptable).
 
 
 ## Herramientas de creación de prototipos digitales {#herramientas-de-creación-de-prototipos-digitales}

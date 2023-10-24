@@ -4,6 +4,7 @@ date = 2019-10-29T12:00:00+01:00
 tags = ["css", "formularios"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 En este artículo se analizarán algunas recomendaciones de diseño relacionadas con los formularios web. El objetivo es aprender a diseñar formularios que muestren la información de manera limpia, clara y de forma adaptada a cualquier tipo de dispositivo.
@@ -249,10 +250,10 @@ La utilización de HTML5 junto con los navegadores actuales permiten incorporar 
 -   Utilizar las etiquetas `<input>` definidas en HTML5: `<input type="date">`, `<input type="email">`, `<input type="number">`,... Más información [sobre etiquetas input](https://developer.mozilla.org/es/docs/Web/HTML/Elemento/input).
 -   Utilizar el atributo `required` para indicar que un campo es obligatorio.
 -   Utilizar atributos de validación específicos: `min`, `max`, `minlength`, `maxlength`, `pattern`,...
--   Utilizar [mensajes de error personalizados](https://developer.mozilla.org/es/docs/Learn/HTML/Forms/Validacion%5Fformulario%5Fdatos#Mensajes%5Fde%5Ferror%5Fpersonalizados) (requiere JavaScript).
+-   Utilizar [mensajes de error personalizados](https://developer.mozilla.org/es/docs/Learn/HTML/Forms/Validacion_formulario_datos#Mensajes_de_error_personalizados) (requiere JavaScript).
 -   Utilizar las [pseudo-clases `:valid` y `:invalid`](https://developer.mozilla.org/es/docs/Web/CSS/:invalid) de CSS para personalizar la apariencia visual de los campos correctos o incorrectos.
 
-Puede consultarse más información sobre validación en este [artículo de MDN sobre validación de formularios](https://developer.mozilla.org/es/docs/Learn/HTML/Forms/Validacion%5Fformulario%5Fdatos).
+Puede consultarse más información sobre validación en este [artículo de MDN sobre validación de formularios](https://developer.mozilla.org/es/docs/Learn/HTML/Forms/Validacion_formulario_datos).
 
 
 ### Relleno automático de campos {#relleno-automático-de-campos}
@@ -320,7 +321,7 @@ Las **etiquetas** de los formularios suelen colocarse **arriba o a la izquierda*
 
 ### Control por teclado {#control-por-teclado}
 
--   Se debe tener en cuenta el uso del teclado para rellenar formularios. Para ello puede utilizarse el atributo [tabindex](http://www.w3schools.com/tags/att%5Fglobal%5Ftabindex.asp).
+-   Se debe tener en cuenta el uso del teclado para rellenar formularios. Para ello puede utilizarse el atributo [tabindex](http://www.w3schools.com/tags/att_global_tabindex.asp).
 
 
 ### Retroalimentación {#retroalimentación}

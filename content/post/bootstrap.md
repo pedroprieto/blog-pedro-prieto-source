@@ -4,6 +4,7 @@ date = 2020-01-07T12:56:00+01:00
 tags = ["bootstrap", "css"]
 categories = ["diw", "diw-bootstrap"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 [Bootstrap](https://getbootstrap.com) es una biblioteca de clases CSS pensada para facilitar la creación de prototipos web. Ofrece una serie de **clases CSS** listas para ser usadas en cualquier proyecto **prácticamente sin necesidad de tener que crear código CSS**. Los estilos han sido diseñados para **ofrecer un aspecto visual uniforme** independientemente del tipo de navegador o sistema operativo utilizado.

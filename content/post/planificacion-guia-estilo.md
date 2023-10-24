@@ -4,6 +4,7 @@ date = 2019-09-30T10:46:00+02:00
 tags = ["guia", "estilo", "planificacion"]
 categories = ["diw", "diw-planificacion-interfacesweb"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 Una guía de estilo recoge las normas de diseño que se utilizarán para crear un sitio web. Normalmente hace referencia a una serie de elementos (tipografía, colores, logos, etc.) que se deben utilizar para garantizar la **uniformidad** de la **estructura** y **apariencia visual** del sitio.
@@ -15,7 +16,7 @@ Una guía de estilo recoge las normas de diseño que se utilizarán para crear u
 
 El logo es la imagen del sitio web. Es importante diseñarlo adecuadamente para que refleje correctamente la temática y el contenido del sitio web.
 
-Para diseñar un logo se suele recurrir a algún programa de **[dibujo vectorial](https://es.wikipedia.org/wiki/Gr%C3%A1fico%5Fvectorial)** como [Inkscape](https://inkscape.org/es/). La principal ventaja de los gráficos vectoriales es que no están formados por píxeles, por lo que no pierden calidad. Una vez creado el gráfico vectorial éste puede ser exportado a diferentes **formatos** (PNG, JPG,...) o **personalizado** (blanco y negro, cambio de colores, versiones con o sin texto,...) para su uso en el sitio web.
+Para diseñar un logo se suele recurrir a algún programa de **[dibujo vectorial](https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial)** como [Inkscape](https://inkscape.org/es/). La principal ventaja de los gráficos vectoriales es que no están formados por píxeles, por lo que no pierden calidad. Una vez creado el gráfico vectorial éste puede ser exportado a diferentes **formatos** (PNG, JPG,...) o **personalizado** (blanco y negro, cambio de colores, versiones con o sin texto,...) para su uso en el sitio web.
 
 {{< figure src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Oldacmelogo.png" link="https://upload.wikimedia.org/wikipedia/commons/7/7e/Oldacmelogo.png" >}}
 
@@ -36,7 +37,7 @@ A la hora de elegir la paleta de colores es importante definir como mínimo:
 
 El color principal suele estar presente en el **logo** y todos los aspectos relacionados con la **marca del sitio**. También suele aparecer en los **encabezados** y en los **botones** de formulario que activen la acción principal.
 
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Nuancier%5FPantone%5F2%5F%28Cut%5Fout%29.jpg/640px-Nuancier%5FPantone%5F2%5F%28Cut%5Fout%29.jpg" link="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Nuancier%5FPantone%5F2%5F%28Cut%5Fout%29.jpg/640px-Nuancier%5FPantone%5F2%5F%28Cut%5Fout%29.jpg" >}}
+{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Nuancier_Pantone_2_%28Cut_out%29.jpg/640px-Nuancier_Pantone_2_%28Cut_out%29.jpg" link="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Nuancier_Pantone_2_%28Cut_out%29.jpg/640px-Nuancier_Pantone_2_%28Cut_out%29.jpg" >}}
 
 Algunos recursos para generar una paleta de colores:
 
@@ -49,7 +50,7 @@ Algunos recursos para generar una paleta de colores:
 
 La tipografía es uno de los elementos más importantes a tener en cuenta. Se deben elegir cuidadosamente los tipos de letra que mejor casen con la temática del sitio y el diseño del logo. Normalmente se utiliza una tipografía principal para encabezados y otra para el resto del texto.
 
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Metal%5Fmovable%5Ftype.jpg/640px-Metal%5Fmovable%5Ftype.jpg" link="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Metal%5Fmovable%5Ftype.jpg/640px-Metal%5Fmovable%5Ftype.jpg" >}}
+{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Metal_movable_type.jpg/640px-Metal_movable_type.jpg" link="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Metal_movable_type.jpg/640px-Metal_movable_type.jpg" >}}
 
 Algunos recursos para elegir tipografías:
 
@@ -73,7 +74,7 @@ En este apartado se suele hacer referencia a alguno de estos elementos:
 -   Animaciones
 -   Patrones de decoración
 
-{{< figure src="/./octicons.png" >}}
+{{< figure src="/ox-hugo/octicons.png" >}}
 
 Algunos recursos para elegir elementos gráficos:
 
@@ -87,7 +88,7 @@ Algunos recursos para elegir elementos gráficos:
 
 -   [Guía de estilo de Mozilla Firefox](https://mozilla.design/firefox/)
 -   [Photon Design System](https://design.firefox.com/photon/) (para diseño de productos basados en Firefox)
--   [Guía de estilos de la UPV](http://www.upv.es/entidades/ASIC/manuales/guia%5Festilos%5Fupv.pdf)
+-   [Guía de estilos de la UPV](http://www.upv.es/entidades/ASIC/manuales/guia_estilos_upv.pdf)
 -   [Material Design (Google)](https://material.io/design/)
 
 

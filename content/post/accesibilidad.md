@@ -4,6 +4,7 @@ date = 2019-10-14T14:36:00+02:00
 tags = ["accesibilidad", "accesibility", "wai", "aria"]
 categories = ["diw", "diw-planificacion-interfacesweb"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 La accesibilidad web es una práctica inclusiva que tiene como objetivo que **no haya ninguna barrera que impida o limite el uso y acceso a Internet** a personas con cualquier tipo de discapacidad.
@@ -13,14 +14,14 @@ La accesibilidad web es una práctica inclusiva que tiene como objetivo que **no
 
 ## Accesibilidad web {#accesibilidad-web}
 
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Preferences-desktop-assistive-technology.svg/200px-Preferences-desktop-assistive-technology.svg.png" caption="Figura 1: Accesibilidad web. Fuente: Wikimedia" >}}
+{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Preferences-desktop-assistive-technology.svg/200px-Preferences-desktop-assistive-technology.svg.png" caption="<span class=\"figure-number\">Figure 1: </span>Accesibilidad web. Fuente: Wikimedia" >}}
 
 Muchas de las personas que tienen algún tipo de discapacidad, tanto de tipo físico como de tipo intelectual, necesitan utilizar dispositivos especiales para acceder a los contenidos de Internet. Otras necesitan acceder a la información de manera adaptada, con contenidos simplificados para poder comprenderlos mejor. El organismo [W3C](https://www.w3.org/WAI/design-develop/es) desarrolla estándares web denominados _Recomendaciones_ relacionados con esta área.
 
 
 ## WCAG {#wcag}
 
-_Web Content Accessibility Guidelines_ (WCAG) es un conjunto de recomendaciones desarrolladas por el organismo [W3C](https://www.w3.org/WAI/design-develop/es) cuyo objetivo es mejorar la accesibilidad de los contenidos web. WCAG define [12 directrices agrupadas en 4 principios](https://es.wikipedia.org/wiki/Web%5FContent%5FAccessibility%5FGuidelines#Principios). Para cada directriz se definen tres niveles de cumplimiento: A, AA y AAA.
+_Web Content Accessibility Guidelines_ (WCAG) es un conjunto de recomendaciones desarrolladas por el organismo [W3C](https://www.w3.org/WAI/design-develop/es) cuyo objetivo es mejorar la accesibilidad de los contenidos web. WCAG define [12 directrices agrupadas en 4 principios](https://es.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines#Principios). Para cada directriz se definen tres niveles de cumplimiento: A, AA y AAA.
 
 -   [Introducción a las Pautas de Accesibilidad para el contenido web (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/es)
 -   [WCAG 2.1 de un vistazo](https://www.w3.org/WAI/standards-guidelines/wcag/glance/es)
@@ -28,7 +29,7 @@ _Web Content Accessibility Guidelines_ (WCAG) es un conjunto de recomendaciones 
 
 ### Validación {#validación}
 
-Existen varias herramientas de validación de las reglas WCAG. La mayoría de ellos no es capaz de analizar todas las recomendaciones y simplemente hacen sugerencias sobre apartados que podrían estar mal diseñados. En este [enlace](https://www.usableyaccesible.com/recurso%5Fmisvalidadores.php) se comentan algunas de ellas. Uno de los más sencillos de usar es <http://wave.webaim.org/>.
+Existen varias herramientas de validación de las reglas WCAG. La mayoría de ellos no es capaz de analizar todas las recomendaciones y simplemente hacen sugerencias sobre apartados que podrían estar mal diseñados. En este [enlace](https://www.usableyaccesible.com/recurso_misvalidadores.php) se comentan algunas de ellas. Uno de los más sencillos de usar es <http://wave.webaim.org/>.
 
 
 ## Principales recomendaciones {#principales-recomendaciones}

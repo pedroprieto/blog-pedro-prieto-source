@@ -4,6 +4,7 @@ date = 2019-11-11T13:22:00+01:00
 tags = ["css", "imagenes"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 Las imágenes incluidas en los sitios web son responsables de gran parte del **tamaño de descarga**. Por tanto, es de vital importancia utilizar las técnicas adecuadas tanto para su **correcta visualización** (independientemente del tipo de dispositivo utilizado) como para su **optimización de tamaño** de cara a mejorar la velocidad de carga del sitio.
@@ -16,31 +17,31 @@ Las imágenes incluidas en los sitios web son responsables de gran parte del **t
 
 ### Tipos de imagen {#tipos-de-imagen}
 
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Bitmap%5FVS%5FSVG.svg/320px-Bitmap%5FVS%5FSVG.svg.png" caption="Figura 1: Imagen raster y vectorial" >}}
+{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Bitmap_VS_SVG.svg/320px-Bitmap_VS_SVG.svg.png" caption="<span class=\"figure-number\">Figure 1: </span>Imagen raster y vectorial" >}}
 
 Podemos distinguir entre dos grandes grupos de imágenes:
 
 -   **Mapas de bits** (_raster_) - Son imágenes compuestas por **píxeles**. Son las captadas por las cámaras o creadas por programas de edición.
 -   **Vectoriales** - Son imágenes que muestran su información mediante **descripciones matemáticas**. Están creadas exclusivamente por programas de edición.
 
-Las imágenes de [mapa de bits](https://es.wikipedia.org/wiki/Imagen%5Fde%5Fmapa%5Fde%5Fbits) se suelen utilizar en **fotografías**. Tienen una **resolución fija**, por lo que **al ampliarse pierden calidad** (a este proceso se le denomina [aliasing](https://es.wikipedia.org/wiki/Aliasing#En%5Fla%5Fcomputaci%C3%B3n%5Fgr%C3%A1fica)). Suelen ocupar **mucho espacio de almacenamiento** y por ello se suelen almacenar en formatos que soportan **compresión**.
+Las imágenes de [mapa de bits](https://es.wikipedia.org/wiki/Imagen_de_mapa_de_bits) se suelen utilizar en **fotografías**. Tienen una **resolución fija**, por lo que **al ampliarse pierden calidad** (a este proceso se le denomina [aliasing](https://es.wikipedia.org/wiki/Aliasing#En_la_computaci%C3%B3n_gr%C3%A1fica)). Suelen ocupar **mucho espacio de almacenamiento** y por ello se suelen almacenar en formatos que soportan **compresión**.
 
-Las imágenes [vectoriales](https://es.wikipedia.org/wiki/Gr%C3%A1fico%5Fvectorial) se suelen utilizar en **diseño** (carteles, folletos, logos, cómics,...). No tienen una resolución fija, por lo que **no pierden calidad al ampliarse**. Suelen ocupar **poco espacio de almacenamiento**. No están pensadas para imágenes de muy alta complejidad. Para mostrarse en pantallas se tienen que **convertir a mapas de bits** mediante un proceso llamado **render**.
+Las imágenes [vectoriales](https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial) se suelen utilizar en **diseño** (carteles, folletos, logos, cómics,...). No tienen una resolución fija, por lo que **no pierden calidad al ampliarse**. Suelen ocupar **poco espacio de almacenamiento**. No están pensadas para imágenes de muy alta complejidad. Para mostrarse en pantallas se tienen que **convertir a mapas de bits** mediante un proceso llamado **render**.
 
 
 ### Profundidad de color {#profundidad-de-color}
 
-La [profundidad de color](https://es.wikipedia.org/wiki/Profundidad%5Fde%5Fcolor) se refiere a la **cantidad de bits** utilizados para representar **un píxel** de una imagen. Actualmente se utiliza una profundidad de color de 32 bits:
+La [profundidad de color](https://es.wikipedia.org/wiki/Profundidad_de_color) se refiere a la **cantidad de bits** utilizados para representar **un píxel** de una imagen. Actualmente se utiliza una profundidad de color de 32 bits:
 
 -   8 bits para el color rojo (256 gamas de rojo)
 -   8 bits para el color verde (256 gamas de verde)
 -   8 bits para el color azul (256 gamas de azul)
--   8 bits para el [canal alfa](https://es.wikipedia.org/wiki/Composici%C3%B3n%5Falfa) (256 gamas de transparencia/opacidad)
+-   8 bits para el [canal alfa](https://es.wikipedia.org/wiki/Composici%C3%B3n_alfa) (256 gamas de transparencia/opacidad)
 
 
 ### Resolución {#resolución}
 
-La [resolución de imagen](https://es.wikipedia.org/wiki/Resoluci%C3%B3n%5Fde%5Fimagen) indica la **cantidad de píxeles** que componen una imagen. Está directamente relacionada con el **nivel de detalle**: a mayor resolución, mayor nivel de detalle.
+La [resolución de imagen](https://es.wikipedia.org/wiki/Resoluci%C3%B3n_de_imagen) indica la **cantidad de píxeles** que componen una imagen. Está directamente relacionada con el **nivel de detalle**: a mayor resolución, mayor nivel de detalle.
 
 Normalmente se especifica en formato `ancho x alto` o en **megapíxeles** (multiplicación del ancho por el alto): por ejemplo, una imagen de 1600 x 1200 píxeles = 1.920.000 píxeles = 1.92 Megapíxeles.
 
@@ -70,7 +71,7 @@ Algunos de los formatos más habituales son:
 -   WebP - Mapa de bits con compresión. Utilizado para fotografías o dibujos (no soportado en Safari).
 -   SVG - Imagen vectorial.
 
-Para más información se puede consultar este artículo sobre [compatibilidad de formatos de imagen en navegadores](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image%5Ftypes).
+Para más información se puede consultar este artículo sobre [compatibilidad de formatos de imagen en navegadores](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types).
 
 
 ## Software {#software}
@@ -96,7 +97,7 @@ Ambas opciones pueden utilizarse incluso de manera combinada. Sin embargo, cada 
 -   Utilizar imágenes de distinta resolución que van a ocupar **distinta proporción de pantalla** en función del dispositivo.se van a mostrar. Por ejemplo, una imagen que va a ocupar el 100% de la pantalla en dispositivos móviles pero un 50% en pantallas grandes. A este caso lo llamaremos **cambio de resolución con distintos tamaños**.
 -   Por último, utilizar imágenes con **distinta relación de aspecto** (relación entre el ancho y el alto) en función del dispositivo. Por ejemplo, una imagen apaisada con la información más importante en la parte central se verá adecuadamente en pantallas grandes; sin embargo, en dispositivos móviles se verá muy delgada. En este último caso es conveniente proporcionar una **versión recortada** de la imagen que muestre los detalles importantes. A este caso se le denomina **dirección de arte**.
 
-{{< figure src="/./art_direction.png" caption="Figura 2: Problema de dirección de arte. Fuente: MDN Web Docs" >}}
+{{< figure src="/ox-hugo/art_direction.png" caption="<span class=\"figure-number\">Figure 2: </span>Problema de dirección de arte. Fuente: MDN Web Docs" >}}
 
 
 ### Cambio de resolución {#cambio-de-resolución}
@@ -128,8 +129,8 @@ En el código anterior tenemos que:
 
 En este caso supondremos que la imagen va a ocupar el **distinto ancho de pantalla** según el tipo de dispositivo. Siguiendo con el caso del ejemplo anterior (versiones de imagen con resolución 450px, 850px y 1400px), asumiremos que se ha creado código CSS que haga uso de `media queries` con las siguientes reglas:
 
--   En pantallas **grandes** (>768px), la imagen ocupará un **50%** de la pantalla.
--   En pantallas **pequeñas** (<768px), la imagen ocupará el **100%** de la pantalla.
+-   En pantallas **grandes** (&gt;768px), la imagen ocupará un **50%** de la pantalla.
+-   En pantallas **pequeñas** (&lt;768px), la imagen ocupará el **100%** de la pantalla.
 
 En este caso, para optimizar la elección de la imagen a cargar habrá que tener en cuenta no solo el tamaño de las imágenes, sino también **qué espacio van a ocupar**. Así, tendremos que:
 
@@ -163,8 +164,8 @@ Esta técnica consiste en mostrar diferentes **versiones** de la imagen en funci
 
 Por ejemplo, supongamos que se quiere mostrar **2 versiones distintas** de la imagen en función del tipo de dispositivo:
 
--   En pantallas **grandes** (>768px) se mostrará la imagen `img_wide.jpg`, que es una versión completa de la imagen en formato apaisado.
--   En pantallas **pequeñas** (<768px) se mostrará la imagen `img_mobile.jpg`, que es una versión **recortada** de la imagen en formato cuadrado.
+-   En pantallas **grandes** (&gt;768px) se mostrará la imagen `img_wide.jpg`, que es una versión completa de la imagen en formato apaisado.
+-   En pantallas **pequeñas** (&lt;768px) se mostrará la imagen `img_mobile.jpg`, que es una versión **recortada** de la imagen en formato cuadrado.
 
 Para la dirección de arte se utiliza la etiqueta `<picture>`. Esta etiqueta permite definir **varios archivos de imagen** a través de etiquetas `<source>` junto con **media queries** para hacer que se muestre una determinada imagen en función de la resolución del dispositivo. Esta etiqueta **fuerza al navegador a escoger la imagen necesaria**, a diferencia del atributo `srcset`, que permite al navegador elegir.
 
@@ -194,14 +195,14 @@ Por último, señalar que se puede utilizar simultáneamente el elemento `<pictu
 A continuación se indican algunos enlaces con más información sobre el tema:
 
 -   [Google - Imágenes responsivas](https://developers.google.com/web/fundamentals/design-and-ux/responsive/images?hl=es)
--   [MDN - Imágenes responsivas](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia%5Fand%5Fembedding/Responsive%5Fimages)
+-   [MDN - Imágenes responsivas](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 -   [Generador de imágenes responsivas](https://www.responsivebreakpoints.com/)
 -   [MDN - El elemento `<picture>`](https://developer.mozilla.org/es/docs/Web/HTML/Elemento/picture)
 
 
 ## Aplicar estilos a imágenes {#aplicar-estilos-a-imágenes}
 
-En ocasiones hacer que las imágenes se muestren adecuadamente puede ser complicado. En el siguiente enlace se muestran algunas [técnicas para personalizar la apariencia de las imágenes mediante CSS](https://www.w3schools.com/css/css3%5Fimages.asp). En él se muestran técnicas de **centrado**, **diseño responsivo** o **creación de efectos o filtros**.
+En ocasiones hacer que las imágenes se muestren adecuadamente puede ser complicado. En el siguiente enlace se muestran algunas [técnicas para personalizar la apariencia de las imágenes mediante CSS](https://www.w3schools.com/css/css3_images.asp). En él se muestran técnicas de **centrado**, **diseño responsivo** o **creación de efectos o filtros**.
 
 La técnica más importante para crear imágenes responsivas (que se adapten correctamente a la capa contenedora) consiste en introducir la etiqueta `<img>` dentro de una etiqueta `<div>` y establecer el ancho de la imagen al 100%. De esta manera, redimensionando la etiqueta `<div>` contenedora se podrá cambiar el tamaño de la imagen. El código sería el siguiente:
 

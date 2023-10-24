@@ -4,6 +4,7 @@ date = 2019-10-31T16:12:00+01:00
 tags = ["css", "fuentes"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 En este artículo se aborda el uso de tipos de letra (fuentes) en CSS: cómo incorporar fuentes desde **servidores externos**, qué tipos de **fuente genéricos** existen y cómo establecer **tipos de fuentes seguros** para que sean compatibles con todos los navegadores y sistemas operativos.
@@ -30,7 +31,7 @@ En general podemos distinguir 5 grandes tipos de fuentes:
 **Fantasía**
 : Tipo de letra que muestra caracteres extraños o personalizados.
 
-{{< figure src="/./font_types.png" caption="Figura 1: Tipos de fuente" >}}
+{{< figure src="/ox-hugo/font_types.png" caption="<span class=\"figure-number\">Figure 1: </span>Tipos de fuente" >}}
 
 
 ## Fuentes en CSS {#fuentes-en-css}
@@ -116,7 +117,7 @@ Para obtener más información sobre fuentes se puede consultar el artículo "[O
 
 -   <https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization?hl=es>
 -   <https://developer.mozilla.org/es/docs/Web/CSS/@font-face>
--   <https://www.w3schools.com/cssref/css3%5Fpr%5Ffont-face%5Frule.asp>
+-   <https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp>
 -   <https://www.w3.org/Style/Examples/007/fonts.en.html>
 -   <https://stackoverflow.com/questions/14676613/how-to-import-google-web-font-in-css-file>
 -   <https://stackoverflow.com/questions/56141957/difference-between-font-face-and-import-url>

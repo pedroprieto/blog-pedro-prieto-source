@@ -4,13 +4,14 @@ date = 2019-11-04T12:44:00+01:00
 tags = ["css", "responsive"]
 categories = ["diw", "diw-estilos-multimedia"]
 draft = false
+author = "Pedro Prieto"
 +++
 
 En este artículo trataremos los fundamentos del diseño web adaptable o adaptativo (_Responsive Web Design_ en inglés).
 
 <!--more-->
 
-> El diseño web adaptable (también **diseño web adaptativo** o **responsivo**; este último calco del inglés _responsive web design_), es una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de las páginas web al dispositivo que se esté utilizando para visitarlas. Hoy día las páginas web se ven en multitud de dispositivos como tabletas, teléfonos inteligentes, libros electrónicos, portátiles, PC, etcétera. Además, aún dentro de cada tipo, cada dispositivo tiene sus características concretas: tamaño de pantalla, resolución, potencia de CPU, sistema operativo o capacidad de memoria entre otras. Esta tecnología pretende que con un único diseño web, todo se vea correctamente en cualquier dispositivo. ---_Fuente: [Wikipedia](https://es.wikipedia.org/wiki/Dise%C3%B1o%5Fweb%5Fadaptable)_
+> El diseño web adaptable (también **diseño web adaptativo** o **responsivo**; este último calco del inglés _responsive web design_), es una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de las páginas web al dispositivo que se esté utilizando para visitarlas. Hoy día las páginas web se ven en multitud de dispositivos como tabletas, teléfonos inteligentes, libros electrónicos, portátiles, PC, etcétera. Además, aún dentro de cada tipo, cada dispositivo tiene sus características concretas: tamaño de pantalla, resolución, potencia de CPU, sistema operativo o capacidad de memoria entre otras. Esta tecnología pretende que con un único diseño web, todo se vea correctamente en cualquier dispositivo. ---_Fuente: [Wikipedia](https://es.wikipedia.org/wiki/Dise%C3%B1o_web_adaptable)_
 
 
 ## Mobile First {#mobile-first}
@@ -51,14 +52,14 @@ Por último, existe un tercer valor de resolución utilizado en el diseño web, 
 
 Este concepto fue desarrollado por Apple en el iPhone y tenía como objetivo solucionar el problema del tamaño de la pantalla a la hora de visualizar páginas web. Consiste en **hacer creer al navegador** que el **ancho de la pantalla es mayor que su anchura CSS**. De esta manera las **páginas web** se podrán **mostrar exactamente igual que en navegadores de escritorio** pero aparecerán con un tamaño más pequeño, como si se hubiera hecho un **zoom de alejamiento**. De esta manera consiguieron que la navegación a través del móvil fuera igual que la de escritorio, con la pequeña diferencia del zoom.
 
-{{< figure src="/./viewport.png" caption="Figura 1: Viewport" >}}
+{{< figure src="/ox-hugo/viewport.png" caption="<span class=\"figure-number\">Figure 1: </span>Viewport" >}}
 
 Es importante dejar claro que la resolución del _ViewPort_ es **distinta de la resolución física y la resolución CSS**. En los sistemas **Android** el ancho es de **800px** y en los sistemas **iOS** es de **980px**.
 
 
 ### Etiqueta `<meta name="viewport">` {#etiqueta-meta-name-viewport}
 
-En el diseño adaptativo se busca que la apariencia visual de la página web esté ajustada al tamaño de la pantalla. Para ello se utiliza la etiqueta [meta name="viewport"](https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport%5Fmeta%5Ftag). Esta etiqueta sirve para **indicar al navegador** qué **tamaño** debe definir para su _ViewPort_. En la mayoría de ocasiones utilizaremos la etiqueta de la siguiente manera:
+En el diseño adaptativo se busca que la apariencia visual de la página web esté ajustada al tamaño de la pantalla. Para ello se utiliza la etiqueta [meta name="viewport"](https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag). Esta etiqueta sirve para **indicar al navegador** qué **tamaño** debe definir para su _ViewPort_. En la mayoría de ocasiones utilizaremos la etiqueta de la siguiente manera:
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,7 +69,7 @@ Este código indica al navegador que debe utilizar la **anchura CSS** (`width=de
 
 > **¡IMPORTANTE!** Esta etiqueta **sólo debe utilizarse** con diseños web **optimizados para móvil** o diseños web **adaptativos**. Si la página no está adaptada para móvil no se debe usar, ya que se visualizaría de manera incorrecta.
 
-Puedes consultar más información relacionada con esta etiqueta en este [artículo sobre ViewPort en MDN](https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport%5Fmeta%5Ftag).
+Puedes consultar más información relacionada con esta etiqueta en este [artículo sobre ViewPort en MDN](https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag).
 
 
 ## Media queries {#media-queries}
@@ -100,7 +101,7 @@ Se pueden utilizar expresiones adicionales al _Media Type_ para **determinar de 
 
 Existe otra propiedad relacionada con la anchura de los dispositivos denominada `device-width`, pero en el borrador más reciente de la especificación [han sido declaradas obsoletas](https://drafts.csswg.org/mediaqueries-4/#mf-deprecated).
 
-En este enlace se puede consultar todas las [Características del medio disponibles](https://developer.mozilla.org/es/docs/CSS/Media%5Fqueries#Funciones%5FMultimedia).
+En este enlace se puede consultar todas las [Características del medio disponibles](https://developer.mozilla.org/es/docs/CSS/Media_queries#Funciones_Multimedia).
 
 
 ### Sintaxis {#sintaxis}
@@ -182,8 +183,8 @@ A continuación puedes ver un [ejemplo con estilos definidos en varias Media Que
 
 En los siguientes enlaces puede consultarse más información sobre Media Queries:
 
--   [CSS Media Queries en MDN](https://developer.mozilla.org/es/docs/CSS/Media%5Fqueries)
--   [CSS Media Queries Examples en W3Schools](https://www.w3schools.com/css/css3%5Fmediaqueries%5Fex.asp)
+-   [CSS Media Queries en MDN](https://developer.mozilla.org/es/docs/CSS/Media_queries)
+-   [CSS Media Queries Examples en W3Schools](https://www.w3schools.com/css/css3_mediaqueries_ex.asp)
 
 
 ### Curiosidad: Modelo de Rejilla {#curiosidad-modelo-de-rejilla}
@@ -192,8 +193,8 @@ Muchos diseños actuales se basan en el **modelo de rejilla**. Básicamente cons
 
 A continuación se muestran dos enlaces con información más detallada sobre este tema:
 
--   [Tutorial de diseño basado en rejilla](https://www.w3schools.com/css/css%5Frwd%5Fgrid.asp).
--   [Cómo combinar el diseño en rejilla con _media queries_ para realizar diseños reponsivos](https://www.w3schools.com/css/css%5Frwd%5Fmediaqueries.asp).
+-   [Tutorial de diseño basado en rejilla](https://www.w3schools.com/css/css_rwd_grid.asp).
+-   [Cómo combinar el diseño en rejilla con _media queries_ para realizar diseños reponsivos](https://www.w3schools.com/css/css_rwd_mediaqueries.asp).
 
 
 ### Curiosidad: Font boosting (Chrome Mobile) {#curiosidad-font-boosting--chrome-mobile}
@@ -202,9 +203,9 @@ El navegador Chrome para móviles **cambia el tamaño de la letra** de algunos *
 
 Para **desactivar** esta característica basta con **especificar una altura** (`height`) o altura máxima (`max-height`) a la capa en cuestión.
 
-Para desactivarlo de manera global basta con establecer una altura máxima con un valor muy grande a nivel global.
+Para desactivarlo de manera global basta con establecer una altura máxima con un [valor muy grande](#org-coderef--761fe0-2) a nivel global.
 
-```css
+```css { linenos=true, anchorlinenos=true, lineanchors=org-coderef--761fe0 }
 html * {
     max-height:1000000px;
 }
@@ -220,7 +221,7 @@ Para más información puedes consultar los siguientes artículos de _Stack Over
 
 Las [herramientas de desarrollo de los navegadores](/post/herramientas-desarrollo/#herramientas-de-desarrollo-de-navegadores) incorporan un modo de **Vista de Diseño Adaptable** para simular cómo se verá la página en distintos tamaños de pantalla:
 
--   [Responsive Design View (Firefox)](https://developer.mozilla.org/es/docs/Tools/Responsive%5FDesign%5FView)
+-   [Responsive Design View (Firefox)](https://developer.mozilla.org/es/docs/Tools/Responsive_Design_View)
 -   [Device Mode (Chrome)](https://developers.google.com/web/tools/chrome-devtools/device-mode/)
 
 Es importante saber que en última instancia el mejor test siempre es **comprobar la apariencia visual desde un dispositivo nativo** (tablet, teléfono móvil,..).
@@ -237,8 +238,8 @@ De esta manera se reduce el tamaño de los archivos y se aumenta la velocidad de
 
 ## Referencias {#referencias}
 
--   [Guía de RWD en W3Schools](http://www.w3schools.com/css/css%5Frwd%5Fintro.asp)
+-   [Guía de RWD en W3Schools](http://www.w3schools.com/css/css_rwd_intro.asp)
 -   [Aspectos básicos del diseño web adaptable (Google)](https://developers.google.com/web/fundamentals/design-and-ux/responsive/?hl=es)
--   [Diseño Responsivo (MDN)](https://developer.mozilla.org/es/docs/Web%5FDevelopment/Mobile/Dise%C3%B1o%5Fresponsivo)
--   [Responsive Design (MDN)](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS%5Flayout/Responsive%5FDesign)
--   [The building blocks of responsive design (MDN)](https://developer.mozilla.org/en-US/docs/Web/Progressive%5Fweb%5Fapps/Responsive/responsive%5Fdesign%5Fbuilding%5Fblocks)
+-   [Diseño Responsivo (MDN)](https://developer.mozilla.org/es/docs/Web_Development/Mobile/Dise%C3%B1o_responsivo)
+-   [Responsive Design (MDN)](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
+-   [The building blocks of responsive design (MDN)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks)
