@@ -39,6 +39,7 @@ defaultContentLanguage = "es"
   url = "/categories/"
 
 [params]
+  BookSection = '*'
   keywords = ["DIW", "interfaces", "DAW", "desarrollo web"]
   description = "Blog profesional de Pedro Prieto"
   dateFormatToUse = "02-01-2006"
