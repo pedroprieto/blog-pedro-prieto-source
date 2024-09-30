@@ -1,14 +1,16 @@
 baseURL = "https://pedroprieto.github.io"
 title = "Blog de Pedro Prieto"
-theme = "jane"
+theme = "hugo-book"
 enableRobotsTXT = true
-paginate = 3
 
 pygmentsCodeFences = true
 pygmentsStyle = "emacs"
 # pygmentsOptions = "linenos=true"
 
 defaultContentLanguage = "es"
+
+[pagination]
+  pagerSize = 3
 [languages.es]
   languageCode = "es"
 
