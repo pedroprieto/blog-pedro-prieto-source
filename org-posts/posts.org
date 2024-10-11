@@ -3126,7 +3126,6 @@ Como *inconveniente principal*, tenemos dos:
 
 Algunos de los IDEs Cloud más utilizados son:
 - [[https://github.com/features/codespaces][GitHub CodeSpaces]] - Entornos basados en contenedores.
-- [[https://aws.amazon.com/es/cloud9/][AWS Cloud9]] - Entornos basados en máquinas virtuales.
 
 * TODO Ideas
 - Posicionamiento absoluto, floats
