@@ -132,4 +132,3 @@ Como **inconveniente principal**, tenemos dos:
 Algunos de los IDEs Cloud más utilizados son:
 
 -   [GitHub CodeSpaces](https://github.com/features/codespaces) - Entornos basados en contenedores.
--   [AWS Cloud9](https://aws.amazon.com/es/cloud9/) - Entornos basados en máquinas virtuales.
